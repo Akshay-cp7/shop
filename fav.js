@@ -19,13 +19,8 @@ var tt,toast;
 function say(msg){if(!toast){toast=document.createElement('div');toast.className='favtoast';toast.setAttribute('role','status');document.body.appendChild(toast)}
   toast.innerHTML=msg;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show')},2600)}
 document.addEventListener('click',function(e){var b=e.target.closest('[data-fav]');if(!b)return;e.preventDefault();e.stopPropagation();
-  var on=toggle(b.dataset.fav);if(on)tr('AddToWishlist',b.dataset.fav);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop');
+  var on=toggle(b.dataset.fav);b.classList.remove('pop');void b.offsetWidth;if(on)b.classList.add('pop');
   if(location.pathname!=='/saved/')say(on?'Saved. <a href="/saved/">See your saved list</a>':'Removed from saved')},true);
-function tr(ev,slug,val){try{if(window.fbq)fbq('track',ev,{content_ids:[slug],content_type:'product',value:val||0,currency:'INR'})}catch(e){}}
-document.addEventListener('click',function(e){var a=e.target.closest('a[rel~="sponsored"]');if(!a)return;
-  var ps=window.__ps||{},slug=a.dataset.s||ps.s||'',v=+(a.dataset.p||ps.v||0);
-  if(!slug){var pc=a.closest('.pc');if(pc)slug=slugOf(pc)}
-  tr('InitiateCheckout',slug||'unknown',v)},true);
 window.addEventListener('storage',function(e){if(e.key===K){mem=get();sync();emit()}});
 decorate(document);
 var q=false;new MutationObserver(function(){if(q)return;q=true;requestAnimationFrame(function(){q=false;decorate(document)})}).observe(document.body,{childList:true,subtree:true});
