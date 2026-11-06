@@ -558,6 +558,10 @@
     .btn-buy, .sticky-buy .btn-buy { background: #FFC21A; color: #0B0D10; box-shadow: 0 4px 14px rgba(255,170,0,.35); }
     .btn-buy:hover { background: #FFB300; }
     .footer-cta .btn-buy-white { background: #FFC21A; color: #0B0D10; }
+    .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+    .thumb { cursor: pointer; transition: border-color .15s; }
+    .thumb.on { border: 2px solid #12355B; }
+    .gallery-main img { transition: opacity .15s; }
   </style>
 </head>
 <body>
@@ -592,6 +596,7 @@
                alt="Boldfit Plastic Tennis Cricket Bat, main product photo" width="832" height="832">
         </div>
         <div class="thumbs">
+          <div class="thumb on"><img src="https://rukminim1.flixcart.com/image/416/416/xif0q/bat/w/s/2/810-cricket-bat-indoor-outdoor-turf-bat-plastic-tennis-cricket-original-imahry9an29we5gg.jpeg?q=70" alt="Boldfit Plastic Tennis Cricket Bat, main product photo"></div>
           <div class="thumb"><img src="https://rukminim1.flixcart.com/image/416/416/xif0q/massager/s/d/x/tens-massager-black-pulsex-pulsex-boldfit-original-imahmcwjcg8vmehb.jpeg?q=70" alt="Boldfit Plastic Tennis Cricket Bat, photo 2 from the Flipkart listing" loading="lazy"></div>
           <div class="thumb"><img src="https://rukminim1.flixcart.com/image/416/416/xif0q/bat/i/e/t/810-cricket-bat-indoor-outdoor-turf-bat-plastic-tennis-cricket-original-imah9m9mczjvh9y7.jpeg?q=70" alt="Boldfit Plastic Tennis Cricket Bat, photo 3 from the Flipkart listing" loading="lazy"></div>
           <div class="thumb"><img src="https://rukminim1.flixcart.com/image/416/416/xif0q/bat/x/o/r/810-cricket-bat-indoor-outdoor-turf-bat-plastic-tennis-cricket-original-imahry9aaqjvcrgz.jpeg?q=70" alt="Boldfit Plastic Tennis Cricket Bat, photo 4 from the Flipkart listing" loading="lazy"></div>
@@ -832,5 +837,17 @@
     })();
   </script>
 
+<script>
+(function(){
+  var main=document.querySelector('.gallery-main img'); if(!main) return;
+  var T=document.querySelectorAll('.thumb');
+  T.forEach(function(t){ t.addEventListener('click',function(){
+    var src=t.querySelector('img').src.replace('/416/416/','/832/832/');
+    if(main.src===src) return;
+    main.style.opacity=.3; var n=new Image(); n.onload=function(){ main.src=src; main.alt=t.querySelector('img').alt; main.style.opacity=1; }; n.src=src;
+    T.forEach(function(x){x.classList.remove('on')}); t.classList.add('on');
+  }); });
+})();
+</script>
 </body>
 </html>
