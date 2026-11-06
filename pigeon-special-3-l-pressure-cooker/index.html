@@ -562,6 +562,43 @@
     .thumb { cursor: pointer; transition: border-color .15s; }
     .thumb.on { border: 2px solid #12355B; }
     .gallery-main img { transition: opacity .15s; }
+
+    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
+    .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
+    .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
+    .vscore .lbl { font-size: 0.8rem; color: var(--steel); margin-top: 0.3rem; }
+    .vbars { margin-top: 1rem; display: grid; gap: 0.55rem; }
+    .vbar { font-size: 0.78rem; color: var(--graphite); }
+    .vbar .t { height: 8px; background: #E9EDF2; border-radius: 4px; margin-top: 3px; overflow: hidden; }
+    .vbar .f { height: 100%; background: #12355B; border-radius: 4px; }
+    .vnote { font-size: 0.75rem; color: var(--steel); margin-top: 0.9rem; line-height: 1.5; }
+    .scatter { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1rem 1rem 0.6rem; }
+    .scatter h3 { font-size: 0.95rem; margin-bottom: 0.2rem; }
+    .scatter .sub { font-size: 0.78rem; color: var(--steel); margin-bottom: 0.4rem; }
+    .scatter svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .scatter .peer { fill: #AEB7C3; stroke: #fff; stroke-width: 2; transition: r .15s; }
+    .scatter a:hover .peer, .scatter a:focus .peer { fill: #6B7480; }
+    .scatter .me { fill: #12355B; stroke: #fff; stroke-width: 2; }
+    .scatter .ax { stroke: #E4E8EE; stroke-width: 1; }
+    .scatter text { font-family: inherit; font-size: 13px; fill: #6B7480; }
+    .scatter text.mel { fill: #0B0D10; font-weight: 700; font-size: 14px; }
+    .scatter .tip { font-size: 0.78rem; color: var(--graphite); min-height: 1.4em; margin-top: 0.2rem; }
+    .rivals { width: 100%; border-collapse: collapse; background: var(--white); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; font-size: 0.85rem; }
+    .rivals th, .rivals td { text-align: left; padding: 0.7rem 0.8rem; border-bottom: 1px solid var(--line); vertical-align: middle; }
+    .rivals th { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--steel); background: var(--mist); }
+    .rivals tr.me td { background: #EEF3F9; font-weight: 700; }
+    .rivals td a.nm { color: var(--ink); font-weight: 600; text-decoration: none; }
+    .rivals td a.nm:hover { text-decoration: underline; }
+    .rivals .rt { background: var(--green); color: #fff; font-weight: 700; border-radius: 4px; padding: 1px 5px; font-size: 0.75rem; white-space: nowrap; }
+    .rivals .bb { display: inline-block; background: #FFC21A; color: #0B0D10; font-weight: 800; border-radius: 6px; padding: 5px 10px; font-size: 0.75rem; text-decoration: none; white-space: nowrap; }
+    .rivals .num { white-space: nowrap; }
+    .rv-wrap { overflow-x: auto; border-radius: 16px; }
+    @media (max-width: 780px) {
+      .vfm { grid-template-columns: 1fr; }
+      .rivals .hide-m { display: none; }
+      .rivals th, .rivals td { padding: 0.6rem 0.5rem; }
+    }
   </style>
 </head>
 <body>
@@ -678,6 +715,38 @@
         <div class="rb-score">4.1<span>/5</span></div>
         <div class="rb-meta">2,90,518 ratings<br>30,248 written reviews</div>
       </div>
+    </div>
+  </section>
+
+
+  <!-- VALUE -->
+  <section>
+    <div class="wrap">
+      <p class="sec-label">Value for money</p>
+      <h2 class="sec-title">How it stacks up</h2>
+      <div class="vfm">
+        <div class="vscore">
+          <div class="big">5.5<span> / 10</span></div>
+          <div class="lbl">Fair value</div>
+          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:45%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:91%"></div></div></div><div class="vbar">Price (not enough of the same type yet, counted as average)<div class="t"><div class="f" style="width:50%"></div></div></div></div>
+          <p class="vnote">My own score, worked out the same way for every product here: 60% rating, 20% how many ratings, 20% price against the same type of product. It is not a Flipkart score.</p>
+        </div>
+        <div class="scatter">
+          <h3>Price against rating</h3>
+          <p class="sub">Every dot is one of the 26 kitchen picks on this site. Further left is cheaper, higher is better rated, bigger means more ratings.</p>
+          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 26 kitchen picks. This product costs ₹649 and is rated 4.1.">
+            <line class="ax" x1="46" x2="544" y1="234.7" y2="234.7"/><text x="38" y="238.7" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="172.2" y2="172.2"/><text x="38" y="176.2" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="109.7" y2="109.7"/><text x="38" y="113.7" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="47.3" y2="47.3"/><text x="38" y="51.3" text-anchor="end">4.6★</text><text x="107.6" y="288" text-anchor="middle">₹340</text><text x="231.7" y="288" text-anchor="middle">₹670</text><text x="353.1" y="288" text-anchor="middle">₹1,300</text><text x="479.9" y="288" text-anchor="middle">₹2,600</text>
+            <a href="/pigeon-2100-w-induction-cooktop/" data-tip="Pigeon 2100 W Induction Cooktop · ₹2,199 · 4.0★"><circle class="peer" cx="449.3" cy="234.7" r="8.8"><title>Pigeon 2100 W Induction Cooktop, ₹2,199, 4.0★</title></circle></a><a href="/kenstar-grill-sandwich-maker/" data-tip="Kenstar Grill Sandwich Maker · ₹799 · 4.2★"><circle class="peer" cx="264.0" cy="172.2" r="8.0"><title>Kenstar Grill Sandwich Maker, ₹799, 4.2★</title></circle></a><a href="/cello-dazzle-swirl-34-piece-opalware-dinner-set/" data-tip="Cello Dazzle Swirl 34 Piece Opalware Dinner Set · ₹1,699 · 4.4★"><circle class="peer" cx="402.1" cy="109.7" r="8.3"><title>Cello Dazzle Swirl 34 Piece Opalware Dinner Set, ₹1,699, 4.4★</title></circle></a><a href="/philips-hr3705-300-w-hand-blender/" data-tip="Philips HR3705 300 W Hand Blender · ₹2,087 · 4.5★"><circle class="peer" cx="439.7" cy="78.5" r="7.4"><title>Philips HR3705 300 W Hand Blender, ₹2,087, 4.5★</title></circle></a><a href="/bajaj-rex-500-w-mixer-grinder-3-jars/" data-tip="Bajaj Rex 500 W Mixer Grinder, 3 Jars · ₹1,899 · 4.2★"><circle class="peer" cx="422.4" cy="172.2" r="8.6"><title>Bajaj Rex 500 W Mixer Grinder, 3 Jars, ₹1,899, 4.2★</title></circle></a><a href="/prestige-atlas-1-5-l-electric-kettle/" data-tip="Prestige Atlas 1.5 L Electric Kettle · ₹669 · 4.1★"><circle class="peer" cx="231.5" cy="203.5" r="8.3"><title>Prestige Atlas 1.5 L Electric Kettle, ₹669, 4.1★</title></circle></a><a href="/pigeon-popular-2-burner-glass-gas-stove/" data-tip="Pigeon Popular 2 Burner Glass Gas Stove · ₹1,699 · 4.1★"><circle class="peer" cx="402.1" cy="203.5" r="8.4"><title>Pigeon Popular 2 Burner Glass Gas Stove, ₹1,699, 4.1★</title></circle></a><a href="/pigeon-750-w-pop-up-toaster/" data-tip="Pigeon 750 W Pop Up Toaster · ₹1,209 · 4.2★"><circle class="peer" cx="339.8" cy="172.2" r="7.5"><title>Pigeon 750 W Pop Up Toaster, ₹1,209, 4.2★</title></circle></a><a href="/cello-sapphire-3-piece-casserole-set/" data-tip="Cello Sapphire 3 Piece Casserole Set · ₹599 · 4.1★"><circle class="peer" cx="211.2" cy="203.5" r="8.3"><title>Cello Sapphire 3 Piece Casserole Set, ₹599, 4.1★</title></circle></a><a href="/milton-pro-insulated-lunch-box-4-containers/" data-tip="Milton Pro Insulated Lunch Box, 4 Containers · ₹799 · 4.3★"><circle class="peer" cx="264.0" cy="141.0" r="7.8"><title>Milton Pro Insulated Lunch Box, 4 Containers, ₹799, 4.3★</title></circle></a><a href="/cello-puro-steel-x-benz-650-ml-bottle/" data-tip="Cello Puro Steel X Benz 650 ml Bottle · ₹329 · 4.1★"><circle class="peer" cx="101.5" cy="203.5" r="8.1"><title>Cello Puro Steel X Benz 650 ml Bottle, ₹329, 4.1★</title></circle></a><a href="/pigeon-special-pressure-cooker-set-2-3-and-5-l/" data-tip="Pigeon Special Pressure Cooker Set, 2, 3 and 5 L · ₹2,349 · 4.1★"><circle class="peer" cx="461.4" cy="203.5" r="8.7"><title>Pigeon Special Pressure Cooker Set, 2, 3 and 5 L, ₹2,349, 4.1★</title></circle></a><a href="/prestige-omega-festival-pack-non-stick-cookware-3-piece/" data-tip="Prestige Omega Festival Pack Non Stick Cookware, 3 Piece · ₹1,799 · 4.3★"><circle class="peer" cx="412.5" cy="141.0" r="8.6"><title>Prestige Omega Festival Pack Non Stick Cookware, 3 Piece, ₹1,799, 4.3★</title></circle></a><a href="/pigeon-healthifry-digital-1200-w-air-fryer/" data-tip="Pigeon Healthifry Digital 1200 W Air Fryer · ₹2,999 · 4.0★"><circle class="peer" cx="506.1" cy="234.7" r="7.8"><title>Pigeon Healthifry Digital 1200 W Air Fryer, ₹2,999, 4.0★</title></circle></a><a href="/treo-cascade-glass-set-of-4-292-ml/" data-tip="Treo Cascade Glass Set of 4, 292 ml · ₹281 · 4.4★"><circle class="peer" cx="72.7" cy="109.7" r="6.5"><title>Treo Cascade Glass Set of 4, 292 ml, ₹281, 4.4★</title></circle></a><a href="/pigeon-favourite-1800-w-induction-cooktop/" data-tip="Pigeon Favourite 1800 W Induction Cooktop · ₹1,599 · 4.0★"><circle class="peer" cx="391.0" cy="234.7" r="8.8"><title>Pigeon Favourite 1800 W Induction Cooktop, ₹1,599, 4.0★</title></circle></a><a href="/prestige-pgmfb-grill-sandwich-maker/" data-tip="Prestige PGMFB Grill Sandwich Maker · ₹1,470 · 4.3★"><circle class="peer" cx="375.6" cy="141.0" r="7.8"><title>Prestige PGMFB Grill Sandwich Maker, ₹1,470, 4.3★</title></circle></a><a href="/cello-dazzle-oleander-47-piece-dinner-set/" data-tip="Cello Dazzle Oleander 47 Piece Dinner Set · ₹2,199 · 4.4★"><circle class="peer" cx="449.3" cy="109.7" r="8.3"><title>Cello Dazzle Oleander 47 Piece Dinner Set, ₹2,199, 4.4★</title></circle></a><a href="/kent-450-w-chopper-and-hand-blender/" data-tip="KENT 450 W Chopper and Hand Blender · ₹1,484 · 4.2★"><circle class="peer" cx="377.3" cy="172.2" r="7.3"><title>KENT 450 W Chopper and Hand Blender, ₹1,484, 4.2★</title></circle></a><a href="/bajaj-gx-8-750-w-mixer-grinder-4-jars/" data-tip="Bajaj GX 8 750 W Mixer Grinder, 4 Jars · ₹3,189 · 4.2★"><circle class="peer" cx="517.3" cy="172.2" r="8.6"><title>Bajaj GX 8 750 W Mixer Grinder, 4 Jars, ₹3,189, 4.2★</title></circle></a><a href="/prestige-pkoss-1-5-l-electric-kettle/" data-tip="Prestige PKOSS 1.5 L Electric Kettle · ₹699 · 4.2★"><circle class="peer" cx="239.5" cy="172.2" r="8.2"><title>Prestige PKOSS 1.5 L Electric Kettle, ₹699, 4.2★</title></circle></a><a href="/lifelong-isi-certified-2-burner-glass-gas-stove/" data-tip="Lifelong ISI Certified 2 Burner Glass Gas Stove · ₹1,299 · 4.1★"><circle class="peer" cx="352.9" cy="203.5" r="8.0"><title>Lifelong ISI Certified 2 Burner Glass Gas Stove, ₹1,299, 4.1★</title></circle></a><a href="/bajaj-atx-4-750-w-pop-up-toaster/" data-tip="Bajaj ATX 4 750 W Pop Up Toaster · ₹1,499 · 4.3★"><circle class="peer" cx="379.1" cy="141.0" r="7.1"><title>Bajaj ATX 4 750 W Pop Up Toaster, ₹1,499, 4.3★</title></circle></a><a href="/milton-super-1000-ml-steel-bottle/" data-tip="Milton Super 1000 ml Steel Bottle · ₹305 · 4.0★"><circle class="peer" cx="87.7" cy="234.7" r="7.9"><title>Milton Super 1000 ml Steel Bottle, ₹305, 4.0★</title></circle></a><a href="/kent-ultra-4-l-digital-air-fryer/" data-tip="KENT Ultra 4 L Digital Air Fryer · ₹3,099 · 4.1★"><circle class="peer" cx="512.1" cy="203.5" r="7.1"><title>KENT Ultra 4 L Digital Air Fryer, ₹3,099, 4.1★</title></circle></a>
+            <circle class="me" cx="225.9" cy="203.5" r="9"/><text class="mel" x="237.9" y="191.5" text-anchor="start">This one</text>
+          </svg>
+          <p class="tip" aria-live="polite">Tap a grey dot to open that product.</p>
+        </div>
+      </div>
+      <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>
+      <div class="rv-wrap"><table class="rivals">
+          <thead><tr><th>Product</th><th>Price</th><th>Rating</th><th class="hide-m">Ratings</th><th class="hide-m">Warranty</th><th>Value</th><th></th></tr></thead>
+          <tbody><tr><td><a class="nm" href="/prestige-pkoss-1-5-l-electric-kettle/">Prestige PKOSS 1.5 L Electric Kettle</a></td><td class="num">₹699</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">1,70,922</td><td class="hide-m">1 Year</td><td class="num"><b>6.0</b></td><td><a class="bb" href="https://fktr.in/XeSriU1" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr class="me"><td>Pigeon Special 3 L Pressure Cooker <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹649</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">2,90,518</td><td class="hide-m">5 years on manufacturing defec</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/ZNqiteh" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/prestige-atlas-1-5-l-electric-kettle/">Prestige Atlas 1.5 L Electric Kettle</a></td><td class="num">₹669</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">1,93,024</td><td class="hide-m">—</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/yq4ij6f" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/cello-sapphire-3-piece-casserole-set/">Cello Sapphire 3 Piece Casserole Set</a></td><td class="num">₹599</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">1,96,033</td><td class="hide-m">No</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/Ia16OlW" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
+        </table></div>
     </div>
   </section>
 
@@ -849,6 +918,15 @@
     T.forEach(function(x){x.classList.remove('on')}); t.classList.add('on');
   }); });
 })();
+</script>
+<script>
+document.querySelectorAll('.scatter').forEach(function(s){
+  var tip=s.querySelector('.tip');
+  s.querySelectorAll('a[data-tip]').forEach(function(a){
+    a.addEventListener('mouseenter',function(){ tip.textContent=a.getAttribute('data-tip'); });
+    a.addEventListener('focus',function(){ tip.textContent=a.getAttribute('data-tip'); });
+  });
+});
 </script>
 </body>
 </html>
