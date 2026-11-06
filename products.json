@@ -3582,5 +3582,1413 @@
 "h1": "boAt Storm Call 4 Smartwatch",
 "price": 1499,
 "link": "https://fktr.in/45fH3K0"
+},
+{
+"slug": "havells-9-w-led-bulb",
+"pid": "itm8cb92ef041952",
+"cat": "home",
+"h1": "Havells 9 W LED Bulb",
+"price": 263,
+"link": "https://fktr.in/ggF27Q4"
+},
+{
+"slug": "philips-na221-air-fryer",
+"pid": "itm219580008b7d6",
+"cat": "kitchen",
+"h1": "Philips NA221 Air Fryer",
+"price": 9590,
+"link": "https://fktr.in/5MlHQcf"
+},
+{
+"slug": "orient-10-w-motion-sensor-led-bulb",
+"pid": "itm3dc020a2c364e",
+"cat": "home",
+"h1": "Orient 10 W Motion Sensor LED Bulb",
+"price": 209,
+"link": "https://fktr.in/qPLLqgR"
+},
+{
+"slug": "cello-smart-pro-1400-w-digital-air-fryer",
+"pid": "itmdb7bebcb4acd9",
+"cat": "kitchen",
+"h1": "Cello Smart Pro 1400 W Digital Air Fryer",
+"price": 2999,
+"link": "https://fktr.in/E7Cn1P6"
+},
+{
+"slug": "himalaya-baby-shampoo",
+"pid": "itmbad1db239cc92",
+"cat": "kids",
+"h1": "Himalaya Baby Shampoo",
+"price": 383,
+"link": "https://fktr.in/jzJurpp"
+},
+{
+"slug": "zebronics-juke-bar-9451-600-w-dolby-soundbar",
+"pid": "itm6f54dbc0e42c8",
+"cat": "audio",
+"h1": "Zebronics Juke Bar 9451 600 W Dolby Soundbar",
+"price": 8999,
+"link": "https://fktr.in/J6vT6nl"
+},
+{
+"slug": "hp-smart-tank-589-wifi-colour-printer",
+"pid": "itm42d7699c860a9",
+"cat": "tech",
+"h1": "HP Smart Tank 589 WiFi Colour Printer",
+"price": 12999,
+"link": "https://fktr.in/10ggHnu"
+},
+{
+"slug": "pigeon-special-5-l-induction-pressure-cooker",
+"pid": "itm7928612e45995",
+"cat": "kitchen",
+"h1": "Pigeon Special 5 L Induction Pressure Cooker",
+"price": 1179,
+"link": "https://fktr.in/K5rwogL"
+},
+{
+"slug": "maybelline-fit-me-matte-poreless-foundation-tube",
+"pid": "itm27d11a51b0f76",
+"cat": "beauty",
+"h1": "Maybelline Fit Me Matte Poreless Foundation Tube",
+"price": 150,
+"link": "https://fktr.in/vQhy8xx"
+},
+{
+"slug": "tata-1mg-bp05-blood-pressure-monitor",
+"pid": "itme5a6765c593cd",
+"cat": "tech",
+"h1": "Tata 1mg BP05 Blood Pressure Monitor",
+"price": 969,
+"link": "https://fktr.in/L52du2B"
+},
+{
+"slug": "mamaearth-onion-hair-serum",
+"pid": "itm3129394b0dbfa",
+"cat": "hair",
+"h1": "Mamaearth Onion Hair Serum",
+"price": 263,
+"link": "https://fktr.in/SeLmOEX"
+},
+{
+"slug": "usha-qh-4302-quartz-room-heater",
+"pid": "itm0b721e02313ce",
+"cat": "appliances",
+"h1": "Usha QH 4302 Quartz Room Heater",
+"price": 1249,
+"link": "https://fktr.in/eM67k7N"
+},
+{
+"slug": "milton-flip-lid-500-ml-thermosteel-bottle",
+"pid": "itmddc4e25d9cdaa",
+"cat": "kitchen",
+"h1": "Milton Flip Lid 500 ml Thermosteel Bottle",
+"price": 690,
+"link": "https://fktr.in/NFp0C22"
+},
+{
+"slug": "bella-vita-perfumed-soap-for-men-pack-of-3",
+"pid": "itmd25e33da5ce4d",
+"cat": "beauty",
+"h1": "Bella Vita Perfumed Soap for Men, Pack of 3",
+"price": 199,
+"link": "https://fktr.in/b83uf93"
+},
+{
+"slug": "dove-hair-fall-rescue-conditioner",
+"pid": "itme21d41ef15e9a",
+"cat": "hair",
+"h1": "Dove Hair Fall Rescue Conditioner",
+"price": 260,
+"link": "https://fktr.in/28NOwcG"
+},
+{
+"slug": "crucial-bx500-500-gb-ssd",
+"pid": "itm5e7cc53cc3352",
+"cat": "tech",
+"h1": "Crucial BX500 500 GB SSD",
+"price": 8819,
+"link": "https://fktr.in/r1EfchF"
+},
+{
+"slug": "denver-hamilton-deo-and-perfume-gift-set",
+"pid": "itm463a12ac46d90",
+"cat": "fragrance",
+"h1": "Denver Hamilton Deo and Perfume Gift Set",
+"price": 451,
+"link": "https://fktr.in/I29Xtlf"
+},
+{
+"slug": "motorola-pad-60-neo-tablet",
+"pid": "itm836bb9c384246",
+"cat": "tech",
+"h1": "Motorola Pad 60 Neo Tablet",
+"price": 20999,
+"link": "https://fktr.in/IOqr3MI"
+},
+{
+"slug": "hawkins-28-cm-non-stick-dosa-tawa",
+"pid": "itma18c8aabf2421",
+"cat": "kitchen",
+"h1": "Hawkins 28 cm Non Stick Dosa Tawa",
+"price": 1410,
+"link": "https://fktr.in/5gPH4ra"
+},
+{
+"slug": "pigeon-6-piece-knife-set-with-shears",
+"pid": "itm2257a0b94d38a",
+"cat": "kitchen",
+"h1": "Pigeon 6 Piece Knife Set with Shears",
+"price": 429,
+"link": "https://fktr.in/5ZD5mtO"
+},
+{
+"slug": "nivea-men-active-clean-charcoal-body-wash",
+"pid": "itmc24bdb3e12f62",
+"cat": "beauty",
+"h1": "Nivea Men Active Clean Charcoal Body Wash",
+"price": 498,
+"link": "https://fktr.in/pU3V4ZT"
+},
+{
+"slug": "garnier-naturals-keratin-hair-colour-caramel-brown",
+"pid": "itm2aab6a8fe5cf2",
+"cat": "hair",
+"h1": "Garnier Naturals Keratin Hair Colour, Caramel Brown",
+"price": 194,
+"link": "https://fktr.in/uXVIFsA"
+},
+{
+"slug": "himalaya-baby-cream",
+"pid": "itmdar4udcnnjcrg",
+"cat": "kids",
+"h1": "Himalaya Baby Cream",
+"price": 240,
+"link": "https://fktr.in/mlfvmV4"
+},
+{
+"slug": "pigeon-joy-multi-cooker-and-rice-cooker",
+"pid": "itm432113268d328",
+"cat": "kitchen",
+"h1": "Pigeon Joy Multi Cooker and Rice Cooker",
+"price": 1499,
+"link": "https://fktr.in/Cs706Lg"
+},
+{
+"slug": "maybelline-fit-me-compact-powder",
+"pid": "itmfda7f8c7db668",
+"cat": "beauty",
+"h1": "Maybelline Fit Me Compact Powder",
+"price": 349,
+"link": "https://fktr.in/oom9a1Q"
+},
+{
+"slug": "zebronics-32-inch-curved-full-hd-monitor",
+"pid": "itmd0bf3471b1e6f",
+"cat": "tech",
+"h1": "Zebronics 32 inch Curved Full HD Monitor",
+"price": 10499,
+"link": "https://fktr.in/D5U7w1o"
+},
+{
+"slug": "crompton-arno-neo-15-l-geyser-5-star",
+"pid": "itmf16d60d8adeaf",
+"cat": "appliances",
+"h1": "Crompton Arno Neo 15 L Geyser, 5 Star",
+"price": 5899,
+"link": "https://fktr.in/vZiiFge"
+},
+{
+"slug": "maybelline-hyper-glossy-liquid-liner",
+"pid": "itm836ac0445e4d8",
+"cat": "beauty",
+"h1": "Maybelline Hyper Glossy Liquid Liner",
+"price": 268,
+"link": "https://fktr.in/iqNqz7B"
+},
+{
+"slug": "zebronics-3-m-hdmi-cable",
+"pid": "itm950486a0e1d51",
+"cat": "tech",
+"h1": "Zebronics 3 m HDMI Cable",
+"price": 179,
+"link": "https://fktr.in/58u2M2z"
+},
+{
+"slug": "biotique-coconut-instant-glow-cream",
+"pid": "itm7c39ddd2e905f",
+"cat": "beauty",
+"h1": "Biotique Coconut Instant Glow Cream",
+"price": 244,
+"link": "https://fktr.in/7m7iEQx"
+},
+{
+"slug": "philips-avent-natural-response-baby-bottle",
+"pid": "itm5fe8bc5d16101",
+"cat": "kids",
+"h1": "Philips Avent Natural Response Baby Bottle",
+"price": 699,
+"link": "https://fktr.in/i6EWFzu"
+},
+{
+"slug": "bella-vita-luxury-perfume-gift-set-4-x-20-ml",
+"pid": "itmf17ee6c66d0f7",
+"cat": "fragrance",
+"h1": "Bella Vita Luxury Perfume Gift Set, 4 x 20 ml",
+"price": 475,
+"link": "https://fktr.in/wQJ08am"
+},
+{
+"slug": "skybags-bloom-30-l-backpack",
+"pid": "itm421276eb306d5",
+"cat": "bags",
+"h1": "Skybags Bloom 30 L Backpack",
+"price": 890,
+"link": "https://fktr.in/HIpVv2o"
+},
+{
+"slug": "pigeon-handy-mini-chopper",
+"pid": "itmemrhkahtezckx",
+"cat": "kitchen",
+"h1": "Pigeon Handy Mini Chopper",
+"price": 189,
+"link": "https://fktr.in/zQIiiih"
+},
+{
+"slug": "vaseline-cocoa-glow-body-lotion-600-ml",
+"pid": "itme4d1745ce63ff",
+"cat": "beauty",
+"h1": "Vaseline Cocoa Glow Body Lotion 600 ml",
+"price": 370,
+"link": "https://fktr.in/TdSnxPd"
+},
+{
+"slug": "havells-hs4201-hair-straightener-brush",
+"pid": "itm2a1af8b56dd44",
+"cat": "hair",
+"h1": "Havells HS4201 Hair Straightener Brush",
+"price": 2090,
+"link": "https://fktr.in/Kmfmnui"
+},
+{
+"slug": "mamaearth-vitamin-c-daily-glow-face-cream",
+"pid": "itmf9becf21f4b46",
+"cat": "beauty",
+"h1": "Mamaearth Vitamin C Daily Glow Face Cream",
+"price": 365,
+"link": "https://fktr.in/Pq0sv5c"
+},
+{
+"slug": "agaro-marvel-9-l-oven-toaster-grill",
+"pid": "itm11a5dd659f030",
+"cat": "kitchen",
+"h1": "AGARO Marvel 9 L Oven Toaster Grill",
+"price": 3899,
+"link": "https://fktr.in/7Ky7m30"
+},
+{
+"slug": "sugar-pop-nourishing-lip-balm",
+"pid": "itmd41df5c87e411",
+"cat": "beauty",
+"h1": "Sugar Pop Nourishing Lip Balm",
+"price": 97,
+"link": "https://fktr.in/1N4Fsnk"
+},
+{
+"slug": "realme-buds-t200x-anc-earbuds",
+"pid": "itm7f681ace2dfaf",
+"cat": "audio",
+"h1": "realme Buds T200x ANC Earbuds",
+"price": 1499,
+"link": "https://fktr.in/SGnC3Qk"
+},
+{
+"slug": "boldfit-typhoon-shaker-bottle-700-ml",
+"pid": "itmeec78956db61c",
+"cat": "sports",
+"h1": "Boldfit Typhoon Shaker Bottle 700 ml",
+"price": 180,
+"link": "https://fktr.in/wj2f2LA"
+},
+{
+"slug": "tata-1mg-digital-weighing-scale",
+"pid": "itme202144cda52b",
+"cat": "appliances",
+"h1": "Tata 1mg Digital Weighing Scale",
+"price": 599,
+"link": "https://fktr.in/e9Pym6J"
+},
+{
+"slug": "metronaut-uv-protection-sunglasses",
+"pid": "itm78e3046c56689",
+"cat": "fashion",
+"h1": "Metronaut UV Protection Sunglasses",
+"price": 268,
+"link": "https://fktr.in/3qp48gb"
+},
+{
+"slug": "engage-celebrations-perfume-gift-set",
+"pid": "itm308a4b6d7c244",
+"cat": "home",
+"h1": "Engage Celebrations Perfume Gift Set",
+"price": 209,
+"link": "https://fktr.in/tf0hpT4"
+},
+{
+"slug": "hrx-low-cut-socks-for-men",
+"pid": "itm619a739ffdc10",
+"cat": "fashion",
+"h1": "HRX Low Cut Socks for Men",
+"price": 216,
+"link": "https://fktr.in/q1a7H2R"
+},
+{
+"slug": "mivi-fort-h550-5-1-soundbar",
+"pid": "itmffe1bb8a42f0f",
+"cat": "audio",
+"h1": "Mivi Fort H550 5.1 Soundbar",
+"price": 6499,
+"link": "https://fktr.in/jHefktU"
+},
+{
+"slug": "portronics-80-w-turbo-car-charger",
+"pid": "itmb1c28809c4f7e",
+"cat": "tech",
+"h1": "Portronics 80 W Turbo Car Charger",
+"price": 458,
+"link": "https://fktr.in/1ZIfvIC"
+},
+{
+"slug": "pebble-qore-fitness-band",
+"pid": "itmd95b5a4c09a61",
+"cat": "wearables",
+"h1": "Pebble Qore Fitness Band",
+"price": 2699,
+"link": "https://fktr.in/wl93DRB"
+},
+{
+"slug": "portronics-power-plate-10-extension-board",
+"pid": "itma3c01e35cef31",
+"cat": "tech",
+"h1": "Portronics Power Plate 10 Extension Board",
+"price": 299,
+"link": "https://fktr.in/ZmoOU5B"
+},
+{
+"slug": "bata-derby-formal-shoes-for-men",
+"pid": "itm3b2932e178316",
+"cat": "footwear",
+"h1": "Bata Derby Formal Shoes for Men",
+"price": 747,
+"link": "https://fktr.in/uPhEOEy"
+},
+{
+"slug": "cosco-cricket-tennis-balls-pack-of-3",
+"pid": "itmbec5bfd532fa1",
+"cat": "sports",
+"h1": "Cosco Cricket Tennis Balls, Pack of 3",
+"price": 253,
+"link": "https://fktr.in/R0U1Lbk"
+},
+{
+"slug": "tata-1mg-flexible-tip-digital-thermometer",
+"pid": "itm9fd74d2fc539e",
+"cat": "appliances",
+"h1": "Tata 1mg Flexible Tip Digital Thermometer",
+"price": 215,
+"link": "https://fktr.in/IeqQL0s"
+},
+{
+"slug": "usha-1500-w-immersion-heater-rod",
+"pid": "itmf979a6fuugtpt",
+"cat": "appliances",
+"h1": "Usha 1500 W Immersion Heater Rod",
+"price": 699,
+"link": "https://fktr.in/UHMDuM7"
+},
+{
+"slug": "hawkins-pro-26-cm-deep-fry-pan-with-lid",
+"pid": "itmde66bdd6ee811",
+"cat": "kitchen",
+"h1": "Hawkins Pro 26 cm Deep Fry Pan with Lid",
+"price": 2640,
+"link": "https://fktr.in/dE4HA91"
+},
+{
+"slug": "jack-and-jones-sports-cap",
+"pid": "itm37b7a167aadf1",
+"cat": "fashion",
+"h1": "Jack and Jones Sports Cap",
+"price": 519,
+"link": "https://fktr.in/dqMzGh6"
+},
+{
+"slug": "ambrane-minivac-2-in-1-car-vacuum-cleaner",
+"pid": "itmdf34b421f15a4",
+"cat": "appliances",
+"h1": "Ambrane Minivac 2 in 1 Car Vacuum Cleaner",
+"price": 2376,
+"link": "https://fktr.in/EPqXOl3"
+},
+{
+"slug": "zebronics-sp116-16-a-smart-plug",
+"pid": "itmaf24790d3d887",
+"cat": "tech",
+"h1": "Zebronics SP116 16 A Smart Plug",
+"price": 899,
+"link": "https://fktr.in/7iwPPTl"
+},
+{
+"slug": "beardo-godfather-lite-beard-oil",
+"pid": "itmf0e956a782a01",
+"cat": "grooming",
+"h1": "Beardo Godfather Lite Beard Oil",
+"price": 345,
+"link": "https://fktr.in/LheQ5bt"
+},
+{
+"slug": "highlander-full-sleeve-jacket-for-men",
+"pid": "itma3f356e0f7f49",
+"cat": "fashion",
+"h1": "Highlander Full Sleeve Jacket for Men",
+"price": 616,
+"link": "https://fktr.in/3bYf0sp"
+},
+{
+"slug": "lifelong-llm171-body-massager",
+"pid": "itmf7uzcnypguzgv",
+"cat": "appliances",
+"h1": "Lifelong LLM171 Body Massager",
+"price": 999,
+"link": "https://fktr.in/AIff9sa"
+},
+{
+"slug": "bata-loafers-for-men",
+"pid": "itm5098a6327ebed",
+"cat": "footwear",
+"h1": "Bata Loafers for Men",
+"price": 489,
+"link": "https://fktr.in/4kcdZSM"
+},
+{
+"slug": "kenstar-aeroglide-bldc-auto-clean-chimney",
+"pid": "itmde7a788b96f1c",
+"cat": "kitchen",
+"h1": "Kenstar Aeroglide BLDC Auto Clean Chimney",
+"price": 7290,
+"link": "https://fktr.in/wHeEgfg"
+},
+{
+"slug": "mamaearth-gentle-baby-shampoo",
+"pid": "itmf3xfwrznmsrcx",
+"cat": "kids",
+"h1": "Mamaearth Gentle Baby Shampoo",
+"price": 149,
+"link": "https://fktr.in/xkozkf1"
+},
+{
+"slug": "zebronics-juke-bar-801-400-w-soundbar",
+"pid": "itm514be15e566d0",
+"cat": "audio",
+"h1": "Zebronics Juke Bar 801 400 W Soundbar",
+"price": 5999,
+"link": "https://fktr.in/wngcFEe"
+},
+{
+"slug": "hp-smart-tank-529-colour-printer",
+"pid": "itmd0ee2f16df471",
+"cat": "tech",
+"h1": "HP Smart Tank 529 Colour Printer",
+"price": 10999,
+"link": "https://fktr.in/b3hSjZo"
+},
+{
+"slug": "maybelline-fit-me-liquid-foundation-with-pump",
+"pid": "itmfcbbffbb9b21c",
+"cat": "beauty",
+"h1": "Maybelline Fit Me Liquid Foundation with Pump",
+"price": 299,
+"link": "https://fktr.in/640uGmL"
+},
+{
+"slug": "bajaj-almond-drops-hair-serum",
+"pid": "itmcdcfc06531aa0",
+"cat": "hair",
+"h1": "Bajaj Almond Drops Hair Serum",
+"price": 144,
+"link": "https://fktr.in/xlYikHi"
+},
+{
+"slug": "milton-aura-1000-ml-thermosteel-bottle",
+"pid": "itm98c01c61f6c9a",
+"cat": "kitchen",
+"h1": "Milton Aura 1000 ml Thermosteel Bottle",
+"price": 872,
+"link": "https://fktr.in/2JYSHjL"
+},
+{
+"slug": "bajaj-almond-drops-soap-pack-of-8",
+"pid": "itm21de000031094",
+"cat": "beauty",
+"h1": "Bajaj Almond Drops Soap, Pack of 8",
+"price": 262,
+"link": "https://fktr.in/5Lqfa9j"
+},
+{
+"slug": "mamaearth-onion-conditioner",
+"pid": "itm7ddfcfbac1386",
+"cat": "hair",
+"h1": "Mamaearth Onion Conditioner",
+"price": 293,
+"link": "https://fktr.in/WjeZdlY"
+},
+{
+"slug": "samsung-t7-shield-1-tb-portable-ssd",
+"pid": "itm9336d1bdf50e5",
+"cat": "tech",
+"h1": "Samsung T7 Shield 1 TB Portable SSD",
+"price": 19499,
+"link": "https://fktr.in/SejfObO"
+},
+{
+"slug": "dettol-icy-cool-body-wash",
+"pid": "itm5e7ddad06b3dc",
+"cat": "beauty",
+"h1": "Dettol Icy Cool Body Wash",
+"price": 100,
+"link": "https://fktr.in/p70tGgQ"
+},
+{
+"slug": "garnier-color-naturals-hair-colour-natural-black",
+"pid": "itmaf36cb94570bb",
+"cat": "hair",
+"h1": "Garnier Color Naturals Hair Colour, Natural Black",
+"price": 320,
+"link": "https://fktr.in/lzBu1lm"
+},
+{
+"slug": "mamaearth-milky-soft-baby-face-cream",
+"pid": "itm389e7989ad112",
+"cat": "kids",
+"h1": "Mamaearth Milky Soft Baby Face Cream",
+"price": 155,
+"link": "https://fktr.in/35rxhcW"
+},
+{
+"slug": "pigeon-1-8-l-electric-rice-cooker",
+"pid": "itmedc88f8a1407e",
+"cat": "kitchen",
+"h1": "Pigeon 1.8 L Electric Rice Cooker",
+"price": 2199,
+"link": "https://fktr.in/AXanbj2"
+},
+{
+"slug": "just-herbs-oil-control-compact-powder",
+"pid": "itm427922e81fe9f",
+"cat": "beauty",
+"h1": "Just Herbs Oil Control Compact Powder",
+"price": 149,
+"link": "https://fktr.in/vzQDY0E"
+},
+{
+"slug": "samsung-s3-22-inch-full-hd-monitor",
+"pid": "itma64ec02100b09",
+"cat": "tech",
+"h1": "Samsung S3 22 inch Full HD Monitor",
+"price": 6499,
+"link": "https://fktr.in/EM3wcrn"
+},
+{
+"slug": "orient-aquapro-3-l-instant-geyser",
+"pid": "itm85ba52fb652b9",
+"cat": "appliances",
+"h1": "Orient Aquapro 3 L Instant Geyser",
+"price": 2199,
+"link": "https://fktr.in/e79W7Dd"
+},
+{
+"slug": "sugar-pop-matte-eyeliner-pencil",
+"pid": "itma0f46a13485a0",
+"cat": "beauty",
+"h1": "Sugar Pop Matte Eyeliner Pencil",
+"price": 137,
+"link": "https://fktr.in/N7l98h5"
+},
+{
+"slug": "zebronics-5-m-hdmi-cable",
+"pid": "itmc1999db85f326",
+"cat": "tech",
+"h1": "Zebronics 5 m HDMI Cable",
+"price": 249,
+"link": "https://fktr.in/ej2Wgni"
+},
+{
+"slug": "biotique-wheat-germ-night-cream",
+"pid": "itm312c34db5df22",
+"cat": "beauty",
+"h1": "Biotique Wheat Germ Night Cream",
+"price": 177,
+"link": "https://fktr.in/lny1yRE"
+},
+{
+"slug": "philips-avent-grow-baby-bottle-250-ml",
+"pid": "itm02603baee5bbf",
+"cat": "kids",
+"h1": "Philips Avent Grow Baby Bottle 250 ml",
+"price": 375,
+"link": "https://fktr.in/GEBy3Dg"
+},
+{
+"slug": "puma-plus-18-l-backpack",
+"pid": "itmf88df95fbdb32",
+"cat": "bags",
+"h1": "Puma Plus 18 L Backpack",
+"price": 756,
+"link": "https://fktr.in/4240TW2"
+},
+{
+"slug": "butterfly-premium-0-9-l-vegetable-chopper",
+"pid": "itmd6890422d84b7",
+"cat": "kitchen",
+"h1": "Butterfly Premium 0.9 L Vegetable Chopper",
+"price": 398,
+"link": "https://fktr.in/fceL398"
+},
+{
+"slug": "minimalist-10-vitamin-b5-moisturizer",
+"pid": "itma5f4b0a22ac0e",
+"cat": "beauty",
+"h1": "Minimalist 10% Vitamin B5 Moisturizer",
+"price": 331,
+"link": "https://fktr.in/NoKl77y"
+},
+{
+"slug": "nivea-men-creme",
+"pid": "itmc6370bec50580",
+"cat": "beauty",
+"h1": "Nivea Men Creme",
+"price": 152,
+"link": "https://fktr.in/um8nIIn"
+},
+{
+"slug": "pigeon-20-l-oven-toaster-grill",
+"pid": "itm1f51d0e5b83c3",
+"cat": "kitchen",
+"h1": "Pigeon 20 L Oven Toaster Grill",
+"price": 2999,
+"link": "https://fktr.in/bjKHT5b"
+},
+{
+"slug": "boult-tenet-pro-anc-neckband",
+"pid": "itm3bef7364b8c83",
+"cat": "audio",
+"h1": "Boult Tenet Pro ANC Neckband",
+"price": 1499,
+"link": "https://fktr.in/5Df0LYd"
+},
+{
+"slug": "lifelong-glass-weighing-scale",
+"pid": "itm6a48ebdd4ad04",
+"cat": "appliances",
+"h1": "Lifelong Glass Weighing Scale",
+"price": 269,
+"link": "https://fktr.in/us1Es6K"
+},
+{
+"slug": "hrx-ankle-socks-for-men",
+"pid": "itm43c0f046eaf3d",
+"cat": "fashion",
+"h1": "HRX Ankle Socks for Men",
+"price": 161,
+"link": "https://fktr.in/7088lAE"
+},
+{
+"slug": "mivi-fort-h750-5-1-soundbar",
+"pid": "itm04060c0b96b2a",
+"cat": "audio",
+"h1": "Mivi Fort H750 5.1 Soundbar",
+"price": 7499,
+"link": "https://fktr.in/5tUuK3t"
+},
+{
+"slug": "havells-spikestar-4-socket-spike-guard",
+"pid": "itm0a9f8320d6897",
+"cat": "tech",
+"h1": "Havells Spikestar 4 Socket Spike Guard",
+"price": 461,
+"link": "https://fktr.in/lEuF1BE"
+},
+{
+"slug": "mamaearth-beetroot-daily-glow-face-cream",
+"pid": "itm6d2357b6b52f8",
+"cat": "beauty",
+"h1": "Mamaearth Beetroot Daily Glow Face Cream",
+"price": 219,
+"link": "https://fktr.in/2QD9a8t"
+},
+{
+"slug": "nivia-heavy-tennis-cricket-balls-pack-of-6",
+"pid": "itmdcc11a130681f",
+"cat": "sports",
+"h1": "Nivia Heavy Tennis Cricket Balls, Pack of 6",
+"price": 503,
+"link": "https://fktr.in/ngfwP6i"
+},
+{
+"slug": "orient-arc-plus-1500-w-immersion-rod",
+"pid": "itm1c3ad2524ad01",
+"cat": "appliances",
+"h1": "Orient Arc Plus 1500 W Immersion Rod",
+"price": 669,
+"link": "https://fktr.in/pa8ThYN"
+},
+{
+"slug": "johnson-s-baby-no-more-tears-shampoo",
+"pid": "itmfavgmczbhqaky",
+"cat": "kids",
+"h1": "Johnson's Baby No More Tears Shampoo",
+"price": 108,
+"link": "https://fktr.in/SMxUiv3"
+},
+{
+"slug": "mivi-fort-s80-soundbar",
+"pid": "itm022954382460a",
+"cat": "audio",
+"h1": "Mivi Fort S80 Soundbar",
+"price": 2299,
+"link": "https://fktr.in/dy37Ym7"
+},
+{
+"slug": "canon-pixma-g3770-wifi-ink-tank-printer",
+"pid": "itm7613c7d4dfadb",
+"cat": "tech",
+"h1": "Canon Pixma G3770 WiFi Ink Tank Printer",
+"price": 14499,
+"link": "https://fktr.in/eqiuwE1"
+},
+{
+"slug": "mamaearth-rosemary-scalp-serum",
+"pid": "itme291522c4f6fd",
+"cat": "hair",
+"h1": "Mamaearth Rosemary Scalp Serum",
+"price": 354,
+"link": "https://fktr.in/eTvgtIJ"
+},
+{
+"slug": "orient-fh20wp-fan-room-heater",
+"pid": "itm743ebe447ef51",
+"cat": "appliances",
+"h1": "Orient FH20WP Fan Room Heater",
+"price": 1499,
+"link": "https://fktr.in/ing3SFc"
+},
+{
+"slug": "dove-sandalwood-serum-bar",
+"pid": "itm2cdd6d1b7da75",
+"cat": "beauty",
+"h1": "Dove Sandalwood Serum Bar",
+"price": 227,
+"link": "https://fktr.in/QIh7pFw"
+},
+{
+"slug": "just-herbs-trio-perfume-set-3-x-50-ml",
+"pid": "itm1ea607c0606a7",
+"cat": "fragrance",
+"h1": "Just Herbs Trio Perfume Set, 3 x 50 ml",
+"price": 583,
+"link": "https://fktr.in/2cxfZ8j"
+},
+{
+"slug": "apple-ipad-a16-128-gb-2025",
+"pid": "itm12757f0d5f932",
+"cat": "tech",
+"h1": "Apple iPad A16, 128 GB, 2025",
+"price": 46999,
+"link": "https://fktr.in/03ardcP"
+},
+{
+"slug": "prestige-omega-marble-25-cm-tawa",
+"pid": "itmb917f5e9e1d84",
+"cat": "kitchen",
+"h1": "Prestige Omega Marble 25 cm Tawa",
+"price": 689,
+"link": "https://fktr.in/1z7x2yL"
+},
+{
+"slug": "biotique-apricot-body-wash",
+"pid": "itm63ec3e04cd247",
+"cat": "beauty",
+"h1": "Biotique Apricot Body Wash",
+"price": 209,
+"link": "https://fktr.in/oXJW9ds"
+},
+{
+"slug": "mamaearth-daily-moisturizing-baby-lotion",
+"pid": "itmern848bpgnzzt",
+"cat": "kids",
+"h1": "Mamaearth Daily Moisturizing Baby Lotion",
+"price": 151,
+"link": "https://fktr.in/FH66XP4"
+},
+{
+"slug": "bella-vita-matte-compact-powder",
+"pid": "itm6525fa2e69230",
+"cat": "beauty",
+"h1": "Bella Vita Matte Compact Powder",
+"price": 199,
+"link": "https://fktr.in/676dwMA"
+},
+{
+"slug": "orient-calidus-pro-5-5-l-instant-geyser",
+"pid": "itmac5c2e937f519",
+"cat": "appliances",
+"h1": "Orient Calidus Pro 5.5 L Instant Geyser",
+"price": 3199,
+"link": "https://fktr.in/gHrLwnO"
+},
+{
+"slug": "bella-vita-intense-drama-waterproof-eyeliner",
+"pid": "itm66cbadda63214",
+"cat": "beauty",
+"h1": "Bella Vita Intense Drama Waterproof Eyeliner",
+"price": 130,
+"link": "https://fktr.in/tKjDjM5"
+},
+{
+"slug": "himalaya-revitalizing-night-cream",
+"pid": "itmd9eczhgfugssw",
+"cat": "beauty",
+"h1": "Himalaya Revitalizing Night Cream",
+"price": 255,
+"link": "https://fktr.in/UB64HFt"
+},
+{
+"slug": "fogg-premium-perfume-gift-set",
+"pid": "itme758f78666ef5",
+"cat": "fragrance",
+"h1": "Fogg Premium Perfume Gift Set",
+"price": 348,
+"link": "https://fktr.in/u0ia9Z3"
+},
+{
+"slug": "zouk-aravalli-12-l-daypack",
+"pid": "itm2d9050111402d",
+"cat": "bags",
+"h1": "Zouk Aravalli 12 L Daypack",
+"price": 1249,
+"link": "https://fktr.in/k0MJC2M"
+},
+{
+"slug": "beardo-ultraglow-face-cream-for-men",
+"pid": "itm7f2accfd281e4",
+"cat": "beauty",
+"h1": "Beardo Ultraglow Face Cream for Men",
+"price": 145,
+"link": "https://fktr.in/2N8rX0D"
+},
+{
+"slug": "agaro-marvel-48-l-oven-toaster-grill",
+"pid": "itm5dcf762b4e18f",
+"cat": "kitchen",
+"h1": "AGARO Marvel 48 L Oven Toaster Grill",
+"price": 6999,
+"link": "https://fktr.in/xQ5JaWr"
+},
+{
+"slug": "motorola-amphisoundx-200-w-soundbar",
+"pid": "itme99fe4fffa928",
+"cat": "audio",
+"h1": "Motorola AmphisoundX 200 W Soundbar",
+"price": 5499,
+"link": "https://fktr.in/woeG67i"
+},
+{
+"slug": "noise-rep-fitness-tracker",
+"pid": "itm2de94002d798e",
+"cat": "wearables",
+"h1": "Noise Rep Fitness Tracker",
+"price": 9499,
+"link": "https://fktr.in/90ixp06"
+},
+{
+"slug": "bata-lace-up-shoes-for-men",
+"pid": "itma137ec424c0fb",
+"cat": "footwear",
+"h1": "Bata Lace Up Shoes for Men",
+"price": 940,
+"link": "https://fktr.in/DV2U7zd"
+},
+{
+"slug": "nivea-soft-daily-uv-spf-15-cream",
+"pid": "itm97e2ffcfc93d6",
+"cat": "beauty",
+"h1": "Nivea Soft Daily UV SPF 15 Cream",
+"price": 263,
+"link": "https://fktr.in/NPPRSRi"
+},
+{
+"slug": "tp-link-tapo-p110-smart-plug",
+"pid": "itm6c828b14ca8d0",
+"cat": "tech",
+"h1": "TP-Link Tapo P110 Smart Plug",
+"price": 972,
+"link": "https://fktr.in/J7xnm0c"
+},
+{
+"slug": "brother-hl-l2321d-laser-printer",
+"pid": "itmd7f233b006e31",
+"cat": "tech",
+"h1": "Brother HL L2321D Laser Printer",
+"price": 10999,
+"link": "https://fktr.in/54hn435"
+},
+{
+"slug": "maybelline-super-stay-lumi-matte-foundation",
+"pid": "itmd15083d2317b2",
+"cat": "beauty",
+"h1": "Maybelline Super Stay Lumi Matte Foundation",
+"price": 364,
+"link": "https://fktr.in/wW6hFwI"
+},
+{
+"slug": "orpat-oeh-1220-2000-w-fan-heater",
+"pid": "itmfb3gs9jysmuuf",
+"cat": "appliances",
+"h1": "Orpat OEH 1220 2000 W Fan Heater",
+"price": 1726,
+"link": "https://fktr.in/8Cq09Va"
+},
+{
+"slug": "pigeon-aqua-1000-ml-steel-flask",
+"pid": "itm414f0df3ea6d1",
+"cat": "kitchen",
+"h1": "Pigeon Aqua 1000 ml Steel Flask",
+"price": 597,
+"link": "https://fktr.in/qowwjCc"
+},
+{
+"slug": "wild-stone-soap-combo-for-men",
+"pid": "itmc72ab28bd390c",
+"cat": "beauty",
+"h1": "Wild Stone Soap Combo for Men",
+"price": 248,
+"link": "https://fktr.in/y2XTu32"
+},
+{
+"slug": "seagate-one-touch-1-tb-portable-ssd",
+"pid": "itmff2516fa9d5f7",
+"cat": "tech",
+"h1": "Seagate One Touch 1 TB Portable SSD",
+"price": 13999,
+"link": "https://fktr.in/pN1VpQh"
+},
+{
+"slug": "beardo-perfume-set-3-x-50-ml",
+"pid": "itm3460969506ee5",
+"cat": "fragrance",
+"h1": "Beardo Perfume Set, 3 x 50 ml",
+"price": 647,
+"link": "https://fktr.in/AdVvXVT"
+},
+{
+"slug": "motorola-pad-60-pro-tablet",
+"pid": "itm32831ab5b9ce5",
+"cat": "tech",
+"h1": "Motorola Pad 60 Pro Tablet",
+"price": 29999,
+"link": "https://fktr.in/Ega7ndq"
+},
+{
+"slug": "mamaearth-rice-water-body-wash",
+"pid": "itm2bd961fb54f95",
+"cat": "beauty",
+"h1": "Mamaearth Rice Water Body Wash",
+"price": 224,
+"link": "https://fktr.in/ed1vm8u"
+},
+{
+"slug": "biotique-herbcolor-natural-brown-hair-colour",
+"pid": "itmb4503fd0db201",
+"cat": "hair",
+"h1": "Biotique Herbcolor Natural Brown Hair Colour",
+"price": 186,
+"link": "https://fktr.in/CkCBmSp"
+},
+{
+"slug": "himalaya-gentle-baby-lotion",
+"pid": "itm9c619ef9277ff",
+"cat": "kids",
+"h1": "Himalaya Gentle Baby Lotion",
+"price": 250,
+"link": "https://fktr.in/EAQ5K3t"
+},
+{
+"slug": "prestige-prwo-1-8-l-rice-cooker",
+"pid": "itmd2pysqkwrfnhh",
+"cat": "kitchen",
+"h1": "Prestige PRWO 1.8 L Rice Cooker",
+"price": 2999,
+"link": "https://fktr.in/sQw3xPC"
+},
+{
+"slug": "zebronics-pure-pixel-24-inch-monitor",
+"pid": "itmf7d05ad8c20a5",
+"cat": "tech",
+"h1": "Zebronics Pure Pixel 24 inch Monitor",
+"price": 5934,
+"link": "https://fktr.in/wo1JM2s"
+},
+{
+"slug": "havells-instanio-10-l-geyser",
+"pid": "itm066d03dbcf8e6",
+"cat": "appliances",
+"h1": "Havells Instanio 10 L Geyser",
+"price": 6900,
+"link": "https://fktr.in/eTUwema"
+},
+{
+"slug": "maybelline-tattoo-liquid-pen-liner",
+"pid": "itm51af0ea7145bc",
+"cat": "beauty",
+"h1": "Maybelline Tattoo Liquid Pen Liner",
+"price": 289,
+"link": "https://fktr.in/87KzdU9"
+},
+{
+"slug": "cetaphil-bright-healthy-radiance-night-cream",
+"pid": "itmd47573d5d29fe",
+"cat": "beauty",
+"h1": "Cetaphil Bright Healthy Radiance Night Cream",
+"price": 1084,
+"link": "https://fktr.in/tCX9pB2"
+},
+{
+"slug": "beardo-spf-30-ultraglow-cream-for-men",
+"pid": "itm3afce1069290f",
+"cat": "beauty",
+"h1": "Beardo SPF 30 Ultraglow Cream for Men",
+"price": 294,
+"link": "https://fktr.in/GK4Eygu"
+},
+{
+"slug": "mamaearth-lip-balm-pack-of-2",
+"pid": "itm6eb0dc323a706",
+"cat": "beauty",
+"h1": "Mamaearth Lip Balm, Pack of 2",
+"price": 219,
+"link": "https://fktr.in/uQZ5Ofc"
+},
+{
+"slug": "motorola-amphisoundx-vibe-600-w-dolby-atmos-soundbar",
+"pid": "itmb4611ed1af064",
+"cat": "audio",
+"h1": "Motorola AmphisoundX Vibe 600 W Dolby Atmos Soundbar",
+"price": 10999,
+"link": "https://fktr.in/vU845a2"
+},
+{
+"slug": "chicco-no-tears-baby-shampoo",
+"pid": "itm92a8c562a7cd2",
+"cat": "kids",
+"h1": "Chicco No Tears Baby Shampoo",
+"price": 233,
+"link": "https://fktr.in/DOAzdQH"
+},
+{
+"slug": "crompton-comfyplus-quartz-heater",
+"pid": "itm413b4e1e02a1a",
+"cat": "appliances",
+"h1": "Crompton Comfyplus Quartz Heater",
+"price": 1367,
+"link": "https://fktr.in/ykeAaUp"
+},
+{
+"slug": "milton-eiffel-1000-insulated-flask",
+"pid": "itm3d2a6b4a04f60",
+"cat": "kitchen",
+"h1": "Milton Eiffel 1000 Insulated Flask",
+"price": 338,
+"link": "https://fktr.in/oxRZFjp"
+},
+{
+"slug": "dettol-original-soap-combo",
+"pid": "itmd6631052fd5f5",
+"cat": "beauty",
+"h1": "Dettol Original Soap Combo",
+"price": 235,
+"link": "https://fktr.in/YLzclo5"
+},
+{
+"slug": "wow-moroccan-argan-oil-conditioner",
+"pid": "itm86e9e601de767",
+"cat": "hair",
+"h1": "WOW Moroccan Argan Oil Conditioner",
+"price": 127,
+"link": "https://fktr.in/iIulEme"
+},
+{
+"slug": "zebronics-128-gb-sata-ssd",
+"pid": "itmed5b3d74574dc",
+"cat": "tech",
+"h1": "Zebronics 128 GB SATA SSD",
+"price": 2790,
+"link": "https://fktr.in/qd1r3j3"
+},
+{
+"slug": "wild-stone-ultra-sensual-and-edge-perfume-gift-set",
+"pid": "itm2195b9fecfa6b",
+"cat": "fragrance",
+"h1": "Wild Stone Ultra Sensual and Edge Perfume Gift Set",
+"price": 179,
+"link": "https://fktr.in/VWXOQEy"
+},
+{
+"slug": "redmi-pad-2-tablet-128-gb",
+"pid": "itmd589f547e523f",
+"cat": "tech",
+"h1": "Redmi Pad 2 Tablet, 128 GB",
+"price": 19999,
+"link": "https://fktr.in/j6fTlUc"
+},
+{
+"slug": "bella-vita-white-oud-and-ceo-shower-gel-combo",
+"pid": "itm7316f5aea2098",
+"cat": "beauty",
+"h1": "Bella Vita White Oud and CEO Shower Gel Combo",
+"price": 500,
+"link": "https://fktr.in/wrIiqUt"
+},
+{
+"slug": "sebamed-baby-body-lotion",
+"pid": "itme2b584f98e212",
+"cat": "kids",
+"h1": "Sebamed Baby Body Lotion",
+"price": 560,
+"link": "https://fktr.in/7s1KmFd"
+},
+{
+"slug": "orient-cronos-pro-15-l-geyser-5-star",
+"pid": "itmaeed5656f48ca",
+"cat": "appliances",
+"h1": "Orient Cronos Pro 15 L Geyser, 5 Star",
+"price": 5199,
+"link": "https://fktr.in/g8Y3a7R"
+},
+{
+"slug": "minimalist-2-retinoid-night-cream",
+"pid": "itm63c78a6cea8c9",
+"cat": "beauty",
+"h1": "Minimalist 2% Retinoid Night Cream",
+"price": 664,
+"link": "https://fktr.in/saGKzVi"
+},
+{
+"slug": "oscar-forever-scents-for-her-pack-of-11",
+"pid": "itmf37e85976165d",
+"cat": "fragrance",
+"h1": "Oscar Forever Scents for Her, Pack of 11",
+"price": 299,
+"link": "https://fktr.in/OhVytBJ"
+},
+{
+"slug": "dove-men-care-oil-control-moisturiser",
+"pid": "itm909fe78c9b30e",
+"cat": "beauty",
+"h1": "Dove Men Care Oil Control Moisturiser",
+"price": 125,
+"link": "https://fktr.in/YT8f35h"
+},
+{
+"slug": "beardo-lip-lightener-for-men",
+"pid": "itma544aea1c0e8a",
+"cat": "beauty",
+"h1": "Beardo Lip Lightener for Men",
+"price": 291,
+"link": "https://fktr.in/tJp39GC"
+},
+{
+"slug": "cetaphil-baby-gentle-wash-and-shampoo",
+"pid": "itm15aa7f964bd58",
+"cat": "kids",
+"h1": "Cetaphil Baby Gentle Wash and Shampoo",
+"price": 649,
+"link": "https://fktr.in/SFGb98d"
+},
+{
+"slug": "zebronics-juke-bar-3903-soundbar",
+"pid": "itm9cdd7928626aa",
+"cat": "audio",
+"h1": "Zebronics Juke Bar 3903 Soundbar",
+"price": 2899,
+"link": "https://fktr.in/mssMVgf"
+},
+{
+"slug": "crompton-insta-comfy-800-w-room-heater",
+"pid": "itm2a051ee1c46dd",
+"cat": "appliances",
+"h1": "Crompton Insta Comfy 800 W Room Heater",
+"price": 1408,
+"link": "https://fktr.in/CmGRcnd"
+},
+{
+"slug": "cello-lifestyle-500-ml-insulated-flask",
+"pid": "itmd7cfe73d848b1",
+"cat": "kitchen",
+"h1": "Cello Lifestyle 500 ml Insulated Flask",
+"price": 579,
+"link": "https://fktr.in/spDFtXm"
+},
+{
+"slug": "cetaphil-baby-daily-lotion",
+"pid": "itmfdpf2grgyeegh",
+"cat": "kids",
+"h1": "Cetaphil Baby Daily Lotion",
+"price": 750,
+"link": "https://fktr.in/SzpmUr0"
+},
+{
+"slug": "acer-ka222q-22-inch-full-hd-monitor",
+"pid": "itm94bf12f13b2aa",
+"cat": "tech",
+"h1": "Acer KA222Q 22 inch Full HD Monitor",
+"price": 5698,
+"link": "https://fktr.in/tgKD72m"
+},
+{
+"slug": "crompton-arno-neo-5-9-l-instant-geyser",
+"pid": "itm158fae781148e",
+"cat": "appliances",
+"h1": "Crompton Arno Neo 5.9 L Instant Geyser",
+"price": 3499,
+"link": "https://fktr.in/tmtaaMi"
+},
+{
+"slug": "sebamed-baby-shampoo",
+"pid": "itm31be739172c4d",
+"cat": "kids",
+"h1": "Sebamed Baby Shampoo",
+"price": 1187,
+"link": "https://fktr.in/f9ykwYm"
+},
+{
+"slug": "jbl-cinema-sb550-3-1-soundbar",
+"pid": "itm3f2b844ffe8b3",
+"cat": "audio",
+"h1": "JBL Cinema SB550 3.1 Soundbar",
+"price": 11499,
+"link": "https://fktr.in/XOQixA9"
+},
+{
+"slug": "milton-duo-dlx-1000-thermosteel-bottle",
+"pid": "itm1bea2c631f692",
+"cat": "kitchen",
+"h1": "Milton Duo DLX 1000 Thermosteel Bottle",
+"price": 1300,
+"link": "https://fktr.in/9sUwMsp"
+},
+{
+"slug": "lenovo-tab-plus-tablet",
+"pid": "itmac3b41158b70c",
+"cat": "tech",
+"h1": "Lenovo Tab Plus Tablet",
+"price": 20999,
+"link": "https://fktr.in/M7mTh6s"
+},
+{
+"slug": "yardley-london-luxury-gift-set-for-women",
+"pid": "itm2779f66c2c91a",
+"cat": "fragrance",
+"h1": "Yardley London Luxury Gift Set for Women",
+"price": 283,
+"link": "https://fktr.in/19o46MY"
+},
+{
+"slug": "vaseline-lip-care-rosy-lips",
+"pid": "itmba5db59f025dc",
+"cat": "beauty",
+"h1": "Vaseline Lip Care Rosy Lips",
+"price": 160,
+"link": "https://fktr.in/tqLXipf"
+},
+{
+"slug": "zebronics-juke-bar-9775-dolby-atmos-soundbar",
+"pid": "itmab828f8a8a380",
+"cat": "audio",
+"h1": "Zebronics Juke Bar 9775 Dolby Atmos Soundbar",
+"price": 17999,
+"link": "https://fktr.in/H02RPpn"
+},
+{
+"slug": "hawkins-classic-5-l-pressure-cooker",
+"pid": "itm6700ad439645e",
+"cat": "kitchen",
+"h1": "Hawkins Classic 5 L Pressure Cooker",
+"price": 2037,
+"link": "https://fktr.in/wt6s420"
+},
+{
+"slug": "oneplus-pad-lite-tablet",
+"pid": "itm43f3d68c17625",
+"cat": "tech",
+"h1": "OnePlus Pad Lite Tablet",
+"price": 21999,
+"link": "https://fktr.in/pvzcxVL"
+},
+{
+"slug": "johnson-s-baby-lotion",
+"pid": "itmf9rb3byqhwfcr",
+"cat": "kids",
+"h1": "Johnson's Baby Lotion",
+"price": 192,
+"link": "https://fktr.in/x2mUTEi"
+},
+{
+"slug": "lenovo-l24-24-inch-full-hd-monitor",
+"pid": "itm6e55ff15c372a",
+"cat": "tech",
+"h1": "Lenovo L24 24 inch Full HD Monitor",
+"price": 8799,
+"link": "https://fktr.in/grp49aZ"
+},
+{
+"slug": "carlton-london-euphoria-perfume-gift-set",
+"pid": "itmabe90e56b201f",
+"cat": "fragrance",
+"h1": "Carlton London Euphoria Perfume Gift Set",
+"price": 719,
+"link": "https://fktr.in/8xbrygJ"
+},
+{
+"slug": "lenovo-idea-tab-plus-with-pen",
+"pid": "itmbe623e343aa10",
+"cat": "tech",
+"h1": "Lenovo Idea Tab Plus with Pen",
+"price": 29999,
+"link": "https://fktr.in/x6GrLVo"
+},
+{
+"slug": "samsung-galaxy-tab-s10-fe-with-s-pen",
+"pid": "itm376fd07ae989d",
+"cat": "tech",
+"h1": "Samsung Galaxy Tab S10 FE with S Pen",
+"price": 45899,
+"link": "https://fktr.in/Sz3Wi7Z"
+},
+{
+"slug": "prestige-judge-ace-5-l-pressure-cooker",
+"pid": "itmd90e753658943",
+"cat": "kitchen",
+"h1": "Prestige Judge Ace 5 L Pressure Cooker",
+"price": 1349,
+"link": "https://fktr.in/vbJ42Qj"
+},
+{
+"slug": "cetaphil-baby-soothing-cream",
+"pid": "itmee088ce00eded",
+"cat": "kids",
+"h1": "Cetaphil Baby Soothing Cream",
+"price": 449,
+"link": "https://fktr.in/gneh2er"
 }
 ]
