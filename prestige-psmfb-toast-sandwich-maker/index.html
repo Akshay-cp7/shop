@@ -572,7 +572,7 @@
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
-    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vfm { display: block; max-width: 30rem; }
     .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
     .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
@@ -747,16 +747,6 @@
           <div class="lbl">Average value</div>
           <div class="vbars"><div class="vbar">Rating<div class="t"><div class="f" style="width:51%"></div></div></div><div class="vbar">Buyers<div class="t"><div class="f" style="width:65%"></div></div></div><div class="vbar">Price vs similar<div class="t"><div class="f" style="width:43%"></div></div></div><div class="vbar">Warranty<div class="t"><div class="f" style="width:50%"></div></div></div></div>
           <p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p>
-        </div>
-        <div class="scatter">
-          <h3>Price against rating</h3>
-          <p class="sub">8 products of the same type. Left = cheaper · higher = better rated · bigger = more buyers</p>
-          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 8 products of the same type. This product costs ₹1,344 and is rated 4.2.">
-            <line class="ax" x1="46" x2="544" y1="234.7" y2="234.7"/><text x="38" y="238.7" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="172.2" y2="172.2"/><text x="38" y="176.2" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="109.7" y2="109.7"/><text x="38" y="113.7" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="47.3" y2="47.3"/><text x="38" y="51.3" text-anchor="end">4.6★</text><text x="110.1" y="288" text-anchor="middle">₹460</text><text x="230.9" y="288" text-anchor="middle">₹770</text><text x="359.5" y="288" text-anchor="middle">₹1,100</text><text x="476.4" y="288" text-anchor="middle">₹1,400</text>
-            <a href="/kenstar-grill-sandwich-maker/" data-tip="Kenstar Grill Sandwich Maker · ₹799 · 4.2★"><circle class="peer" cx="242.2" cy="172.2" r="8.0"><title>Kenstar Grill Sandwich Maker, ₹799, 4.2★</title></circle></a><a href="/prestige-pgmfb-grill-sandwich-maker/" data-tip="Prestige PGMFB Grill Sandwich Maker · ₹1,470 · 4.3★"><circle class="peer" cx="503.7" cy="141.0" r="7.8"><title>Prestige PGMFB Grill Sandwich Maker, ₹1,470, 4.3★</title></circle></a><a href="/prestige-psmfb-designer-sandwich-toaster/" data-tip="Prestige PSMFB Designer Sandwich Toaster · ₹1,505 · 4.2★"><circle class="peer" cx="517.3" cy="172.2" r="6.9"><title>Prestige PSMFB Designer Sandwich Toaster, ₹1,505, 4.2★</title></circle></a><a href="/orient-chefspecial-grill-sandwich-maker/" data-tip="Orient Chefspecial Grill Sandwich Maker · ₹999 · 4.3★"><circle class="peer" cx="320.1" cy="141.0" r="6.6"><title>Orient Chefspecial Grill Sandwich Maker, ₹999, 4.3★</title></circle></a><a href="/havells-perfect-fill-plus-grill-sandwich-maker/" data-tip="Havells Perfect Fill Plus Grill Sandwich Maker · ₹1,495 · 4.3★"><circle class="peer" cx="513.4" cy="141.0" r="6.6"><title>Havells Perfect Fill Plus Grill Sandwich Maker, ₹1,495, 4.3★</title></circle></a><a href="/milton-pro-cook-sandwich-griller/" data-tip="Milton Pro Cook Sandwich Griller · ₹364 · 4.2★"><circle class="peer" cx="72.7" cy="172.2" r="5.9"><title>Milton Pro Cook Sandwich Griller, ₹364, 4.2★</title></circle></a><a href="/milton-royal-express-800-w-sandwich-maker/" data-tip="Milton Royal Express 800 W Sandwich Maker · ₹1,099 · 4.1★"><circle class="peer" cx="359.1" cy="203.5" r="5.8"><title>Milton Royal Express 800 W Sandwich Maker, ₹1,099, 4.1★</title></circle></a>
-            <circle class="me" cx="454.6" cy="172.2" r="9"/><text class="mel" x="442.6" y="160.2" text-anchor="end">This one</text>
-          </svg>
-          <p class="tip" aria-live="polite">Tap a dot to open it</p>
         </div>
       </div>
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>

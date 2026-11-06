@@ -572,7 +572,7 @@
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
-    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vfm { display: block; max-width: 30rem; }
     .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
     .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
@@ -734,16 +734,6 @@
           <div class="lbl">Average value</div>
           <div class="vbars"><div class="vbar">Rating<div class="t"><div class="f" style="width:48%"></div></div></div><div class="vbar">Buyers<div class="t"><div class="f" style="width:50%"></div></div></div><div class="vbar">Price vs similar<div class="t"><div class="f" style="width:4%"></div></div></div><div class="vbar">Warranty<div class="t"><div class="f" style="width:4%"></div></div></div></div>
           <p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p>
-        </div>
-        <div class="scatter">
-          <h3>Price against rating</h3>
-          <p class="sub">10 products of the same type. Left = cheaper · higher = better rated · bigger = more buyers</p>
-          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 10 products of the same type. This product costs ₹9,999 and is rated 4.4.">
-            <line class="ax" x1="46" x2="544" y1="234.7" y2="234.7"/><text x="38" y="238.7" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="172.2" y2="172.2"/><text x="38" y="176.2" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="109.7" y2="109.7"/><text x="38" y="113.7" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="47.3" y2="47.3"/><text x="38" y="51.3" text-anchor="end">4.6★</text><text x="108.7" y="288" text-anchor="middle">₹810</text><text x="229.2" y="288" text-anchor="middle">₹1,700</text><text x="355.7" y="288" text-anchor="middle">₹3,700</text><text x="481.1" y="288" text-anchor="middle">₹8,000</text>
-            <a href="/mivi-fort-h350-5-1-soundbar/" data-tip="Mivi Fort H350 5.1 Soundbar · ₹5,299 · 4.2★"><circle class="peer" cx="414.1" cy="172.2" r="7.4"><title>Mivi Fort H350 5.1 Soundbar, ₹5,299, 4.2★</title></circle></a><a href="/mivi-fort-h160-2-1-soundbar/" data-tip="Mivi Fort H160 2.1 Soundbar · ₹3,799 · 4.2★"><circle class="peer" cx="360.0" cy="172.2" r="7.3"><title>Mivi Fort H160 2.1 Soundbar, ₹3,799, 4.2★</title></circle></a><a href="/motorola-amphisoundx-vibe-220-w-2-1-soundbar/" data-tip="Motorola AmphisoundX Vibe 220 W 2.1 Soundbar · ₹4,799 · 4.2★"><circle class="peer" cx="398.0" cy="172.2" r="7.2"><title>Motorola AmphisoundX Vibe 220 W 2.1 Soundbar, ₹4,799, 4.2★</title></circle></a><a href="/motorola-amphisoundx-100-w-soundbar-with-hdmi-arc/" data-tip="Motorola AmphisoundX 100 W Soundbar with HDMI Arc · ₹2,999 · 4.2★"><circle class="peer" cx="321.5" cy="172.2" r="7.0"><title>Motorola AmphisoundX 100 W Soundbar with HDMI Arc, ₹2,999, 4.2★</title></circle></a><a href="/triggr-roar-12-bluetooth-speaker/" data-tip="TRIGGR Roar 12 Bluetooth Speaker · ₹729 · 4.2★"><circle class="peer" cx="91.6" cy="172.2" r="6.9"><title>TRIGGR Roar 12 Bluetooth Speaker, ₹729, 4.2★</title></circle></a><a href="/boat-aavante-bar-490-speaker/" data-tip="boAt Aavante Bar 490 Speaker · ₹1,103 · 4.0★"><circle class="peer" cx="158.9" cy="234.7" r="6.7"><title>boAt Aavante Bar 490 Speaker, ₹1,103, 4.0★</title></circle></a><a href="/motorola-amphisoundx-vibe-330-w-5-1-soundbar/" data-tip="Motorola AmphisoundX Vibe 330 W 5.1 Soundbar · ₹5,799 · 4.2★"><circle class="peer" cx="428.7" cy="172.2" r="6.6"><title>Motorola AmphisoundX Vibe 330 W 5.1 Soundbar, ₹5,799, 4.2★</title></circle></a><a href="/triggr-roar-8-rgb-bluetooth-speaker/" data-tip="TRIGGR Roar 8 RGB Bluetooth Speaker · ₹649 · 4.0★"><circle class="peer" cx="72.7" cy="234.7" r="6.2"><title>TRIGGR Roar 8 RGB Bluetooth Speaker, ₹649, 4.0★</title></circle></a><a href="/zebronics-county-3-w-bluetooth-speaker/" data-tip="Zebronics County 3 W Bluetooth Speaker · ₹855 · 4.0★"><circle class="peer" cx="117.5" cy="234.7" r="6.1"><title>Zebronics County 3 W Bluetooth Speaker, ₹855, 4.0★</title></circle></a>
-            <circle class="me" cx="517.3" cy="109.7" r="9"/><text class="mel" x="505.3" y="97.7" text-anchor="end">This one</text>
-          </svg>
-          <p class="tip" aria-live="polite">Tap a dot to open it</p>
         </div>
       </div>
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>

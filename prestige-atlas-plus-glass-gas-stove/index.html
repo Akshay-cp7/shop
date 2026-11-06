@@ -572,7 +572,7 @@
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
-    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vfm { display: block; max-width: 30rem; }
     .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
     .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
@@ -747,16 +747,6 @@
           <div class="lbl">Fair value</div>
           <div class="vbars"><div class="vbar">Rating<div class="t"><div class="f" style="width:62%"></div></div></div><div class="vbar">Buyers<div class="t"><div class="f" style="width:76%"></div></div></div><div class="vbar">Price vs similar<div class="t"><div class="f" style="width:14%"></div></div></div><div class="vbar">Warranty<div class="t"><div class="f" style="width:100%"></div></div></div></div>
           <p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p>
-        </div>
-        <div class="scatter">
-          <h3>Price against rating</h3>
-          <p class="sub">8 products of the same type. Left = cheaper · higher = better rated · bigger = more buyers</p>
-          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 8 products of the same type. This product costs ₹3,699 and is rated 4.3.">
-            <line class="ax" x1="46" x2="544" y1="234.7" y2="234.7"/><text x="38" y="238.7" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="172.2" y2="172.2"/><text x="38" y="176.2" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="109.7" y2="109.7"/><text x="38" y="113.7" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="47.3" y2="47.3"/><text x="38" y="51.3" text-anchor="end">4.6★</text><text x="110.6" y="288" text-anchor="middle">₹1,700</text><text x="233.6" y="288" text-anchor="middle">₹3,000</text><text x="356.6" y="288" text-anchor="middle">₹4,300</text><text x="479.6" y="288" text-anchor="middle">₹5,600</text>
-            <a href="/pigeon-popular-2-burner-glass-gas-stove/" data-tip="Pigeon Popular 2 Burner Glass Gas Stove · ₹1,699 · 4.1★"><circle class="peer" cx="110.5" cy="203.5" r="8.4"><title>Pigeon Popular 2 Burner Glass Gas Stove, ₹1,699, 4.1★</title></circle></a><a href="/lifelong-isi-certified-2-burner-glass-gas-stove/" data-tip="Lifelong ISI Certified 2 Burner Glass Gas Stove · ₹1,299 · 4.1★"><circle class="peer" cx="72.7" cy="203.5" r="8.0"><title>Lifelong ISI Certified 2 Burner Glass Gas Stove, ₹1,299, 4.1★</title></circle></a><a href="/lifelong-2-burner-automatic-glass-gas-stove/" data-tip="Lifelong 2 Burner Automatic Glass Gas Stove · ₹1,499 · 4.1★"><circle class="peer" cx="91.6" cy="203.5" r="8.0"><title>Lifelong 2 Burner Automatic Glass Gas Stove, ₹1,499, 4.1★</title></circle></a><a href="/pigeon-brunet-3-burner-glass-gas-stove/" data-tip="Pigeon Brunet 3 Burner Glass Gas Stove · ₹2,599 · 4.0★"><circle class="peer" cx="195.7" cy="234.7" r="7.5"><title>Pigeon Brunet 3 Burner Glass Gas Stove, ₹2,599, 4.0★</title></circle></a><a href="/pigeon-brunet-3-burner-auto-ignition-gas-stove/" data-tip="Pigeon Brunet 3 Burner Auto Ignition Gas Stove · ₹2,678 · 4.0★"><circle class="peer" cx="203.1" cy="234.7" r="7.5"><title>Pigeon Brunet 3 Burner Auto Ignition Gas Stove, ₹2,678, 4.0★</title></circle></a><a href="/bajaj-ucx-3-burner-glass-gas-stove/" data-tip="Bajaj UCX 3 Burner Glass Gas Stove · ₹2,999 · 4.3★"><circle class="peer" cx="233.5" cy="141.0" r="7.3"><title>Bajaj UCX 3 Burner Glass Gas Stove, ₹2,999, 4.3★</title></circle></a><a href="/prestige-svachh-duo-3-burner-gas-stove/" data-tip="Prestige Svachh Duo 3 Burner Gas Stove · ₹5,999 · 4.4★"><circle class="peer" cx="517.3" cy="109.7" r="7.2"><title>Prestige Svachh Duo 3 Burner Gas Stove, ₹5,999, 4.4★</title></circle></a>
-            <circle class="me" cx="299.7" cy="141.0" r="9"/><text class="mel" x="311.7" y="129.0" text-anchor="start">This one</text>
-          </svg>
-          <p class="tip" aria-live="polite">Tap a dot to open it</p>
         </div>
       </div>
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>

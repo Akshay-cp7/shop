@@ -572,7 +572,7 @@
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
-    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vfm { display: block; max-width: 30rem; }
     .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
     .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
@@ -747,16 +747,6 @@
           <div class="lbl">Good value</div>
           <div class="vbars"><div class="vbar">Rating<div class="t"><div class="f" style="width:72%"></div></div></div><div class="vbar">Buyers<div class="t"><div class="f" style="width:65%"></div></div></div><div class="vbar">Price vs similar<div class="t"><div class="f" style="width:57%"></div></div></div><div class="vbar">Warranty<div class="t"><div class="f" style="width:50%"></div></div></div></div>
           <p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p>
-        </div>
-        <div class="scatter">
-          <h3>Price against rating</h3>
-          <p class="sub">8 products of the same type. Left = cheaper · higher = better rated · bigger = more buyers</p>
-          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 8 products of the same type. This product costs ₹21,999 and is rated 4.5.">
-            <line class="ax" x1="46" x2="544" y1="238.2" y2="238.2"/><text x="38" y="242.2" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="182.7" y2="182.7"/><text x="38" y="186.7" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="127.1" y2="127.1"/><text x="38" y="131.1" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="71.6" y2="71.6"/><text x="38" y="75.6" text-anchor="end">4.6★</text><line class="ax" x1="46" x2="544" y1="16.0" y2="16.0"/><text x="38" y="20.0" text-anchor="end">4.8★</text><text x="105.6" y="288" text-anchor="middle">₹22,000</text><text x="237.4" y="288" text-anchor="middle">₹30,000</text><text x="352.7" y="288" text-anchor="middle">₹37,000</text><text x="484.4" y="288" text-anchor="middle">₹45,000</text>
-            <a href="/motorola-pad-60-neo-tablet/" data-tip="Motorola Pad 60 Neo Tablet · ₹20,999 · 4.5★"><circle class="peer" cx="89.1" cy="99.3" r="7.3"><title>Motorola Pad 60 Neo Tablet, ₹20,999, 4.5★</title></circle></a><a href="/apple-ipad-a16-128-gb-2025/" data-tip="Apple iPad A16, 128 GB, 2025 · ₹46,999 · 4.7★"><circle class="peer" cx="517.3" cy="43.8" r="7.2"><title>Apple iPad A16, 128 GB, 2025, ₹46,999, 4.7★</title></circle></a><a href="/motorola-pad-60-pro-tablet/" data-tip="Motorola Pad 60 Pro Tablet · ₹29,999 · 4.5★"><circle class="peer" cx="237.4" cy="99.3" r="7.0"><title>Motorola Pad 60 Pro Tablet, ₹29,999, 4.5★</title></circle></a><a href="/redmi-pad-2-tablet-128-gb/" data-tip="Redmi Pad 2 Tablet, 128 GB · ₹19,999 · 4.4★"><circle class="peer" cx="72.7" cy="127.1" r="7.0"><title>Redmi Pad 2 Tablet, 128 GB, ₹19,999, 4.4★</title></circle></a><a href="/lenovo-tab-plus-tablet/" data-tip="Lenovo Tab Plus Tablet · ₹20,999 · 4.5★"><circle class="peer" cx="89.1" cy="99.3" r="6.9"><title>Lenovo Tab Plus Tablet, ₹20,999, 4.5★</title></circle></a><a href="/lenovo-idea-tab-plus-with-pen/" data-tip="Lenovo Idea Tab Plus with Pen · ₹29,999 · 4.4★"><circle class="peer" cx="237.4" cy="127.1" r="6.3"><title>Lenovo Idea Tab Plus with Pen, ₹29,999, 4.4★</title></circle></a><a href="/samsung-galaxy-tab-s10-fe-with-s-pen/" data-tip="Samsung Galaxy Tab S10 FE with S Pen · ₹45,899 · 4.6★"><circle class="peer" cx="499.2" cy="71.6" r="6.2"><title>Samsung Galaxy Tab S10 FE with S Pen, ₹45,899, 4.6★</title></circle></a>
-            <circle class="me" cx="105.6" cy="99.3" r="9"/><text class="mel" x="117.6" y="87.3" text-anchor="start">This one</text>
-          </svg>
-          <p class="tip" aria-live="polite">Tap a dot to open it</p>
         </div>
       </div>
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>

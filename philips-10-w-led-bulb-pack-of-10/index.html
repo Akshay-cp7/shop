@@ -572,7 +572,7 @@
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
-    .vfm { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: 1.4rem; align-items: start; }
+    .vfm { display: block; max-width: 30rem; }
     .vscore { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 1.2rem 1.3rem; }
     .vscore .big { font-size: 3rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1; }
     .vscore .big span { font-size: 1.1rem; color: var(--steel); font-weight: 600; }
@@ -740,16 +740,6 @@
           <div class="lbl">Average value</div>
           <div class="vbars"><div class="vbar">Rating<div class="t"><div class="f" style="width:54%"></div></div></div><div class="vbar">Buyers<div class="t"><div class="f" style="width:76%"></div></div></div><div class="vbar">Price vs similar<div class="t"><div class="f" style="width:4%"></div></div></div><div class="vbar">Warranty<div class="t"><div class="f" style="width:50%"></div></div></div></div>
           <p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p>
-        </div>
-        <div class="scatter">
-          <h3>Price against rating</h3>
-          <p class="sub">8 products of the same type. Left = cheaper · higher = better rated · bigger = more buyers</p>
-          <svg viewBox="0 0 560 300" role="img" aria-label="Scatter chart of price against rating for 8 products of the same type. This product costs ₹581 and is rated 4.2.">
-            <line class="ax" x1="46" x2="544" y1="234.7" y2="234.7"/><text x="38" y="238.7" text-anchor="end">4.0★</text><line class="ax" x1="46" x2="544" y1="172.2" y2="172.2"/><text x="38" y="176.2" text-anchor="end">4.2★</text><line class="ax" x1="46" x2="544" y1="109.7" y2="109.7"/><text x="38" y="113.7" text-anchor="end">4.4★</text><line class="ax" x1="46" x2="544" y1="47.3" y2="47.3"/><text x="38" y="51.3" text-anchor="end">4.6★</text><text x="109.7" y="288" text-anchor="middle">₹240</text><text x="229.3" y="288" text-anchor="middle">₹340</text><text x="360.7" y="288" text-anchor="middle">₹450</text><text x="480.3" y="288" text-anchor="middle">₹550</text>
-            <a href="/syska-9-w-led-bulb-pack-of-6/" data-tip="Syska 9 W LED Bulb, Pack of 6 · ₹228 · 4.2★"><circle class="peer" cx="95.4" cy="172.2" r="8.2"><title>Syska 9 W LED Bulb, Pack of 6, ₹228, 4.2★</title></circle></a><a href="/orient-30-w-led-bulb/" data-tip="Orient 30 W LED Bulb · ₹298 · 4.2★"><circle class="peer" cx="179.1" cy="172.2" r="7.5"><title>Orient 30 W LED Bulb, ₹298, 4.2★</title></circle></a><a href="/orient-9-w-led-bulb-pack-of-10/" data-tip="Orient 9 W LED Bulb, Pack of 10 · ₹500 · 4.2★"><circle class="peer" cx="420.5" cy="172.2" r="7.5"><title>Orient 9 W LED Bulb, Pack of 10, ₹500, 4.2★</title></circle></a><a href="/crompton-9-w-led-bulb-pack-of-10/" data-tip="Crompton 9 W LED Bulb, Pack of 10 · ₹418 · 4.1★"><circle class="peer" cx="322.5" cy="203.5" r="7.4"><title>Crompton 9 W LED Bulb, Pack of 10, ₹418, 4.1★</title></circle></a><a href="/orient-40-w-led-bulb/" data-tip="Orient 40 W LED Bulb · ₹330 · 4.1★"><circle class="peer" cx="217.3" cy="203.5" r="7.2"><title>Orient 40 W LED Bulb, ₹330, 4.1★</title></circle></a><a href="/havells-9-w-led-bulb/" data-tip="Havells 9 W LED Bulb · ₹263 · 4.1★"><circle class="peer" cx="137.2" cy="203.5" r="7.1"><title>Havells 9 W LED Bulb, ₹263, 4.1★</title></circle></a><a href="/orient-10-w-motion-sensor-led-bulb/" data-tip="Orient 10 W Motion Sensor LED Bulb · ₹209 · 4.0★"><circle class="peer" cx="72.7" cy="234.7" r="6.9"><title>Orient 10 W Motion Sensor LED Bulb, ₹209, 4.0★</title></circle></a>
-            <circle class="me" cx="517.3" cy="172.2" r="9"/><text class="mel" x="505.3" y="160.2" text-anchor="end">This one</text>
-          </svg>
-          <p class="tip" aria-live="polite">Tap a dot to open it</p>
         </div>
       </div>
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>
