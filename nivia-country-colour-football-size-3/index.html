@@ -563,6 +563,8 @@
     .topbar .brand::before { content: "4★+ "; color: #FFC21A; }
     .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .thumb { cursor: pointer; transition: border-color .15s; }
+    .wpill { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 700; color: #0B5D3B; background: #E8F5EE; border-radius: 100px; padding: 4px 10px; }
+    .rating-row { flex-wrap: wrap; }
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
@@ -730,10 +732,10 @@
       <h2 class="sec-title">How it stacks up</h2>
       <div class="vfm">
         <div class="vscore">
-          <div class="big">5.8<span> / 10</span></div>
-          <div class="lbl">Fair value</div>
-          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:36%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:83%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:100%"></div></div></div></div>
-          <p class="vnote">My own score, worked out the same way for every product here: 60% rating, 20% how many ratings, 20% price against the same type of product. It is not a Flipkart score.</p>
+          <div class="big">5.0<span> / 10</span></div>
+          <div class="lbl">Average value</div>
+          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:36%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:83%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:100%"></div></div></div><div class="vbar">Warranty stated on the listing (2 years or more scores full)<div class="t"><div class="f" style="width:4%"></div></div></div></div>
+          <p class="vnote">My own score, worked out the same way for every product here: 50% rating, 20% how many ratings, 15% price against the same type of product, 15% warranty. It is not a Flipkart score.</p>
         </div>
         <div class="scatter">
           <h3>Price against rating</h3>
@@ -749,9 +751,9 @@
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>
       <div class="rv-wrap"><table class="rivals">
           <thead><tr><th>Product</th><th>Price</th><th>Rating</th><th class="hide-m">Ratings</th><th class="hide-m">Warranty</th><th>Value</th><th></th></tr></thead>
-          <tbody><tr class="me"><td>Nivia Country Colour Football, Size 3 <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹297</td><td><span class="rt">4.0 ★</span></td><td class="num hide-m">97,179</td><td class="hide-m">—</td><td class="num"><b>5.8</b></td><td><a class="bb" href="https://fktr.in/Y9TC82h" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boldfit-plastic-tennis-cricket-bat/">Boldfit Plastic Tennis Cricket Bat</a></td><td class="num">₹314</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">9,372</td><td class="hide-m">—</td><td class="num"><b>5.4</b></td><td><a class="bb" href="https://fktr.in/2TeaGPy" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boldfit-4-mm-yoga-mat/">Boldfit 4 mm Yoga Mat</a></td><td class="num">₹282</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">16,182</td><td class="hide-m">—</td><td class="num"><b>5.1</b></td><td><a class="bb" href="https://fktr.in/gP3wDEm" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/lifelong-6-mm-eva-yoga-mat-with-cover/">Lifelong 6 mm EVA Yoga Mat with Cover</a></td><td class="num">₹325</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">5,433</td><td class="hide-m">6 months against manufacturing</td><td class="num"><b>4.8</b></td><td><a class="bb" href="https://fktr.in/zZqgdR0" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
+          <tbody><tr class="me"><td>Nivia Country Colour Football, Size 3 <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹297</td><td><span class="rt">4.0 ★</span></td><td class="num hide-m">97,179</td><td class="hide-m">—</td><td class="num"><b>5.0</b></td><td><a class="bb" href="https://fktr.in/Y9TC82h" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boldfit-plastic-tennis-cricket-bat/">Boldfit Plastic Tennis Cricket Bat</a></td><td class="num">₹314</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">9,372</td><td class="hide-m">—</td><td class="num"><b>4.6</b></td><td><a class="bb" href="https://fktr.in/2TeaGPy" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/lifelong-6-mm-eva-yoga-mat-with-cover/">Lifelong 6 mm EVA Yoga Mat with Cover</a></td><td class="num">₹325</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">5,433</td><td class="hide-m">6 months against manufacturing</td><td class="num"><b>4.5</b></td><td><a class="bb" href="https://fktr.in/zZqgdR0" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boldfit-4-mm-yoga-mat/">Boldfit 4 mm Yoga Mat</a></td><td class="num">₹282</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">16,182</td><td class="hide-m">—</td><td class="num"><b>4.4</b></td><td><a class="bb" href="https://fktr.in/gP3wDEm" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
         </table></div>
-      <a href="/vs/?a=nivia-country-colour-football-size-3" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔ Compare head to head</a>
+      <a href="/vs/?a=nivia-country-colour-football-size-3" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔️ Compare head to head</a>
     </div>
   </section>
 

@@ -563,6 +563,8 @@
     .topbar .brand::before { content: "4★+ "; color: #FFC21A; }
     .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .thumb { cursor: pointer; transition: border-color .15s; }
+    .wpill { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 700; color: #0B5D3B; background: #E8F5EE; border-radius: 100px; padding: 4px 10px; }
+    .rating-row { flex-wrap: wrap; }
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
@@ -627,6 +629,7 @@
         <div class="rating-row">
           <span class="rating-pill">4.2 ★</span>
           <span class="rating-count">8,623 ratings &amp; 720 reviews on Flipkart</span>
+          <span class="wpill" title="Warranty stated on the Flipkart listing"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>6 month warranty</span>
         </div>
       </div>
 
@@ -732,10 +735,10 @@
       <h2 class="sec-title">How it stacks up</h2>
       <div class="vfm">
         <div class="vscore">
-          <div class="big">6.4<span> / 10</span></div>
+          <div class="big">5.7<span> / 10</span></div>
           <div class="lbl">Fair value</div>
-          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:51%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:66%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:100%"></div></div></div></div>
-          <p class="vnote">My own score, worked out the same way for every product here: 60% rating, 20% how many ratings, 20% price against the same type of product. It is not a Flipkart score.</p>
+          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:51%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:66%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:100%"></div></div></div><div class="vbar">Warranty stated on the listing (2 years or more scores full)<div class="t"><div class="f" style="width:25%"></div></div></div></div>
+          <p class="vnote">My own score, worked out the same way for every product here: 50% rating, 20% how many ratings, 15% price against the same type of product, 15% warranty. It is not a Flipkart score.</p>
         </div>
         <div class="scatter">
           <h3>Price against rating</h3>
@@ -751,9 +754,9 @@
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>
       <div class="rv-wrap"><table class="rivals">
           <thead><tr><th>Product</th><th>Price</th><th>Rating</th><th class="hide-m">Ratings</th><th class="hide-m">Warranty</th><th>Value</th><th></th></tr></thead>
-          <tbody><tr class="me"><td>Ambrane 1.5 m USB Type C Cable <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹129</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">8,623</td><td class="hide-m">6 Months Manufacturer</td><td class="num"><b>6.4</b></td><td><a class="bb" href="https://fktr.in/9NtPc5f" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/portronics-konnect-l-usb-type-c-cable-1-2-m/">Portronics Konnect L USB Type C Cable 1.2 m</a></td><td class="num">₹199</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">56,086</td><td class="hide-m">6-Months</td><td class="num"><b>5.8</b></td><td><a class="bb" href="https://fktr.in/QIar1IM" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boat-65-w-usb-c-to-c-cable-1-2-m/">boAt 65 W USB C to C Cable 1.2 m</a></td><td class="num">₹149</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">6,072</td><td class="hide-m">1 Year</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/1AMVoKx" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/portronics-konnect-x-1-m-usb-type-c-cable/">Portronics Konnect X 1 m USB Type C Cable</a></td><td class="num">₹165</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">5,101</td><td class="hide-m">6 Months Manufacturing</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/tVCCUl5" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
+          <tbody><tr class="me"><td>Ambrane 1.5 m USB Type C Cable <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹129</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">8,623</td><td class="hide-m">6 Months Manufacturer</td><td class="num"><b>5.7</b></td><td><a class="bb" href="https://fktr.in/9NtPc5f" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/boat-65-w-usb-c-to-c-cable-1-2-m/">boAt 65 W USB C to C Cable 1.2 m</a></td><td class="num">₹149</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">6,072</td><td class="hide-m">1 Year</td><td class="num"><b>5.4</b></td><td><a class="bb" href="https://fktr.in/1AMVoKx" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/portronics-konnect-x-1-m-usb-type-c-cable/">Portronics Konnect X 1 m USB Type C Cable</a></td><td class="num">₹165</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">5,101</td><td class="hide-m">6 Months Manufacturing</td><td class="num"><b>5.1</b></td><td><a class="bb" href="https://fktr.in/tVCCUl5" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/portronics-konnect-l-usb-type-c-cable-1-2-m/">Portronics Konnect L USB Type C Cable 1.2 m</a></td><td class="num">₹199</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">56,086</td><td class="hide-m">6-Months</td><td class="num"><b>5.0</b></td><td><a class="bb" href="https://fktr.in/QIar1IM" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
         </table></div>
-      <a href="/vs/?a=ambrane-1-5-m-usb-type-c-cable" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔ Compare head to head</a>
+      <a href="/vs/?a=ambrane-1-5-m-usb-type-c-cable" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔️ Compare head to head</a>
     </div>
   </section>
 

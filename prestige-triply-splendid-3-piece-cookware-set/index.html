@@ -563,6 +563,8 @@
     .topbar .brand::before { content: "4★+ "; color: #FFC21A; }
     .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .thumb { cursor: pointer; transition: border-color .15s; }
+    .wpill { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 700; color: #0B5D3B; background: #E8F5EE; border-radius: 100px; padding: 4px 10px; }
+    .rating-row { flex-wrap: wrap; }
     .thumb.on { border: 2px solid #0B5D3B; }
     .gallery-main img { transition: opacity .15s; }
 
@@ -627,6 +629,7 @@
         <div class="rating-row">
           <span class="rating-pill">4.4 ★</span>
           <span class="rating-count">1,702 ratings &amp; 141 reviews on Flipkart</span>
+          <span class="wpill" title="Warranty stated on the Flipkart listing"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>15 yr warranty</span>
         </div>
       </div>
 
@@ -731,10 +734,10 @@
       <h2 class="sec-title">How it stacks up</h2>
       <div class="vfm">
         <div class="vscore">
-          <div class="big">4.3<span> / 10</span></div>
+          <div class="big">5.2<span> / 10</span></div>
           <div class="lbl">Average value</div>
-          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:53%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:54%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:4%"></div></div></div></div>
-          <p class="vnote">My own score, worked out the same way for every product here: 60% rating, 20% how many ratings, 20% price against the same type of product. It is not a Flipkart score.</p>
+          <div class="vbars"><div class="vbar">Rating, adjusted for how many rated it<div class="t"><div class="f" style="width:53%"></div></div></div><div class="vbar">How many people bought and rated it<div class="t"><div class="f" style="width:54%"></div></div></div><div class="vbar">Price against the same type of product<div class="t"><div class="f" style="width:4%"></div></div></div><div class="vbar">Warranty stated on the listing (2 years or more scores full)<div class="t"><div class="f" style="width:100%"></div></div></div></div>
+          <p class="vnote">My own score, worked out the same way for every product here: 50% rating, 20% how many ratings, 15% price against the same type of product, 15% warranty. It is not a Flipkart score.</p>
         </div>
         <div class="scatter">
           <h3>Price against rating</h3>
@@ -750,9 +753,9 @@
       <p class="sec-label" style="margin-top:2.2rem">Compared with similar picks</p>
       <div class="rv-wrap"><table class="rivals">
           <thead><tr><th>Product</th><th>Price</th><th>Rating</th><th class="hide-m">Ratings</th><th class="hide-m">Warranty</th><th>Value</th><th></th></tr></thead>
-          <tbody><tr><td><a class="nm" href="/prestige-omega-festival-pack-non-stick-cookware-3-piece/">Prestige Omega Festival Pack Non Stick Cookware, 3 Piece</a></td><td class="num">₹1,799</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,17,714</td><td class="hide-m">1 Year</td><td class="num"><b>6.7</b></td><td><a class="bb" href="https://fktr.in/lxeovEk" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/prestige-festival-pack-build-your-kitchen-cookware-set/">Prestige Festival Pack Build Your Kitchen Cookware Set</a></td><td class="num">₹1,799</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,17,714</td><td class="hide-m">1 year</td><td class="num"><b>6.7</b></td><td><a class="bb" href="https://fktr.in/2J2ys80" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/milton-kitchen-pride-granito-5-piece-cookware-set/">Milton Kitchen Pride Granito 5 Piece Cookware Set</a></td><td class="num">₹1,451</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">2,255</td><td class="hide-m">—</td><td class="num"><b>5.1</b></td><td><a class="bb" href="https://fktr.in/ZfkS0o8" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr class="me"><td>Prestige Triply Splendid 3 Piece Cookware Set <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹2,299</td><td><span class="rt">4.4 ★</span></td><td class="num hide-m">1,702</td><td class="hide-m">15 Year Manufacturer</td><td class="num"><b>4.3</b></td><td><a class="bb" href="https://fktr.in/6sW4FMm" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
+          <tbody><tr><td><a class="nm" href="/prestige-omega-festival-pack-non-stick-cookware-3-piece/">Prestige Omega Festival Pack Non Stick Cookware, 3 Piece</a></td><td class="num">₹1,799</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,17,714</td><td class="hide-m">1 Year</td><td class="num"><b>6.5</b></td><td><a class="bb" href="https://fktr.in/lxeovEk" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/prestige-festival-pack-build-your-kitchen-cookware-set/">Prestige Festival Pack Build Your Kitchen Cookware Set</a></td><td class="num">₹1,799</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,17,714</td><td class="hide-m">1 year</td><td class="num"><b>6.5</b></td><td><a class="bb" href="https://fktr.in/2J2ys80" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr class="me"><td>Prestige Triply Splendid 3 Piece Cookware Set <span style="font-weight:600;color:#6B7480">(this one)</span></td><td class="num">₹2,299</td><td><span class="rt">4.4 ★</span></td><td class="num hide-m">1,702</td><td class="hide-m">15 Year Manufacturer</td><td class="num"><b>5.2</b></td><td><a class="bb" href="https://fktr.in/6sW4FMm" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm" href="/milton-kitchen-pride-granito-5-piece-cookware-set/">Milton Kitchen Pride Granito 5 Piece Cookware Set</a></td><td class="num">₹1,451</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">2,255</td><td class="hide-m">—</td><td class="num"><b>4.3</b></td><td><a class="bb" href="https://fktr.in/ZfkS0o8" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
         </table></div>
-      <a href="/vs/?a=prestige-triply-splendid-3-piece-cookware-set" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔ Compare head to head</a>
+      <a href="/vs/?a=prestige-triply-splendid-3-piece-cookware-set" style="display:inline-block;margin-top:1rem;font-weight:800;color:#0B5D3B;text-decoration:none;border:2px solid #0B5D3B;border-radius:100px;padding:.6rem 1.2rem">⚔️ Compare head to head</a>
     </div>
   </section>
 
