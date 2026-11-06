@@ -561,6 +561,8 @@
     .topbar { background: linear-gradient(180deg,#0B5D3B,#11804F); border-bottom: 0; }
     .topbar .back, .topbar .brand, .topbar .back span { color: #fff !important; }
     .topbar .brand::before { content: "4★+ "; color: #FFC21A; }
+    .spec-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+    @media (max-width: 780px) { .spec-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } .spec { padding: .8rem .9rem !important; } .spec-v { font-size: .9rem; word-break: break-word; } }
     .spec-grid.folded .spec:nth-child(n+7) { display: none; }
     .spec-more { display: block; margin: 1rem auto 0; font: inherit; font-weight: 800; font-size: .9rem; color: #0B5D3B; background: #fff; border: 2px solid #0B5D3B; border-radius: 100px; padding: .65rem 1.4rem; cursor: pointer; }
     .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
