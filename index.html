@@ -406,7 +406,7 @@ function aiFind(M,q,D,Q,old){old=old||{};var om=0;for(var o in old)if(old[o]>om)
  r.sort(function(a,b){return (b.s+b.p.v*.015)-(a.s+a.p.v*.015)});return{list:r.slice(0,24).map(function(x){x.p._s=x.s;return x.p}),none:none,best:best}}
 
 var AIM=null,AIP=null;
-function aiGet(){if(!AIP)AIP=Promise.all([fetch('/ai/model.bin?v=4457b98c').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}),fetch('/ai/types.json?v=4457b98c').then(function(r){if(!r.ok)throw 0;return r.json()})]).then(function(x){AIM=aiLoad(x[0],x[1])}).catch(function(){});return AIP}
+function aiGet(){if(!AIP)AIP=Promise.all([fetch('/ai/model.bin?v=f244fc7a').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}),fetch('/ai/types.json?v=f244fc7a').then(function(r){if(!r.ok)throw 0;return r.json()})]).then(function(x){AIM=aiLoad(x[0],x[1])}).catch(function(){});return AIP}
 // ---- orbit ----
 var items=[],S=0,R1=0,R2=0,IS=0,raf=0,last=0,slow=1,pull=0,pullTo=0,open=false;
 var nIn=Math.min(7,Math.ceil(CATS.length*0.42));
