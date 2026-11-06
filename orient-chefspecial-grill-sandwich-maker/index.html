@@ -26,30 +26,27 @@ html{-webkit-text-size-adjust:100%}
 body{background:var(--mist);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.45;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 .top{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--brand),var(--brand2));color:#fff;padding:10px 16px 12px}
-.top-row{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto 8px}
+.top-row{display:flex;align-items:center;justify-content:space-between;max-width:1148px;margin:0 auto 8px}
 .logo{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
 .logo span{color:var(--amber)}
 .top-note{font-size:.72rem;opacity:.8}
 .top-r{display:flex;align-items:center;gap:10px}
 .vs-pill{font-size:.78rem;font-weight:800;background:#FFC21A;color:#0B0D10;border-radius:100px;padding:5px 12px}
 @media(max-width:520px){.top-note{display:none}}
-.search{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:9px 12px}
+.search{max-width:1148px;margin:0 auto;display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:9px 12px}
 .search svg{flex:none;color:var(--steel)}
 .search input{border:0;outline:0;font:inherit;font-size:.95rem;width:100%;color:var(--ink);background:transparent}
-.wrap{max-width:1200px;margin:0 auto}
+.wrap{max-width:1148px;margin:0 auto}
 .cats{background:#fff;display:flex;gap:6px;overflow-x:auto;padding:12px 10px;scrollbar-width:none}
 .cats::-webkit-scrollbar,.row::-webkit-scrollbar{display:none}
 .cat{flex:none;width:76px;text-align:center;font-size:.72rem;font-weight:600;color:var(--graphite);line-height:1.2}
 .cat .ci{width:60px;height:60px;margin:0 auto 6px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;overflow:hidden}
 .cat img{width:46px;height:46px;object-fit:contain;mix-blend-mode:multiply}
-.banner{display:block;margin:10px;border-radius:12px;padding:18px 20px;background:linear-gradient(110deg,#3B1C5A,#7A2E5C 55%,#D9822B);color:#fff}
-.banner b{display:block;font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
-.banner span{font-size:.85rem;opacity:.92}
 .sec{background:#fff;margin-top:10px;padding:14px 0 16px}
 .sec-h{display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px}
 .sec-h h2{font-size:1.05rem;font-weight:800}
 .sec-h a{font-size:.8rem;font-weight:700;color:#fff;background:var(--brand2);border-radius:100px;padding:5px 12px}
-.row{display:flex;gap:10px;overflow-x:auto;padding:0 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+.row{display:flex;gap:10px;overflow-x:auto;padding:0 16px;scroll-padding-inline:16px;scroll-snap-type:x proximity;scrollbar-width:none}
 .row .pc{flex:none;width:150px;scroll-snap-align:start}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;padding:0 12px}
 .pc{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -63,10 +60,9 @@ a{color:inherit;text-decoration:none}
 .pc .off{font-size:.72rem;font-weight:700;color:var(--green)}
 .pc .pr{margin-top:5px;font-size:.7rem;color:var(--steel);display:flex;align-items:center;gap:5px}
 .pc .wb{margin-top:5px;display:inline-flex;align-items:center;gap:4px;font-size:.68rem;font-weight:700;color:#0B5D3B;background:#E8F5EE;border-radius:5px;padding:2px 6px}
+.pc .wb::before{content:"";width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/%3E%3Cpath d='M8.5 12l2.5 2.5 4.5-5'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'/%3E%3Cpath d='M8.5 12l2.5 2.5 4.5-5'/%3E%3C/svg%3E") center/contain no-repeat}
 .pc .rt{background:var(--green);color:#fff;font-weight:700;border-radius:4px;padding:1px 5px}
 .pc>a:first-child{flex:1}
-.pc .buy{display:block;margin:0 10px 10px;text-align:center;background:#FFC21A;color:#0B0D10;font-weight:800;font-size:.8rem;border-radius:6px;padding:7px 0}
-.pc .buy:active{background:#FFB300}
 #hr .hcs{display:flex;gap:6px;overflow-x:auto;padding:0 16px 12px;scrollbar-width:none}
 #hr .hcs::-webkit-scrollbar{display:none}
 .hc{flex:none;display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:.78rem;font-weight:700;color:#262B33;background:#fff;border:1px solid var(--line);border-radius:100px;padding:3px 12px 3px 3px;cursor:pointer}
@@ -101,13 +97,52 @@ a{color:inherit;text-decoration:none}
 .vc .vd em{font-style:normal;font-size:.62rem;font-weight:600;opacity:.7;text-transform:uppercase;letter-spacing:.06em}
 .vc .vd span:last-child{text-align:right}
 .vc .vgo{margin-top:8px;text-align:center;background:#FFC21A;color:#0B0D10;font-weight:800;font-size:.8rem;border-radius:8px;padding:7px}
-#results{display:none;padding:14px 0}
-#results.on{display:block}
 #results .empty{padding:20px 16px;color:var(--steel)}
 .crumbs{background:#fff;padding:14px 16px 4px}
 .home-link{display:inline-flex;align-items:center;gap:4px;font-size:.85rem;font-weight:700;color:var(--brand2);margin-bottom:8px}
 .crumbs h1{font-size:1.25rem;font-weight:800}
 .crumbs p{font-size:.82rem;color:var(--steel);margin-top:2px}
+.search .sfb{flex:none;display:flex;align-items:center;gap:5px;border:0;background:#EAF6EF;color:#0B5D3B;font:inherit;font-size:.78rem;font-weight:800;border-radius:6px;padding:6px 9px;margin:-4px -6px -4px 0;cursor:pointer}
+.dcs{display:flex;align-items:center;gap:6px;overflow-x:auto;padding:0 16px 12px;scrollbar-width:none}
+.dcs::-webkit-scrollbar{display:none}
+.dc{flex:none;font:inherit;font-size:.8rem;font-weight:800;color:#0B5D3B;background:#EAF6EF;border:0;border-radius:100px;padding:7px 14px;cursor:pointer}
+.dc.on{background:#0B5D3B;color:#fff}
+.row .seeall{flex:none;width:150px;display:flex;align-items:center;justify-content:center;font:inherit;font-weight:800;color:#0B5D3B;background:#F6FBF8;border:1px dashed #9FD3B5;border-radius:10px;cursor:pointer;min-height:230px}
+.row .empty{padding:20px 16px;color:var(--steel);font-size:.9rem}
+#results{padding:12px 0 8px}
+#results[hidden]{display:none}
+.rs-bar{display:flex;align-items:center;gap:10px;padding:4px 16px 10px;flex-wrap:wrap}
+.rs-back{flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#fff;font-size:22px;line-height:1;cursor:pointer;color:var(--ink)}
+.rs-title{flex:1;min-width:150px}
+.rs-title b{display:block;font-size:1.08rem;font-weight:800}
+.rs-title span{font-size:.8rem;color:var(--steel)}
+.rs-sort{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--steel)}
+.rs-sort select{font:inherit;font-size:.85rem;font-weight:700;color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 8px;background:#fff}
+.rs-filter{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:.85rem;font-weight:800;color:#fff;background:#0B5D3B;border:0;border-radius:8px;padding:8px 12px;cursor:pointer}
+.rs-filter i{font-style:normal;background:#FFC21A;color:#0B0D10;border-radius:100px;font-size:.7rem;padding:0 6px;min-width:18px;text-align:center}
+.rs-filter i:empty{display:none}
+.rs-pills{display:flex;gap:6px;flex-wrap:wrap;padding:0 16px 12px}
+.rs-pills:empty{display:none}
+.rs-pills button{font:inherit;font-size:.78rem;font-weight:700;color:#0B5D3B;background:#EAF6EF;border:0;border-radius:100px;padding:5px 11px;cursor:pointer}
+.rs-pills button.clr{background:none;color:var(--steel);text-decoration:underline}
+#results .empty{padding:20px 16px;color:var(--steel)}
+@media(max-width:560px){.rs-sort>span,.rs-sort{font-size:0}.rs-sort select{font-size:.82rem}.rs-title{min-width:0}.rs-bar{flex-wrap:nowrap;gap:8px}.rs-filter{padding:8px 10px}}
+.rs-more{display:block;margin:16px auto 6px;font:inherit;font-weight:800;color:#0B5D3B;background:#fff;border:2px solid #0B5D3B;border-radius:100px;padding:10px 24px;cursor:pointer}
+.rs-more[hidden]{display:none}
+.fs .fgroup{padding:12px 4px;border-top:1px solid var(--line)}
+.fs h4{font-size:.82rem;font-weight:800;margin-bottom:8px}
+.fopts{display:flex;flex-wrap:wrap;gap:6px}
+.fopts button{font:inherit;font-size:.8rem;font-weight:600;color:var(--graphite);background:#fff;border:1px solid var(--line);border-radius:100px;padding:6px 12px;cursor:pointer}
+.fopts button.on{background:#0B5D3B;border-color:#0B5D3B;color:#fff}
+.fs-foot{position:sticky;bottom:-20px;background:#fff;display:flex;gap:10px;padding:12px 4px 8px;border-top:1px solid var(--line)}
+.fs-foot button{font:inherit;font-weight:800;border-radius:10px;padding:13px;cursor:pointer}
+#fclear{flex:1;background:#fff;border:1px solid var(--line);color:var(--ink)}
+.fapply{flex:2;background:#FFC21A;border:0;color:#0B0D10}
+.ctool{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:0 12px 12px}
+.ctool .dcs{padding:0}
+.ccount{margin-left:auto;font-size:.8rem;color:var(--steel)}
+.lst .sec.lazy{content-visibility:auto;contain-intrinsic-size:auto 340px}
+@media(min-width:800px){.lst{padding:0 16px}.lst .sec{border:1px solid var(--line);border-radius:16px;margin-top:14px}.lst .crumbs{border-radius:16px 16px 0 0;margin-top:14px;border:1px solid var(--line);border-bottom:0}.lst .crumbs+.sec{margin-top:0;border-top:0;border-radius:0 0 16px 16px}}
 footer{padding:22px 16px 40px;font-size:.75rem;color:var(--steel);text-align:center;line-height:1.7}
 footer a{text-decoration:underline}
 @media(min-width:800px){.row .pc{width:190px}.banner{margin:12px auto;max-width:1176px}.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
@@ -133,7 +168,7 @@ footer a{text-decoration:underline}
 .thumb.on{border:2px solid var(--accent)}
 .pd-main{position:relative;aspect-ratio:1/1;border:1px solid var(--line);border-radius:18px;background:#fff;overflow:hidden}
 .pd-main img{position:absolute;inset:22px;width:calc(100% - 44px);height:calc(100% - 44px);object-fit:contain;transition:opacity .15s}
-.pd-off{position:absolute;top:14px;left:14px;background:#1F8A5B;color:#fff;font-weight:800;font-size:.78rem;border-radius:8px;padding:5px 9px}
+.pd-off{position:absolute;z-index:2;top:14px;left:14px;background:#1F8A5B;color:#fff;font-weight:800;font-size:.78rem;border-radius:8px;padding:5px 9px}
 .pd-info{min-width:0}
 .pd-rate{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .pd-rate .l{display:flex;align-items:center;gap:8px;font-size:.9rem;color:var(--graphite)}
@@ -272,7 +307,7 @@ body{padding-bottom:76px}
       <div class="pd-tiles">
         <div><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><b>1 yr</b><span>warranty</span></div>
         <div><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1.1 6.2L12 17.3 6.4 20.2l1.1-6.2L3 9.6l6.2-.9z"/></svg></div><b>4.3★</b><span>4,162 ratings</span></div>
-        <div><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1116 0"/><path d="M12 17l4-5"/></svg></div><b>5.6/10</b><span>value score</span></div>
+        <div><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17a8 8 0 1116 0"/><path d="M12 17l4-5"/></svg></div><b>5.8/10</b><span>value score</span></div>
       </div>
       <div class="pd-strip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h11v10H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg><span><b>Sold and delivered by Flipkart</b> · their returns and warranty apply</span></div>
       <div class="pd-btns"><a class="cmp" href="/vs/?a=orient-chefspecial-grill-sandwich-maker"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L14 10M14 4l6 6M20 20L10 10M10 4L4 10"/></svg>Compare</a><a class="buy" href="https://fktr.in/moJ4vwV" target="_blank" rel="nofollow sponsored noopener">Buy on Flipkart <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
@@ -284,10 +319,10 @@ body{padding-bottom:76px}
   <section class="card" aria-labelledby="h-val">
     <div class="sec-head"><h2 id="h-val"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>How it compares</h2><span class="sub">Against similar picks on this site</span></div>
     <div class="cmp-grid">
-      <div class="vbox"><div class="vnum">5.6<span> / 10</span></div><span class="vpill">Fair value</span><div class="vbars"><div class="vb"><span>Rating</span><span>5/10</span><div class="t"><i style="width:55%"></i></div></div><div class="vb"><span>Buyers</span><span>6/10</span><div class="t"><i style="width:60%"></i></div></div><div class="vb"><span>Price vs similar</span><span>Mid priced</span><div class="t"><i style="width:62%"></i></div></div><div class="vb"><span>Warranty</span><span>5/10</span><div class="t"><i style="width:50%"></i></div></div></div><p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p></div>
+      <div class="vbox"><div class="vnum">5.8<span> / 10</span></div><span class="vpill">Fair value</span><div class="vbars"><div class="vb"><span>Rating</span><span>5/10</span><div class="t"><i style="width:55%"></i></div></div><div class="vb"><span>Buyers</span><span>6/10</span><div class="t"><i style="width:60%"></i></div></div><div class="vb"><span>Price vs similar</span><span>Cheaper than most</span><div class="t"><i style="width:75%"></i></div></div><div class="vb"><span>Warranty</span><span>5/10</span><div class="t"><i style="width:50%"></i></div></div></div><p class="vnote">My score, not Flipkart's: 50% rating · 20% buyers · 15% price · 15% warranty</p></div>
       <div><div class="rv-wrap"><table class="rivals">
           <thead><tr><th>Product</th><th>Price</th><th>Rating</th><th class="hide-m">Ratings</th><th class="hide-m">Warranty</th><th>Value</th><th></th></tr></thead>
-          <tbody><tr class="me"><td><span class="rcell"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/6/0/h/-original-imagghxnzy9vgvbp.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Orient Chefspecial Grill Sandwich Maker <span style="font-weight:600;color:#6B7480">(this one)</span></span></span></td><td class="num">₹999</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,162</td><td class="hide-m">1 Year</td><td class="num"><b>5.6</b></td><td><a class="bb" href="https://fktr.in/moJ4vwV" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/kenstar-grill-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/p/w/2/-original-imah8jeg6arhzc95.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Kenstar Grill Sandwich Maker</span></a></td><td class="num">₹799</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">1,01,342</td><td class="hide-m">—</td><td class="num"><b>5.5</b></td><td><a class="bb" href="https://fktr.in/Wmtd5Gv" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/prestige-psmfb-toast-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/c/i/a/-original-imahzhwthwqzxun7.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Prestige PSMFB Toast Sandwich Maker</span></a></td><td class="num">₹1,344</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">7,474</td><td class="hide-m">1 Year</td><td class="num"><b>5.1</b></td><td><a class="bb" href="https://fktr.in/OdR2i8i" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/milton-royal-express-800-w-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/t/6/i/royal-pro-express-800w-toaster-griller-sandwich-maker-top-original-imahfjn4uhghz2wt.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Milton Royal Express 800 W Sandwich Maker</span></a></td><td class="num">₹1,099</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">574</td><td class="hide-m">1 Year</td><td class="num"><b>4.3</b></td><td><a class="bb" href="https://fktr.in/evUK97M" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
+          <tbody><tr class="me"><td><span class="rcell"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/6/0/h/-original-imagghxnzy9vgvbp.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Orient Chefspecial Grill Sandwich Maker <span style="font-weight:600;color:#6B7480">(this one)</span></span></span></td><td class="num">₹999</td><td><span class="rt">4.3 ★</span></td><td class="num hide-m">4,162</td><td class="hide-m">1 Year</td><td class="num"><b>5.8</b></td><td><a class="bb" href="https://fktr.in/moJ4vwV" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/kenstar-grill-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/p/w/2/-original-imah8jeg6arhzc95.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Kenstar Grill Sandwich Maker</span></a></td><td class="num">₹799</td><td><span class="rt">4.2 ★</span></td><td class="num hide-m">1,01,342</td><td class="hide-m">—</td><td class="num"><b>5.7</b></td><td><a class="bb" href="https://fktr.in/Wmtd5Gv" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/milton-royal-express-800-w-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/t/6/i/royal-pro-express-800w-toaster-griller-sandwich-maker-top-original-imahfjn4uhghz2wt.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Milton Royal Express 800 W Sandwich Maker</span></a></td><td class="num">₹1,099</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">574</td><td class="hide-m">1 Year</td><td class="num"><b>4.5</b></td><td><a class="bb" href="https://fktr.in/evUK97M" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr><tr><td><a class="nm rcell" href="/lifelong-grill-sandwich-maker/"><img class="rph" src="https://rukminim1.flixcart.com/image/120/120/xif0q/sandwich-maker/b/d/3/-resized-original-imagvfyexnsxcz7s.jpeg?q=70" alt="" width="52" height="52" loading="lazy"><span>Lifelong Grill Sandwich Maker</span></a></td><td class="num">₹1,300</td><td><span class="rt">4.1 ★</span></td><td class="num hide-m">3,228</td><td class="hide-m">Any manufacturing defects up t</td><td class="num"><b>4.0</b></td><td><a class="bb" href="https://fktr.in/R3Fvp7x" target="_blank" rel="nofollow sponsored noopener">Buy</a></td></tr></tbody>
         </table></div><div class="cmp-go"><a href="/vs/?a=orient-chefspecial-grill-sandwich-maker"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20L14 10M14 4l6 6M20 20L10 10M10 4L4 10"/></svg>Compare head to head</a></div></div>
     </div>
   </section>
