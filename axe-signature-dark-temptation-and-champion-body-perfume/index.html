@@ -559,8 +559,10 @@
     .btn-buy:hover { background: #FFB300; }
     .footer-cta .btn-buy-white { background: #FFC21A; color: #0B0D10; }
     .topbar { background: linear-gradient(180deg,#0B5D3B,#11804F); border-bottom: 0; }
-    .topbar .back, .topbar .brand, .topbar .back span { color: #fff; }
+    .topbar .back, .topbar .brand, .topbar .back span { color: #fff !important; }
     .topbar .brand::before { content: "4★+ "; color: #FFC21A; }
+    .spec-grid.folded .spec:nth-child(n+7) { display: none; }
+    .spec-more { display: block; margin: 1rem auto 0; font: inherit; font-weight: 800; font-size: .9rem; color: #0B5D3B; background: #fff; border: 2px solid #0B5D3B; border-radius: 100px; padding: .65rem 1.4rem; cursor: pointer; }
     .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
     .thumb { cursor: pointer; transition: border-color .15s; }
     .wpill { display: inline-flex; align-items: center; gap: 5px; font-size: 0.8rem; font-weight: 700; color: #0B5D3B; background: #E8F5EE; border-radius: 100px; padding: 4px 10px; }
@@ -689,7 +691,7 @@
     <div class="wrap">
       <p class="sec-label">The details</p>
       <h2 class="sec-title">Full specification</h2>
-      <div class="spec-grid">
+      <div class="spec-grid folded" id="specgrid">
         <div class="spec"><div class="spec-k">Pack of</div><div class="spec-v">2</div></div>
         <div class="spec"><div class="spec-k">Ideal For</div><div class="spec-v">Men</div></div>
         <div class="spec"><div class="spec-k">Type</div><div class="spec-v">Deodorant Spray</div></div>
@@ -701,6 +703,7 @@
         <div class="spec"><div class="spec-k">Name and address of the Manufacturer</div><div class="spec-v">Unilever House, B D Sawant Marg, Chakala, Andheri East, Mumbai - 400099, Maharashtra</div></div>
         <div class="spec"><div class="spec-k">All details</div><div class="spec-v">Features, description and more</div></div>
       </div>
+      <button class="spec-more" type="button" aria-expanded="false" aria-controls="specgrid" onclick="var g=document.getElementById('specgrid'),o=g.classList.toggle('folded');this.setAttribute('aria-expanded',!o);this.textContent=o?'Show all 10 specs':'Show fewer';if(o)g.scrollIntoView({block:'nearest'})">Show all 10 specs</button>
     </div>
   </section>
 
