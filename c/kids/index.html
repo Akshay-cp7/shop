@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids, toys and school: checked picks with prices and ratings</title>
+  <meta name="description" content="5 kids, toys and school picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="canonical" href="https://shop.akshaycp.com/c/kids/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kids, toys and school: checked picks with prices and ratings">
+  <meta property="og:description" content="5 kids, toys and school picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
+  <meta property="og:url" content="https://shop.akshaycp.com/c/kids/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #0B0D10;
+      --graphite: #262B33;
+      --steel: #6B7480;
+      --mist: #F4F6F9;
+      --line: #E4E8EE;
+      --white: #FFFFFF;
+      --amber: #B07A18;
+      --green: #1F8A5B;
+    }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--white);
+      color: var(--ink);
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+
+    .topbar {
+      border-bottom: 1px solid var(--line);
+      padding: 0.9rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .topbar a.brand { font-weight: 800; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
+    .topbar .crumb { font-size: 0.8rem; color: var(--steel); }
+
+    header.page {
+      max-width: 62rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 2.5rem;
+    }
+
+    .eyebrow {
+      font-size: 0.66rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--amber);
+      margin-bottom: 0.6rem;
+    }
+
+    h1 {
+      font-size: clamp(1.9rem, 5.4vw, 2.9rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.8rem;
+    }
+
+    header.page p { color: var(--steel); max-width: 36rem; font-size: 1rem; }
+
+    main { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 1.3rem; }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(11,13,16,0.09); }
+
+    /* Merchant images come in mixed aspect ratios — the square is the box's job. */
+    .card-img {
+      background: var(--mist);
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      padding: 1.2rem;
+      /* Load-bearing. As a column flex item this box defaults to
+         min-height:auto, so a tall source image pushes it past its
+         aspect-ratio and the cards end up different heights. */
+      min-height: 0;
+    }
+    /* Same reason one level down — the image is a grid item in here. */
+    .card-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; min-width: 0; min-height: 0; }
+
+    .card-body { padding: 1.3rem 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
+
+    .card-cat { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--steel); }
+    .card-title { font-size: 1.08rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3; }
+    .card-desc { font-size: 0.88rem; color: var(--steel); flex: 1; }
+
+    .card-price { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; margin-top: 0.35rem; }
+    .card-price-now { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.03em; }
+    .card-price-mrp { font-size: 0.85rem; color: var(--steel); text-decoration: line-through; }
+    .card-price-off { font-size: 0.85rem; font-weight: 700; color: var(--green); }
+
+    .card-foot { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .card-rating { font-size: 0.78rem; font-weight: 700; color: var(--white); background: var(--green); padding: 0.12rem 0.42rem; border-radius: 5px; }
+    .card-ratings-n { font-size: 0.8rem; color: var(--steel); }
+    .card-go { margin-left: auto; font-size: 0.82rem; font-weight: 700; color: var(--ink); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 2.2rem 1.5rem 3rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--steel);
+      line-height: 1.8;
+    }
+
+    footer a { color: var(--graphite); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+
+    main { max-width: 76rem; }
+    .cards { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1rem; }
+    .card-img { padding: 1rem; }
+    .card-desc { display: none; }
+    @media (max-width: 600px) { .cards { grid-template-columns: 1fr 1fr; gap: 0.6rem; } .card-title { font-size: 0.92rem; } .card-foot .card-go, .card-ratings-n { display: none; } }
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: 72rem; margin: 0 auto 1.5rem; padding: 0 1rem; }
+    .chip { font-size: 0.85rem; font-weight: 600; text-decoration: none; color: var(--ink); border: 1px solid rgba(0,0,0,0.15); border-radius: 100px; padding: 0.4rem 0.9rem; background: var(--white); }
+    .chip:hover { border-color: var(--ink); }
+    .cat-h { max-width: 72rem; margin: 2.5rem auto 1rem; padding: 0 1rem; font-size: 1.35rem; display: flex; align-items: baseline; gap: 0.75rem; }
+    .cat-h a { font-size: 0.85rem; font-weight: 600; color: var(--graphite); }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <a class="brand" href="/">Akshay's picks</a>
+    <div class="crumb">Kids, toys and school</div>
+  </div>
+
+  <header class="page">
+    <div class="eyebrow">Checked picks</div>
+    <h1>Kids, toys and school</h1>
+    <p>5 picks from brands you know, each rated well by thousands of Flipkart buyers. Every page shows the real specs and the catches.</p>
+  </header>
+
+  <main>
+    <nav class="chips">
+      <a class="chip" href="/c/audio/">Audio (8)</a>
+      <a class="chip" href="/c/wearables/">Smartwatches (2)</a>
+      <a class="chip" href="/c/watches/">Watches (2)</a>
+      <a class="chip" href="/c/tech/">Computer and mobile (16)</a>
+      <a class="chip" href="/c/kids/">Kids, toys and school (5)</a>
+      <a class="chip" href="/c/grooming/">Grooming (7)</a>
+      <a class="chip" href="/c/hair/">Hair care (7)</a>
+      <a class="chip" href="/c/fragrance/">Perfume and deo (6)</a>
+      <a class="chip" href="/c/beauty/">Skin and makeup (10)</a>
+      <a class="chip" href="/c/kitchen/">Kitchen (26)</a>
+      <a class="chip" href="/c/appliances/">Home appliances (10)</a>
+      <a class="chip" href="/c/home/">Home and Diwali decor (7)</a>
+      <a class="chip" href="/c/bags/">Bags and travel (7)</a>
+      <a class="chip" href="/c/fashion/">Clothing and accessories (5)</a>
+      <a class="chip" href="/c/footwear/">Footwear (7)</a>
+      <a class="chip" href="/c/sports/">Sports and fitness (5)</a>
+    </nav>
+    <div class="cards">
+      <a class="card" href="/himalaya-baby-pants-diapers-medium-70-pack/">
+        <div class="card-img">
+          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/bangle-bracelet-armlet/d/g/y/-original-imahzpdkemzzaqbg.jpeg?q=70"
+               alt="Himalaya Baby Pants Diapers, Medium, 70 Pack, main product photo" width="416" height="416">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Kids, toys and school</div>
+          <div class="card-title">Himalaya Baby Pants Diapers, Medium, 70 Pack</div>
+          <div class="card-desc">Ideal For: Kids · Size: M</div>
+          <div class="card-price">
+            <span class="card-price-now">₹515</span>
+            <span class="card-price-mrp">₹999</span>
+            <span class="card-price-off">48% off</span>
+          </div>
+          <div class="card-foot">
+            <span class="card-rating">4.3 ★</span>
+            <span class="card-ratings-n">5,04,849 ratings</span>
+            <span class="card-go">See details &rsaquo;</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="/classmate-pulse-6-subject-a4-spiral-notebook/">
+        <div class="card-img">
+          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/diary-notebook/s/r/h/classmate-02105012-resized-original-imafvm2c7uhgd7fr.jpeg?q=70"
+               alt="Classmate Pulse 6 Subject A4 Spiral Notebook, main product photo" width="416" height="416">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Kids, toys and school</div>
+          <div class="card-title">Classmate Pulse 6 Subject A4 Spiral Notebook</div>
+          <div class="card-desc">Size: A4 · Type: Notebook</div>
+          <div class="card-price">
+            <span class="card-price-now">₹449</span>
+            <span class="card-price-mrp">₹540</span>
+            <span class="card-price-off">17% off</span>
+          </div>
+          <div class="card-foot">
+            <span class="card-rating">4.5 ★</span>
+            <span class="card-ratings-n">50,918 ratings</span>
+            <span class="card-go">See details &rsaquo;</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="/classmate-geometry-box/">
+        <div class="card-img">
+          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/geometry-box/j/h/h/04010030aa-classmate-enriched-transparent-original-imafzw6agupbzyn6.png?q=70"
+               alt="Classmate Geometry Box, main product photo" width="416" height="416" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Kids, toys and school</div>
+          <div class="card-title">Classmate Geometry Box</div>
+          <div class="card-desc">Pack of: 1 · Rated 4.3 by 23,623 Flipkart buyers</div>
+          <div class="card-price">
+            <span class="card-price-now">₹189</span>
+            <span class="card-price-mrp">₹250</span>
+            <span class="card-price-off">24% off</span>
+          </div>
+          <div class="card-foot">
+            <span class="card-rating">4.3 ★</span>
+            <span class="card-ratings-n">23,623 ratings</span>
+            <span class="card-go">See details &rsaquo;</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="/safari-halo-35-l-backpack/">
+        <div class="card-img">
+          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/backpack/0/v/i/-watermarked-original-imahfskaqfgrhzjd.jpeg?q=70"
+               alt="Safari Halo 35 L Backpack, main product photo" width="416" height="416" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Kids, toys and school</div>
+          <div class="card-title">Safari Halo 35 L Backpack</div>
+          <div class="card-desc">Capacity: 35 L · Ideal For: Boys &amp; Girls</div>
+          <div class="card-price">
+            <span class="card-price-now">₹610</span>
+            <span class="card-price-mrp">₹2,499</span>
+            <span class="card-price-off">76% off</span>
+          </div>
+          <div class="card-foot">
+            <span class="card-rating">4.2 ★</span>
+            <span class="card-ratings-n">10,179 ratings</span>
+            <span class="card-go">See details &rsaquo;</span>
+          </div>
+        </div>
+      </a>
+      <a class="card" href="/classmate-invento-geometry-box/">
+        <div class="card-img">
+          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/geometry-box/u/x/z/invento-classmate-enriched-transparent-original-imagffzbpntzdetf.png?q=70"
+               alt="Classmate Invento Geometry Box, main product photo" width="416" height="416" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-cat">Kids, toys and school</div>
+          <div class="card-title">Classmate Invento Geometry Box</div>
+          <div class="card-desc">Pack of: 1 · Rated 4.2 by 697 Flipkart buyers</div>
+          <div class="card-price">
+            <span class="card-price-now">₹142</span>
+            <span class="card-price-mrp">₹170</span>
+            <span class="card-price-off">16% off</span>
+          </div>
+          <div class="card-foot">
+            <span class="card-rating">4.2 ★</span>
+            <span class="card-ratings-n">697 ratings</span>
+            <span class="card-go">See details &rsaquo;</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    © 2026 Akshay C P · <a href="/">All picks</a> · <a href="https://akshaycp.com/">akshaycp.com</a> · <a href="https://akshaycp.com/privacypolicy/">Privacy</a><br>
+    Prices were checked on 6 November 2026 and change often. The Flipkart listing is the one that counts.<br>
+    If you buy through a link here I may earn a small commission, at no extra cost to you. Product images and specifications belong to Flipkart and the brands.
+  </footer>
+
+</body>
+</html>
