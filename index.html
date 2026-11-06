@@ -201,6 +201,7 @@ footer a{text-decoration:underline}
 #answer .dot{flex:none;width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#E6ECF3);box-shadow:0 0 0 2px #FFC21A,0 0 14px rgba(122,92,255,.45)}
 #answer .acts{margin-top:4px;display:flex;gap:12px;flex-wrap:wrap}
 #answer .acts button,#answer .acts a{font:inherit;font-size:.82rem;font-weight:700;color:#11804F;background:none;border:0;cursor:pointer;text-decoration:underline;padding:0}
+#aifu{display:flex;gap:8px;margin-top:10px}#aifu[hidden]{display:none}#aifu input{flex:1;min-width:0;font:inherit;font-size:16px;padding:9px 12px;border:1px solid #E4E8EE;border-radius:8px}#aifu button{font:inherit;font-weight:800;background:#FFC21A;color:#0B0D10;border:0;border-radius:8px;padding:0 16px;cursor:pointer}.aity{font-size:.78rem;color:#6B7480;margin:4px 0}
 #answer .grid{padding:0}
 #answer .grid .pc{animation:pop .5s cubic-bezier(.2,.9,.3,1.3) both}
 @keyframes pop{from{opacity:0;transform:scale(.3) translateY(-50px)}to{opacity:1;transform:none}}
@@ -403,6 +404,15 @@ function aiFind(M,q,D,Q,old){old=old||{};var om=0;for(var o in old)if(old[o]>om)
  .filter(function(x){return (x.pt>=.12||x.lx>=.5)&&(Q.max==null||x.p.p<=Q.max)&&(Q.min==null||x.p.p>=Q.min)});
  r.sort(function(a,b){return (b.s+b.p.v*.015)-(a.s+a.p.v*.015)});return{list:r.slice(0,24).map(function(x){x.p._s=x.s;return x.p}),none:none,best:best}}
 var AIM=null,AIP=null;
+var BOT='https://whatsapp-bot-production-725a.up.railway.app/shop-ai',HIST=[],SEQ=0,PREV=[];
+function sell(q,a){var my=++SEQ,t=document.getElementById('aitxt');if(!t)return;PREV=a.list;var slugs=a.hit?a.list.slice(0,8).map(function(p){return p.s}):[];
+  var d=document.createElement('div');d.className='aity';d.textContent='Working out what suits you...';t.parentNode.insertBefore(d,t.nextSibling);
+  var c=new AbortController();setTimeout(function(){c.abort()},15000);
+  fetch(BOT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:q,slugs:slugs,history:HIST.slice(-6)}),signal:c.signal}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(x){if(my!==SEQ)return;d.remove();if(!x.reply)return;t.textContent=x.reply;HIST.push({role:'user',text:q},{role:'model',text:x.reply});
+    if(x.pick){var g=A.querySelector('.grid'),l=g&&g.querySelector('a[href="/'+x.pick+'/"]'),e=l&&l.closest('.pc');if(e)g.insertBefore(e,g.firstChild)}
+    var f=document.getElementById('aifu');if(f){f.hidden=false;f.onsubmit=function(ev){ev.preventDefault();var i=f.querySelector('input'),v=i.value.trim();if(!v)return;follow(v)}}}).catch(function(){if(my===SEQ)d.remove()})}
+function follow(v){var a=askAnswer(v),seen={},l=PREV.slice(0,4).concat(a.hit?a.list.slice(0,8):PREV.slice(4,12)).filter(function(p){if(seen[p.s])return false;seen[p.s]=1;return true});
+  var n={html:'<b>'+esc(v)+'</b>',list:l,ask:1,hit:true};render(n);sell(v,n)}
 function aiGet(){if(!AIP)AIP=Promise.all([fetch('/ai/model.bin?v=4457b98c').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}),fetch('/ai/types.json?v=4457b98c').then(function(r){if(!r.ok)throw 0;return r.json()})]).then(function(x){AIM=aiLoad(x[0],x[1])}).catch(function(){});return AIP}
 // ---- orbit ----
 var items=[],S=0,R1=0,R2=0,IS=0,raf=0,last=0,slow=1,pull=0,pullTo=0,open=false;
@@ -426,7 +436,7 @@ function loop(t){var dt=Math.min(.05,(t-(last||t))/1000);last=t;
   if(!reduce)items.forEach(function(it){it.a+=dt*(it.inner?.22:-.13)*slow});
   pull+=(pullTo-pull)*Math.min(1,dt*7);
   place();if(open)raf=requestAnimationFrame(loop)}
-function show(){inp.value='';A.classList.remove('on');A.innerHTML='';ai.hidden=false;open=true;size();pull=1;pullTo=0;document.body.style.overflow='hidden';fab.classList.remove('on');
+function show(){HIST=[];SEQ++;PREV=[];inp.value='';A.classList.remove('on');A.innerHTML='';ai.hidden=false;open=true;size();pull=1;pullTo=0;document.body.style.overflow='hidden';fab.classList.remove('on');
   requestAnimationFrame(function(){ai.classList.add('on')});last=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(loop);
   if(innerWidth>700)setTimeout(function(){try{inp.focus({preventScroll:true})}catch(e){}},400)}
 function hide(cb){pullTo=1;orb.classList.add('gulp');
@@ -438,13 +448,13 @@ function pickCat(it){var t0=performance.now();(function z(t){it.zoom=Math.min(1,
   orb.classList.add('gulp');setTimeout(function(){orb.classList.remove('gulp');think(function(){withD(function(){render(catAnswer(it.c))})})},380)}
 function catAnswer(c){var L=D.filter(function(p){return p.k===c.k}).sort(function(a,b){return b.v-a.v});var best=L[0];
   return{html:'Here are all '+L.length+' '+esc(c.full.toLowerCase())+' picks, best value first. Top of the list is the <b>'+esc(best.n)+'</b> at ₹'+fmt(best.p)+', scoring '+best.v+'/10.',list:L,link:'/c/'+c.k+'/'}}
-function askAnswer(q){var R=find(q);if(AIM){var o={};R.list.forEach(function(p){o[p.n]=p._s||0});var l=aiFind(AIM,q,D,R.Q,o).list;l.forEach(function(p,i){p._s=i?0:1});R={Q:R.Q,list:l}}var L=R.list.length?R.list:D.slice().sort(function(a,b){return b.v-a.v}).slice(0,12);return{html:say(q,R),list:L}}
+function askAnswer(q){var R=find(q);if(AIM){var o={};R.list.forEach(function(p){o[p.n]=p._s||0});var l=aiFind(AIM,q,D,R.Q,o).list;l.forEach(function(p,i){p._s=i?0:1});R={Q:R.Q,list:l}}var L=R.list.length?R.list:D.slice().sort(function(a,b){return b.v-a.v}).slice(0,12);return{html:say(q,R),list:L,ask:1,hit:R.list.length>0}}
 function card(p){return '<div class="pc"><a href="/'+p.s+'/"><div class="pi"><img src="'+p.i+'" alt="'+esc(p.n)+'" loading="lazy"></div><div class="pb"><div class="pn">'+esc(p.n)+'</div><div class="pp"><span class="now">₹'+fmt(p.p)+'</span>'+(p.o?'<span class="mrp">₹'+fmt(p.m)+'</span><span class="off">'+p.o+'% off</span>':'')+'</div><div class="pr"><span class="rt">'+p.r+' ★</span>Value '+p.v+'/10</div>'+(p.w?'<div class="wb">🛡 '+(p.w>=1?p.w+' yr':Math.round(p.w*12)+' month')+' warranty</div>':'')+'</div></a></div>'}
-function render(ans){if(ST&&ST.close)ST.close();A.innerHTML='<div class="say"><span class="dot" aria-hidden="true"></span><div>'+ans.html+'<div class="acts"><button type="button" data-again>Ask something else</button>'+(ans.link?'<a href="'+ans.link+'">Open this category</a>':'')+'<button type="button" data-clear>Clear</button></div></div></div><div class="grid">'+ans.list.map(card).join('')+'</div>';
+function render(ans){if(ST&&ST.close)ST.close();A.innerHTML='<div class="say"><span class="dot" aria-hidden="true"></span><div><span id="aitxt">'+ans.html+'</span>'+(ans.ask?'<form id="aifu" hidden><input maxlength="300" placeholder="Ask a follow up" autocomplete="off" enterkeyhint="send" aria-label="Ask a follow up"><button type="submit">Ask</button></form><div class="aity">AI answer, so check the Flipkart listing before you buy. Please do not type personal details.</div>':'')+'<div class="acts"><button type="button" data-again>Ask something else</button>'+(ans.link?'<a href="'+ans.link+'">Open this category</a>':'')+'<button type="button" data-clear>Clear</button></div></div></div><div class="grid">'+ans.list.map(card).join('')+'</div>';
   A.querySelectorAll('.pc').forEach(function(c,i){c.style.animationDelay=(i*45)+'ms'});A.classList.add('on');
   A.querySelector('[data-again]').onclick=function(){inp.value='';show()};A.querySelector('[data-clear]').onclick=function(){A.classList.remove('on');A.innerHTML=''};
   var y=A.getBoundingClientRect().top+scrollY-90;scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'})}
-document.getElementById('aif').addEventListener('submit',function(e){e.preventDefault();var q=inp.value.trim();if(!q){inp.focus();return}inp.blur();think(function(){withD(function(){var done=0,go=function(){if(!done){done=1;render(askAnswer(q))}};aiGet().then(go);setTimeout(go,5000)})})});
+document.getElementById('aif').addEventListener('submit',function(e){e.preventDefault();var q=inp.value.trim();if(!q){inp.focus();return}inp.blur();think(function(){withD(function(){var done=0,go=function(){if(!done){done=1;var a=askAnswer(q);render(a);sell(q,a)}};aiGet().then(go);setTimeout(go,5000)})})});
 inp.addEventListener('input',aiGet,{once:true});
 ai.querySelectorAll('[data-close]').forEach(function(b){b.onclick=function(){hide()}});
 ai.addEventListener('click',function(e){if(e.target===ai)hide()});
