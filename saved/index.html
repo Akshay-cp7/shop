@@ -160,6 +160,8 @@ footer a{text-decoration:underline}
 .favtoast a{color:#FFC21A;text-decoration:underline;margin-left:4px}
 @media (prefers-reduced-motion: reduce){.fav.pop svg,.btn-fav.pop svg{animation:none}.favtoast{transition:none}}
 </style>
+<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','2570473966761359');fbq('track','PageView');</script>
+<noscript><img height="1" width="1" style="display:none" alt="" src="https://www.facebook.com/tr?id=2570473966761359&ev=PageView&noscript=1"></noscript>
 </head>
 <body>
 <header class="top">
@@ -168,14 +170,14 @@ footer a{text-decoration:underline}
 </header>
 <main id="main" class="lst"><div class="crumbs wrap"><a class="home-link" href="/">&lsaquo; Home</a><h1>Saved products</h1><p id="svsub">Kept on this device only.</p></div><section class="sec wrap" style="margin-top:0"><div class="grid" id="svgrid"></div><p class="empty" id="svempty" hidden style="padding:24px 8px">Nothing saved yet. Tap the heart on any product to keep it here, then come back to compare or buy.</p></section></main><footer>Prices were checked on 6 November 2026 and change often. The Flipkart listing is the one that counts.<br>
 If you buy through a link here I may earn a small commission, at no extra cost to you. This site is not Flipkart and sells nothing itself.<br>
-Product photos and specs belong to Flipkart and the brands. Brand names belong to their owners, and this site is not affiliated with any brand. · <a href="https://akshaycp.com/">akshaycp.com</a> · <a href="https://akshaycp.com/privacypolicy/">Privacy</a></footer>
+Product photos and specs belong to Flipkart and the brands. Brand names belong to their owners, and this site is not affiliated with any brand. · <a href="https://akshaycp.com/">akshaycp.com</a> · <a href="/privacy/">Privacy</a></footer>
 <script>
 (function(){
 // One shared product list for search, filters, the Highest rated row and the AI.
 // Row: [name, slug, price, mrp, off, rating, ratings, imgPath, cat, linkCode, warrantyYears, valueScore, type, brand]
 var IMG='https://rukminim1.flixcart.com/image/';
 var S=window.__store={P:[],C:{},open:false};
-S.ready=fetch('/p.json?v=9f3e02d3').then(function(r){return r.json()}).then(function(d){S.C=d.c;S.P=d.p;return d.p}).catch(function(){return []});
+S.ready=fetch('/p.json?v=4885e026').then(function(r){return r.json()}).then(function(d){S.C=d.c;S.P=d.p;return d.p}).catch(function(){return []});
 function $(id){return document.getElementById(id)}
 function f(n){return Number(n).toLocaleString('en-IN')}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
@@ -276,6 +278,6 @@ function draw(){S.ready.then(function(P){var by={};P.forEach(function(p){by[p[1]
   sub.textContent=L.length?L.length+' saved product'+(L.length===1?'':'s')+'. Kept on this device only.':'Kept on this device only.'})}
 if(window.__fav)draw();else window.addEventListener('load',draw);window.addEventListener('favchange',draw)})();
 </script>
-<script src="/fav.js?v=9eeb75a5" defer></script>
+<script src="/fav.js?v=fc1a9974" defer></script>
 </body>
 </html>
