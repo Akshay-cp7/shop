@@ -384,6 +384,25 @@ function say(q,R){var L=R.list,Q=R.Q,b=/\d/.test(q)?'':Q.max&&!Q.min?' under ₹
   var top=L[0]._s||0;var best=L.filter(function(p){return (p._s||0)>=top*.8}).sort(function(a,b){return b.v-a.v})[0];
   return 'Found '+L.length+' pick'+(L.length>1?'s':'')+' for “'+esc(q)+'”'+b+'. Best value among the closest matches is the <b>'+esc(best.n)+'</b> at ₹'+fmt(best.p)+', scoring '+best.v+'/10.'}
 
+// Trained shop search model: hashed letter patterns -> product type probabilities. No libraries.
+function aiLoad(buf,T){var v=new DataView(buf),B=v.getInt32(0,1),D=v.getInt32(4,1),H=v.getInt32(8,1),C=v.getInt32(12,1),sc=v.getFloat32(16,1),o=20,E=new Int8Array(buf,o,B*D);o+=B*D;
+ var f=function(n){var a=new Float32Array(n);for(var i=0;i<n;i++){a[i]=v.getFloat32(o,1);o+=4}return a},W1=f(D*H),b1=f(H),W2=f(H*C),b2=f(C);return{B:B,D:D,H:H,C:C,sc:sc,E:E,W1:W1,b1:b1,W2:W2,b2:b2,T:T}}
+function aiHash(s,B){var b=new TextEncoder().encode(s),h=2166136261;for(var i=0;i<b.length;i++){h=Math.imul(h^b[i],16777619)>>>0}return h%B}
+function aiFeats(q,B){var w=q.toLowerCase().match(/[a-z0-9]+/g)||[],f=[];w.forEach(function(x){f.push(aiHash('w_'+x,B));var y='<'+x+'>';[3,4].forEach(function(n){for(var i=0;i+n<=y.length;i++)f.push(aiHash(y.slice(i,i+n),B))})});
+ for(var i=0;i+1<w.length;i++)f.push(aiHash('b_'+w[i]+'_'+w[i+1],B));return f.length?f:[0]}
+function aiPredict(M,q){var f=aiFeats(q,M.B),e=new Float32Array(M.D),h=new Float32Array(M.H),z=new Float32Array(M.C),i,j;
+ f.forEach(function(x){for(j=0;j<M.D;j++)e[j]+=M.E[x*M.D+j]});for(j=0;j<M.D;j++)e[j]*=M.sc/f.length;
+ for(j=0;j<M.H;j++){var s=M.b1[j];for(i=0;i<M.D;i++)s+=e[i]*M.W1[i*M.H+j];h[j]=s>0?s:0}
+ var mx=-1e9;for(j=0;j<M.C;j++){s=M.b2[j];for(i=0;i<M.H;i++)s+=h[i]*M.W2[i*M.C+j];z[j]=s;if(s>mx)mx=s}
+ var t=0;for(j=0;j<M.C;j++){z[j]=Math.exp(z[j]-mx);t+=z[j]}var P={};for(j=0;j<M.C;j++)P[M.T[j]]=z[j]/t;return P}
+function aiFind(M,q,D,Q,old){old=old||{};var om=0;for(var o in old)if(old[o]>om)om=old[o];var P=aiPredict(M,q),none=P.__none__||0,best=0;for(var k in P)if(k!='__none__'&&P[k]>best)best=P[k];
+ if(none>best||best<.06)return{list:[],none:none,best:best};
+ var words=Q.words.filter(function(w){return w.length>2});
+ var r=D.map(function(p){var pt=(P[p.q]||0)/best,h=p.n.toLowerCase(),lx=0;words.forEach(function(w){if(h.indexOf(w)>=0)lx++});lx=words.length?lx/words.length:0;var ol=om?(old[p.n]||0)/om:0;return{p:p,pt:pt,ol:ol,s:pt+.35*lx*(pt>.05?1:0)+.8*ol}})
+ .filter(function(x){return (x.pt>=.12||x.ol>=.5)&&(Q.max==null||x.p.p<=Q.max)&&(Q.min==null||x.p.p>=Q.min)});
+ r.sort(function(a,b){return (b.s+b.p.v*.015)-(a.s+a.p.v*.015)});return{list:r.slice(0,24).map(function(x){x.p._s=x.s;return x.p}),none:none,best:best}}
+var AIM=null,AIP=null;
+function aiGet(){if(!AIP)AIP=Promise.all([fetch('/ai/model.bin?v=e44d14d9').then(function(r){if(!r.ok)throw 0;return r.arrayBuffer()}),fetch('/ai/types.json?v=e44d14d9').then(function(r){if(!r.ok)throw 0;return r.json()})]).then(function(x){AIM=aiLoad(x[0],x[1])}).catch(function(){});return AIP}
 // ---- orbit ----
 var items=[],S=0,R1=0,R2=0,IS=0,raf=0,last=0,slow=1,pull=0,pullTo=0,open=false;
 var nIn=Math.min(7,Math.ceil(CATS.length*0.42));
@@ -418,13 +437,14 @@ function pickCat(it){var t0=performance.now();(function z(t){it.zoom=Math.min(1,
   orb.classList.add('gulp');setTimeout(function(){orb.classList.remove('gulp');think(function(){withD(function(){render(catAnswer(it.c))})})},380)}
 function catAnswer(c){var L=D.filter(function(p){return p.k===c.k}).sort(function(a,b){return b.v-a.v});var best=L[0];
   return{html:'Here are all '+L.length+' '+esc(c.full.toLowerCase())+' picks, best value first. Top of the list is the <b>'+esc(best.n)+'</b> at ₹'+fmt(best.p)+', scoring '+best.v+'/10.',list:L,link:'/c/'+c.k+'/'}}
-function askAnswer(q){var R=find(q),L=R.list.length?R.list:D.slice().sort(function(a,b){return b.v-a.v}).slice(0,12);return{html:say(q,R),list:L}}
+function askAnswer(q){var R=find(q);if(AIM){var o={};R.list.forEach(function(p){o[p.n]=p._s||0});var l=aiFind(AIM,q,D,R.Q,o).list;l.forEach(function(p,i){p._s=i?0:1});R={Q:R.Q,list:l}}var L=R.list.length?R.list:D.slice().sort(function(a,b){return b.v-a.v}).slice(0,12);return{html:say(q,R),list:L}}
 function card(p){return '<div class="pc"><a href="/'+p.s+'/"><div class="pi"><img src="'+p.i+'" alt="'+esc(p.n)+'" loading="lazy"></div><div class="pb"><div class="pn">'+esc(p.n)+'</div><div class="pp"><span class="now">₹'+fmt(p.p)+'</span>'+(p.o?'<span class="mrp">₹'+fmt(p.m)+'</span><span class="off">'+p.o+'% off</span>':'')+'</div><div class="pr"><span class="rt">'+p.r+' ★</span>Value '+p.v+'/10</div>'+(p.w?'<div class="wb">🛡 '+(p.w>=1?p.w+' yr':Math.round(p.w*12)+' month')+' warranty</div>':'')+'</div></a></div>'}
 function render(ans){if(ST&&ST.close)ST.close();A.innerHTML='<div class="say"><span class="dot" aria-hidden="true"></span><div>'+ans.html+'<div class="acts"><button type="button" data-again>Ask something else</button>'+(ans.link?'<a href="'+ans.link+'">Open this category</a>':'')+'<button type="button" data-clear>Clear</button></div></div></div><div class="grid">'+ans.list.map(card).join('')+'</div>';
   A.querySelectorAll('.pc').forEach(function(c,i){c.style.animationDelay=(i*45)+'ms'});A.classList.add('on');
   A.querySelector('[data-again]').onclick=function(){inp.value='';show()};A.querySelector('[data-clear]').onclick=function(){A.classList.remove('on');A.innerHTML=''};
   var y=A.getBoundingClientRect().top+scrollY-90;scrollTo({top:Math.max(0,y),behavior:reduce?'auto':'smooth'})}
-document.getElementById('aif').addEventListener('submit',function(e){e.preventDefault();var q=inp.value.trim();if(!q){inp.focus();return}inp.blur();think(function(){withD(function(){render(askAnswer(q))})})});
+document.getElementById('aif').addEventListener('submit',function(e){e.preventDefault();var q=inp.value.trim();if(!q){inp.focus();return}inp.blur();think(function(){withD(function(){var done=0,go=function(){if(!done){done=1;render(askAnswer(q))}};aiGet().then(go);setTimeout(go,3000)})})});
+inp.addEventListener('input',aiGet,{once:true});
 ai.querySelectorAll('[data-close]').forEach(function(b){b.onclick=function(){hide()}});
 ai.addEventListener('click',function(e){if(e.target===ai)hide()});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&open)hide()});
