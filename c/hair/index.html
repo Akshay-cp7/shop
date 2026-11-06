@@ -1,345 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hair care: checked picks with prices and ratings</title>
-  <meta name="description" content="7 hair care picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
-  <link rel="icon" type="image/png" href="/favicon.png">
-  <link rel="canonical" href="https://shop.akshaycp.com/c/hair/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Hair care: checked picks with prices and ratings">
-  <meta property="og:description" content="7 hair care picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
-  <meta property="og:url" content="https://shop.akshaycp.com/c/hair/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink: #0B0D10;
-      --graphite: #262B33;
-      --steel: #6B7480;
-      --mist: #F4F6F9;
-      --line: #E4E8EE;
-      --white: #FFFFFF;
-      --amber: #B07A18;
-      --green: #1F8A5B;
-    }
-
-    html { -webkit-text-size-adjust: 100%; }
-
-    body {
-      background: var(--white);
-      color: var(--ink);
-      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
-      line-height: 1.55;
-      overflow-x: hidden;
-    }
-
-    img { max-width: 100%; display: block; }
-
-    .topbar {
-      border-bottom: 1px solid var(--line);
-      padding: 0.9rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .topbar a.brand { font-weight: 800; font-size: 0.95rem; color: var(--ink); text-decoration: none; }
-    .topbar .crumb { font-size: 0.8rem; color: var(--steel); }
-
-    header.page {
-      max-width: 62rem;
-      margin: 0 auto;
-      padding: 4rem 1.5rem 2.5rem;
-    }
-
-    .eyebrow {
-      font-size: 0.66rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      font-weight: 700;
-      color: var(--amber);
-      margin-bottom: 0.6rem;
-    }
-
-    h1 {
-      font-size: clamp(1.9rem, 5.4vw, 2.9rem);
-      font-weight: 800;
-      letter-spacing: -0.03em;
-      line-height: 1.15;
-      margin-bottom: 0.8rem;
-    }
-
-    header.page p { color: var(--steel); max-width: 36rem; font-size: 1rem; }
-
-    main { max-width: 62rem; margin: 0 auto; padding: 0 1.5rem 5rem; }
-
-    .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 1.3rem; }
-
-    .card {
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.18s ease, box-shadow 0.18s ease;
-    }
-
-    .card:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(11,13,16,0.09); }
-
-    /* Merchant images come in mixed aspect ratios — the square is the box's job. */
-    .card-img {
-      background: var(--mist);
-      aspect-ratio: 1 / 1;
-      display: grid;
-      place-items: center;
-      padding: 1.2rem;
-      /* Load-bearing. As a column flex item this box defaults to
-         min-height:auto, so a tall source image pushes it past its
-         aspect-ratio and the cards end up different heights. */
-      min-height: 0;
-    }
-    /* Same reason one level down — the image is a grid item in here. */
-    .card-img img { max-width: 100%; max-height: 100%; width: auto; height: auto; min-width: 0; min-height: 0; }
-
-    .card-body { padding: 1.3rem 1.35rem 1.5rem; display: flex; flex-direction: column; gap: 0.45rem; flex: 1; }
-
-    .card-cat { font-size: 0.66rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: var(--steel); }
-    .card-title { font-size: 1.08rem; font-weight: 700; letter-spacing: -0.015em; line-height: 1.3; }
-    .card-desc { font-size: 0.88rem; color: var(--steel); flex: 1; }
-
-    .card-price { display: flex; align-items: baseline; gap: 0.45rem; flex-wrap: wrap; margin-top: 0.35rem; }
-    .card-price-now { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.03em; }
-    .card-price-mrp { font-size: 0.85rem; color: var(--steel); text-decoration: line-through; }
-    .card-price-off { font-size: 0.85rem; font-weight: 700; color: var(--green); }
-
-    .card-foot { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.5rem; }
-    .card-rating { font-size: 0.78rem; font-weight: 700; color: var(--white); background: var(--green); padding: 0.12rem 0.42rem; border-radius: 5px; }
-    .card-ratings-n { font-size: 0.8rem; color: var(--steel); }
-    .card-go { margin-left: auto; font-size: 0.82rem; font-weight: 700; color: var(--ink); }
-
-    footer {
-      border-top: 1px solid var(--line);
-      padding: 2.2rem 1.5rem 3rem;
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--steel);
-      line-height: 1.8;
-    }
-
-    footer a { color: var(--graphite); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { transition: none !important; }
-    }
-
-    main { max-width: 76rem; }
-    .cards { grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr)); gap: 1rem; }
-    .card-img { padding: 1rem; }
-    .card-desc { display: none; }
-    @media (max-width: 600px) { .cards { grid-template-columns: 1fr 1fr; gap: 0.6rem; } .card-title { font-size: 0.92rem; } .card-foot .card-go, .card-ratings-n { display: none; } }
-    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; max-width: 72rem; margin: 0 auto 1.5rem; padding: 0 1rem; }
-    .chip { font-size: 0.85rem; font-weight: 600; text-decoration: none; color: var(--ink); border: 1px solid rgba(0,0,0,0.15); border-radius: 100px; padding: 0.4rem 0.9rem; background: var(--white); }
-    .chip:hover { border-color: var(--ink); }
-    .cat-h { max-width: 72rem; margin: 2.5rem auto 1rem; padding: 0 1rem; font-size: 1.35rem; display: flex; align-items: baseline; gap: 0.75rem; }
-    .cat-h a { font-size: 0.85rem; font-weight: 600; color: var(--graphite); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hair care: checked picks with prices and ratings</title>
+<meta name="description" content="7 hair care picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
+<link rel="canonical" href="https://shop.akshaycp.com/c/hair/">
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta name="theme-color" content="#12355B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hair care: checked picks with prices and ratings">
+<meta property="og:description" content="7 hair care picks from trusted brands on Flipkart, each with real specs, the price I saw, buyer ratings and what to keep in mind.">
+<meta property="og:url" content="https://shop.akshaycp.com/c/hair/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#0B0D10;--graphite:#262B33;--steel:#6B7480;--mist:#F1F3F6;--line:#E4E8EE;--white:#fff;--brand:#12355B;--brand2:#1C4E80;--amber:#F2B233;--green:#1F8A5B}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--mist);color:var(--ink);font-family:'Plus Jakarta Sans',system-ui,sans-serif;line-height:1.45;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.top{position:sticky;top:0;z-index:20;background:linear-gradient(180deg,var(--brand),var(--brand2));color:#fff;padding:10px 16px 12px}
+.top-row{display:flex;align-items:center;justify-content:space-between;max-width:1200px;margin:0 auto 8px}
+.logo{font-weight:800;font-size:1.15rem;letter-spacing:-.01em}
+.logo span{color:var(--amber)}
+.top-note{font-size:.72rem;opacity:.8}
+.search{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:8px;background:#fff;border-radius:8px;padding:9px 12px}
+.search svg{flex:none;color:var(--steel)}
+.search input{border:0;outline:0;font:inherit;font-size:.95rem;width:100%;color:var(--ink);background:transparent}
+.wrap{max-width:1200px;margin:0 auto}
+.cats{background:#fff;display:flex;gap:6px;overflow-x:auto;padding:12px 10px;scrollbar-width:none}
+.cats::-webkit-scrollbar,.row::-webkit-scrollbar{display:none}
+.cat{flex:none;width:76px;text-align:center;font-size:.72rem;font-weight:600;color:var(--graphite);line-height:1.2}
+.cat .ci{width:60px;height:60px;margin:0 auto 6px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cat img{width:46px;height:46px;object-fit:contain;mix-blend-mode:multiply}
+.banner{display:block;margin:10px;border-radius:12px;padding:18px 20px;background:linear-gradient(110deg,#3B1C5A,#7A2E5C 55%,#D9822B);color:#fff}
+.banner b{display:block;font-size:1.2rem;font-weight:800;letter-spacing:-.01em}
+.banner span{font-size:.85rem;opacity:.92}
+.sec{background:#fff;margin-top:10px;padding:14px 0 16px}
+.sec-h{display:flex;align-items:center;justify-content:space-between;padding:0 16px 10px}
+.sec-h h2{font-size:1.05rem;font-weight:800}
+.sec-h a{font-size:.8rem;font-weight:700;color:#fff;background:var(--brand2);border-radius:100px;padding:5px 12px}
+.row{display:flex;gap:10px;overflow-x:auto;padding:0 16px;scroll-snap-type:x proximity;scrollbar-width:none}
+.row .pc{flex:none;width:150px;scroll-snap-align:start}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;padding:0 12px}
+.pc{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.pc .pi{aspect-ratio:1;background:#fff;display:flex;align-items:center;justify-content:center;padding:10px}
+.pc .pi img{max-width:100%;max-height:100%;object-fit:contain}
+.pc .pb{padding:8px 10px 10px;border-top:1px solid var(--line)}
+.pc .pn{font-size:.8rem;font-weight:600;color:var(--graphite);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;min-height:2.3em}
+.pc .pp{margin-top:4px;display:flex;align-items:baseline;gap:6px;flex-wrap:wrap}
+.pc .now{font-weight:800;font-size:.95rem}
+.pc .mrp{font-size:.72rem;color:var(--steel);text-decoration:line-through}
+.pc .off{font-size:.72rem;font-weight:700;color:var(--green)}
+.pc .pr{margin-top:5px;font-size:.7rem;color:var(--steel);display:flex;align-items:center;gap:5px}
+.pc .rt{background:var(--green);color:#fff;font-weight:700;border-radius:4px;padding:1px 5px}
+#results{display:none;padding:14px 0}
+#results.on{display:block}
+#results .empty{padding:20px 16px;color:var(--steel)}
+.crumbs{background:#fff;padding:14px 16px 4px}
+.crumbs h1{font-size:1.25rem;font-weight:800}
+.crumbs p{font-size:.82rem;color:var(--steel);margin-top:2px}
+footer{padding:22px 16px 40px;font-size:.75rem;color:var(--steel);text-align:center;line-height:1.7}
+footer a{text-decoration:underline}
+@media(min-width:800px){.row .pc{width:190px}.banner{margin:12px auto;max-width:1176px}.grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}}
+</style>
 </head>
 <body>
-
-  <div class="topbar">
-    <a class="brand" href="/">Akshay's picks</a>
-    <div class="crumb">Hair care</div>
-  </div>
-
-  <header class="page">
-    <div class="eyebrow">Checked picks</div>
-    <h1>Hair care</h1>
-    <p>7 picks from brands you know, each rated well by thousands of Flipkart buyers. Every page shows the real specs and the catches.</p>
-  </header>
-
-  <main>
-    <nav class="chips">
-      <a class="chip" href="/c/audio/">Audio (8)</a>
-      <a class="chip" href="/c/wearables/">Smartwatches (2)</a>
-      <a class="chip" href="/c/watches/">Watches (2)</a>
-      <a class="chip" href="/c/tech/">Computer and mobile (16)</a>
-      <a class="chip" href="/c/kids/">Kids, toys and school (5)</a>
-      <a class="chip" href="/c/grooming/">Grooming (7)</a>
-      <a class="chip" href="/c/hair/">Hair care (7)</a>
-      <a class="chip" href="/c/fragrance/">Perfume and deo (6)</a>
-      <a class="chip" href="/c/beauty/">Skin and makeup (10)</a>
-      <a class="chip" href="/c/kitchen/">Kitchen (26)</a>
-      <a class="chip" href="/c/appliances/">Home appliances (10)</a>
-      <a class="chip" href="/c/home/">Home and Diwali decor (7)</a>
-      <a class="chip" href="/c/bags/">Bags and travel (7)</a>
-      <a class="chip" href="/c/fashion/">Clothing and accessories (5)</a>
-      <a class="chip" href="/c/footwear/">Footwear (7)</a>
-      <a class="chip" href="/c/sports/">Sports and fitness (5)</a>
-    </nav>
-    <div class="cards">
-      <a class="card" href="/mamaearth-onion-hair-oil-200-ml/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/hair-oil/q/o/v/200-0-onion-redensyl-for-fall-control-mamaearth-original-imahcksg7zysfufc.jpeg?q=70"
-               alt="Mamaearth Onion Hair Oil 200 ml, main product photo" width="416" height="416">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Mamaearth Onion Hair Oil 200 ml</div>
-          <div class="card-desc">Ideal For: Men &amp; Women · Quantity: 200 ml</div>
-          <div class="card-price">
-            <span class="card-price-now">₹328</span>
-            <span class="card-price-mrp">₹499</span>
-            <span class="card-price-off">34% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.1 ★</span>
-            <span class="card-ratings-n">2,32,835 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/bajaj-100-pure-coconut-oil-1-l/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/hair-oil/w/8/s/-original-imahdnhhjj8q8qzp.jpeg?q=70"
-               alt="Bajaj 100% Pure Coconut Oil 1 L, main product photo" width="416" height="416">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Bajaj 100% Pure Coconut Oil 1 L</div>
-          <div class="card-desc">Ideal For: Men &amp; Women · Quantity: 1000 ml</div>
-          <div class="card-price">
-            <span class="card-price-now">₹324</span>
-            <span class="card-price-mrp">₹540</span>
-            <span class="card-price-off">40% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.4 ★</span>
-            <span class="card-ratings-n">2,10,292 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/dabur-vatika-health-shampoo/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/shampoo/e/k/8/vatika-health-shampoo-with-henna-and-amla-for-problem-free-hair-enriched-transparent-original-imag5ecgrvyrtkw8.png?q=70"
-               alt="Dabur Vatika Health Shampoo, main product photo" width="416" height="416" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Dabur Vatika Health Shampoo</div>
-          <div class="card-desc">Ideal For: Men &amp; Women · Pack of: 1</div>
-          <div class="card-price">
-            <span class="card-price-now">₹299</span>
-            <span class="card-price-mrp">₹999</span>
-            <span class="card-price-off">70% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.3 ★</span>
-            <span class="card-ratings-n">1,57,298 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/havells-hd2222-1200-w-hair-dryer/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/hair-dryer/x/k/a/hd2222-hd2222-havells-enriched-transparent-original-imahcsq472xwupwf.png?q=70"
-               alt="Havells HD2222 1200 W Hair Dryer, main product photo" width="416" height="416" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Havells HD2222 1200 W Hair Dryer</div>
-          <div class="card-desc">Wattage: 1200 W · Pack of: 1</div>
-          <div class="card-price">
-            <span class="card-price-now">₹849</span>
-            <span class="card-price-mrp">₹1,295</span>
-            <span class="card-price-off">34% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.4 ★</span>
-            <span class="card-ratings-n">93,260 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/havells-hs4104-hair-straightener/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/hair-straightener/s/r/m/-enriched-transparent-original-imahgnh86g8gzxzq.png?q=70"
-               alt="Havells HS4104 Hair Straightener, main product photo" width="416" height="416" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Havells HS4104 Hair Straightener</div>
-          <div class="card-desc">Type: Hair Straightener · Warranty: 2 Years Warranty</div>
-          <div class="card-price">
-            <span class="card-price-now">₹992</span>
-            <span class="card-price-mrp">₹2,199</span>
-            <span class="card-price-off">55% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.3 ★</span>
-            <span class="card-ratings-n">79,992 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/mamaearth-rosemary-anti-hair-fall-shampoo/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/shampoo/m/h/q/250-rosemary-anti-hairfall-shampoo-with-rosemary-methi-dana-for-original-imahmqb4zcnpgyha.jpeg?q=70"
-               alt="Mamaearth Rosemary Anti Hair Fall Shampoo, main product photo" width="416" height="416" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Mamaearth Rosemary Anti Hair Fall Shampoo</div>
-          <div class="card-desc">Ideal For: Men &amp; Women · Pack of: 1</div>
-          <div class="card-price">
-            <span class="card-price-now">₹302</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.2 ★</span>
-            <span class="card-ratings-n">73,751 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-      <a class="card" href="/philips-hair-straightener-alia-bhatt-edition/">
-        <div class="card-img">
-          <img src="https://rukminim1.flixcart.com/image/416/416/xif0q/hair-straightener/c/c/u/alia-bhatt-new-edition-philips-original-imagm9yqh2zzeqpa.jpeg?q=70"
-               alt="Philips Hair Straightener, Alia Bhatt Edition, main product photo" width="416" height="416" loading="lazy">
-        </div>
-        <div class="card-body">
-          <div class="card-cat">Hair care</div>
-          <div class="card-title">Philips Hair Straightener, Alia Bhatt Edition</div>
-          <div class="card-desc">Type: Hair Straightener · Warranty: 2 YEARS</div>
-          <div class="card-price">
-            <span class="card-price-now">₹1,287</span>
-            <span class="card-price-mrp">₹1,495</span>
-            <span class="card-price-off">14% off</span>
-          </div>
-          <div class="card-foot">
-            <span class="card-rating">4.1 ★</span>
-            <span class="card-ratings-n">2,983 ratings</span>
-            <span class="card-go">See details &rsaquo;</span>
-          </div>
-        </div>
-      </a>
-    </div>
-  </main>
-
-  <footer>
-    © 2026 Akshay C P · <a href="/">All picks</a> · <a href="https://akshaycp.com/">akshaycp.com</a> · <a href="https://akshaycp.com/privacypolicy/">Privacy</a><br>
-    Prices were checked on 6 November 2026 and change often. The Flipkart listing is the one that counts.<br>
-    If you buy through a link here I may earn a small commission, at no extra cost to you. Product images and specifications belong to Flipkart and the brands.
-  </footer>
-
+<header class="top">
+  <div class="top-row"><a class="logo" href="/">Akshay's <span>picks</span></a><span class="top-note">Trusted brands, checked</span></div>
+  <label class="search"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search for earbuds, kettles, perfume..." autocomplete="off" aria-label="Search products"></label>
+</header>
+<main id="main"><div class="crumbs wrap"><h1>Hair care</h1><p>7 picks, most rated first. Every one was in stock and rated 4 or higher when I checked.</p></div><section class="sec wrap" style="margin-top:0"><div class="grid"><a class="pc" href="/mamaearth-onion-hair-oil-200-ml/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/hair-oil/q/o/v/200-0-onion-redensyl-for-fall-control-mamaearth-original-imahcksg7zysfufc.jpeg?q=70" alt="Mamaearth Onion Hair Oil 200 ml" width="300" height="300"></div><div class="pb"><div class="pn">Mamaearth Onion Hair Oil 200 ml</div><div class="pp"><span class="now">₹328</span><span class="mrp">₹499</span><span class="off">34% off</span></div><div class="pr"><span class="rt">4.1 ★</span>2,32,835</div></div></a><a class="pc" href="/bajaj-100-pure-coconut-oil-1-l/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/hair-oil/w/8/s/-original-imahdnhhjj8q8qzp.jpeg?q=70" alt="Bajaj 100% Pure Coconut Oil 1 L" width="300" height="300"></div><div class="pb"><div class="pn">Bajaj 100% Pure Coconut Oil 1 L</div><div class="pp"><span class="now">₹324</span><span class="mrp">₹540</span><span class="off">40% off</span></div><div class="pr"><span class="rt">4.4 ★</span>2,10,292</div></div></a><a class="pc" href="/dabur-vatika-health-shampoo/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/shampoo/e/k/8/vatika-health-shampoo-with-henna-and-amla-for-problem-free-hair-enriched-transparent-original-imag5ecgrvyrtkw8.png?q=70" alt="Dabur Vatika Health Shampoo" width="300" height="300"></div><div class="pb"><div class="pn">Dabur Vatika Health Shampoo</div><div class="pp"><span class="now">₹299</span><span class="mrp">₹999</span><span class="off">70% off</span></div><div class="pr"><span class="rt">4.3 ★</span>1,57,298</div></div></a><a class="pc" href="/havells-hd2222-1200-w-hair-dryer/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/hair-dryer/x/k/a/hd2222-hd2222-havells-enriched-transparent-original-imahcsq472xwupwf.png?q=70" alt="Havells HD2222 1200 W Hair Dryer" width="300" height="300"></div><div class="pb"><div class="pn">Havells HD2222 1200 W Hair Dryer</div><div class="pp"><span class="now">₹849</span><span class="mrp">₹1,295</span><span class="off">34% off</span></div><div class="pr"><span class="rt">4.4 ★</span>93,260</div></div></a><a class="pc" href="/havells-hs4104-hair-straightener/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/hair-straightener/s/r/m/-enriched-transparent-original-imahgnh86g8gzxzq.png?q=70" alt="Havells HS4104 Hair Straightener" width="300" height="300" loading="lazy"></div><div class="pb"><div class="pn">Havells HS4104 Hair Straightener</div><div class="pp"><span class="now">₹992</span><span class="mrp">₹2,199</span><span class="off">55% off</span></div><div class="pr"><span class="rt">4.3 ★</span>79,992</div></div></a><a class="pc" href="/mamaearth-rosemary-anti-hair-fall-shampoo/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/shampoo/m/h/q/250-rosemary-anti-hairfall-shampoo-with-rosemary-methi-dana-for-original-imahmqb4zcnpgyha.jpeg?q=70" alt="Mamaearth Rosemary Anti Hair Fall Shampoo" width="300" height="300" loading="lazy"></div><div class="pb"><div class="pn">Mamaearth Rosemary Anti Hair Fall Shampoo</div><div class="pp"><span class="now">₹302</span></div><div class="pr"><span class="rt">4.2 ★</span>73,751</div></div></a><a class="pc" href="/philips-hair-straightener-alia-bhatt-edition/"><div class="pi"><img src="https://rukminim1.flixcart.com/image/300/300/xif0q/hair-straightener/c/c/u/alia-bhatt-new-edition-philips-original-imagm9yqh2zzeqpa.jpeg?q=70" alt="Philips Hair Straightener, Alia Bhatt Edition" width="300" height="300" loading="lazy"></div><div class="pb"><div class="pn">Philips Hair Straightener, Alia Bhatt Edition</div><div class="pp"><span class="now">₹1,287</span><span class="mrp">₹1,495</span><span class="off">14% off</span></div><div class="pr"><span class="rt">4.1 ★</span>2,983</div></div></a></div></section></main><section id="results" class="wrap"><div class="grid" id="rgrid"></div></section>
+<footer>Prices were checked on 6 November 2026 and change often. The Flipkart listing is the one that counts.<br>
+If you buy through a link here I may earn a small commission, at no extra cost to you. This site is not Flipkart and sells nothing itself.<br>
+Product photos and specs belong to Flipkart and the brands. · <a href="https://akshaycp.com/">akshaycp.com</a> · <a href="https://akshaycp.com/privacypolicy/">Privacy</a></footer>
+<script>
+const P=[["Logitech B175 Wireless Mouse", "logitech-b175-wireless-mouse", 445, 1190, 63, 4.4, "1,73,404", "https://rukminim1.flixcart.com/image/300/300/xif0q/mouse/d/d/2/-enriched-transparent-original-imahbg3mcksqv9pq.png?q=70", "Computer and mobile"], ["TP-Link 300 Mbps WiFi Router", "tp-link-300-mbps-wifi-router", 1049, 1699, 38, 4.3, "94,095", "https://rukminim1.flixcart.com/image/300/300/xif0q/router/w/n/2/tp-link-wireless-n-enriched-transparent-original-imaf5j9wj4vfudfn.png?q=70", "Computer and mobile"], ["Portronics Konnect L USB Type C Cable 1.2 m", "portronics-konnect-l-usb-type-c-cable-1-2-m", 199, 699, 72, 4.2, "56,086", "https://rukminim1.flixcart.com/image/300/300/xif0q/data-cable/usb-type-c-cable/x/v/i/konnect-l-por-1403-portronics-original-imah45hz7rgjspja.jpeg?q=70", "Computer and mobile"], ["Bella Vita Date and Senorita Perfume Combo", "bella-vita-date-and-senorita-perfume-combo", 179, 749, 76, 4.4, "2,31,708", "https://rukminim1.flixcart.com/image/300/300/xif0q/perfume/m/r/d/40-date-perfume-senorita-perfume-combo-2x20ml-with-fruity-woody-original-imahghfgrqwfh7kg.jpeg?q=70", "Perfume and deo"], ["Safari Magnum 55 cm Cabin Trolley Bag", "safari-magnum-55-cm-cabin-trolley-bag", 1249, 7365, 83, 4.3, "3,14,356", "https://rukminim1.flixcart.com/image/300/300/xif0q/suitcase/s/l/c/-original-imahqeptzm9e8byd.jpeg?q=70", "Bags and travel"], ["KENT Ace Plus B 8 L RO Water Purifier", "kent-ace-plus-b-8-l-ro-water-purifier", 13499, 26500, 49, 4.4, "85,588", "https://rukminim1.flixcart.com/image/300/300/xif0q/water-purifier/h/5/9/ace-plus-b-kent-resized-original-imahhkugh5mwzgzb.jpeg?q=70", "Home appliances"], ["Pigeon 2100 W Induction Cooktop", "pigeon-2100-w-induction-cooktop", 2199, 2995, 27, 4.0, "6,73,970", "https://rukminim1.flixcart.com/image/300/300/xif0q/induction-cook-top/r/0/m/-original-imahf77vrzjhj3gk.jpeg?q=70", "Kitchen"], ["Maybelline Color Sensational Powder Matte Lipstick", "maybelline-color-sensational-powder-matte-lipstick", 185, 329, 44, 4.2, "1,60,237", "https://rukminim1.flixcart.com/image/300/300/koad9jk0/lipstick/k/e/x/color-sensational-powder-matte-nude-lipstick-maybelline-new-york-original-imag2sbpadfjz58g.jpeg?q=70", "Skin and makeup"], ["Boult Astra Gaming Earbuds", "boult-astra-gaming-earbuds", 1099, 3499, 69, 4.1, "1,81,562", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/p/x/k/-enriched-transparent-original-imahnab3rd8jfhyz.png?q=70", "Audio"], ["Noise ColorFit Icon 2 Calling Smartwatch", "noise-colorfit-icon-2-calling-smartwatch", 1299, 5999, 78, 4.1, "8,79,197", "https://rukminim1.flixcart.com/image/300/300/xif0q/smartwatch/n/o/z/-enriched-transparent-original-imah76jstup5zdww.png?q=70", "Smartwatches"], ["WildHorn Genuine Leather RFID Wallet for Men", "wildhorn-genuine-leather-rfid-wallet-for-men", 478, 1499, 68, 4.2, "3,410", "https://rukminim1.flixcart.com/image/300/300/xif0q/wallet-card-wallet/m/c/e/top-grain-leather-wallet-for-men-wh1173m-wallet-wildhorn-original-imagpqpkthrkzkgh.jpeg?q=70", "Bags and travel"], ["AGARO Regal Plus 2 in 1 Vacuum Cleaner", "agaro-regal-plus-2-in-1-vacuum-cleaner", 2279, 2999, 24, 4.0, "44,100", "https://rukminim1.flixcart.com/image/300/300/xif0q/vacuum-cleaner/f/b/v/33423-agaro-original-imahe2cfm8mwqgwg.jpeg?q=70", "Home appliances"], ["Mivi Fort H350 5.1 Soundbar", "mivi-fort-h350-5-1-soundbar", 5299, 34999, 85, 4.2, "27,395", "https://rukminim1.flixcart.com/image/300/300/xif0q/speaker/b/0/o/-original-imahrfg2ddwfwwh6.jpeg?q=70", "Audio"], ["Levi's 505 Straight Fit Jeans for Men", "levi-s-505-straight-fit-jeans-for-men", 1122, 3099, 64, 4.0, "1,599", "https://rukminim1.flixcart.com/image/300/300/xif0q/jean/g/o/p/-original-imahg26azzfmupdg.jpeg?q=70", "Clothing and accessories"], ["Park Avenue Good Morning Grooming Kit", "park-avenue-good-morning-grooming-kit", 293, 699, 58, 4.4, "62,629", "https://rukminim1.flixcart.com/image/300/300/xif0q/shopsy-combo-kit/h/s/o/good-morning-men-s-grooming-essential-kit-pagmk001101-park-original-imah2vuatchaztua.jpeg?q=70", "Grooming"], ["Campus Casual Sneakers for Women", "campus-casual-sneakers-for-women", 1403, 2599, 46, 4.4, "4,738", "https://rukminim1.flixcart.com/image/300/300/xif0q/shoe/f/e/i/-original-imahmgpqyz2th9fr.jpeg?q=70", "Footwear"], ["Denver Hamilton and Imperial Deodorant Combo", "denver-hamilton-and-imperial-deodorant-combo", 279, 580, 52, 4.4, "2,17,793", "https://rukminim1.flixcart.com/image/300/300/xif0q/deodorant/b/d/t/360-hamilton-imperial-combo-2-deodorant-spray-denver-men-original-imahghyfdyezher8.jpeg?q=70", "Perfume and deo"], ["Kenstar Grill Sandwich Maker", "kenstar-grill-sandwich-maker", 799, 1495, 47, 4.2, "1,01,342", "https://rukminim1.flixcart.com/image/300/300/xif0q/sandwich-maker/p/w/2/-original-imah8jeg6arhzc95.jpeg?q=70", "Kitchen"], ["Cello Dazzle Swirl 34 Piece Opalware Dinner Set", "cello-dazzle-swirl-34-piece-opalware-dinner-set", 1699, 3699, 54, 4.4, "2,03,173", "https://rukminim1.flixcart.com/image/300/300/xif0q/dinner-set/u/6/o/yes-34-8904350476961-cello-original-imahfkf36k2ey2ba.jpeg?q=70", "Kitchen"], ["WD My Passport 2 TB External Hard Disk", "wd-my-passport-2-tb-external-hard-disk", 11308, 15400, 27, 4.4, "44,692", "https://rukminim1.flixcart.com/image/300/300/xif0q/minutes_enrichment_original/-enriched-original-ACCFH7XCF2FAQQ2A_0.jpg?q=70", "Computer and mobile"], ["Orient Fabripress 1000 W Dry Iron", "orient-fabripress-1000-w-dry-iron", 559, 990, 44, 4.2, "2,37,721", "https://rukminim1.flixcart.com/image/300/300/xif0q/iron/j/a/0/-original-imah6beszzmghdng.jpeg?q=70", "Home appliances"], ["adidas Adilette Aqua Slides", "adidas-adilette-aqua-slides", 799, 1999, 60, 4.1, "47,178", "https://rukminim1.flixcart.com/image/300/300/xif0q/slipper-flip-flop/a/d/2/-watermarked-original-imahgbrxghd5hfs7.jpeg?q=70", "Footwear"], ["Roadster Genuine Leather Belt for Men", "roadster-genuine-leather-belt-for-men", 268, 2799, 90, 4.0, "25,486", "https://rukminim1.flixcart.com/image/300/300/xif0q/belt/p/d/n/34-mdl-leath-6-bl-sty-leath-6-bl-genuine-leather-belt-for-men-s-original-imahmpfbuqjpzxf2.jpeg?q=70", "Clothing and accessories"], ["Philips HR3705 300 W Hand Blender", "philips-hr3705-300-w-hand-blender", 2087, 2795, 25, 4.5, "23,835", "https://rukminim1.flixcart.com/image/300/300/xif0q/hand-blender/1/y/q/-original-imahf77vvnvg9qcy.jpeg?q=70", "Kitchen"], ["Bajaj Rex 500 W Mixer Grinder, 3 Jars", "bajaj-rex-500-w-mixer-grinder-3-jars", 1899, 4190, 55, 4.2, "3,76,874", "https://rukminim1.flixcart.com/image/300/300/xif0q/mixer-grinder-juicer/k/n/r/-resized-original-imahzv5t9watgs5j.jpeg?q=70", "Kitchen"], ["Boult Z40 Wireless Earbuds", "boult-z40-wireless-earbuds", 899, 4999, 82, 4.1, "5,15,615", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/d/a/c/-enriched-transparent-original-imahebzzqs5fspcv.png?q=70", "Audio"], ["Allen Solly Polo T-Shirt for Men", "allen-solly-polo-t-shirt-for-men", 455, 1099, 59, 4.3, "1,42,758", "https://rukminim1.flixcart.com/image/300/300/xif0q/t-shirt/a/9/3/-original-imahq5ngpfav8ycj.jpeg?q=70", "Clothing and accessories"], ["WROGN 75 L Duffel Trolley Bag", "wrogn-75-l-duffel-trolley-bag", 499, 2879, 83, 4.0, "72,340", "https://rukminim1.flixcart.com/image/300/300/xif0q/duffel-bag/7/i/t/9-wrn-75l-2-0-24-inch-wheel-duffle-traveling-tours-travel-duffel-original-imahpbvsehfrsmy4.jpeg?q=70", "Bags and travel"], ["Lavie Mini Satchel Handbag", "lavie-mini-satchel-handbag", 769, 4799, 84, 4.3, "12,373", "https://rukminim1.flixcart.com/image/300/300/xif0q/hand-messenger-bag/w/d/m/hdfq674238n3-12-hdfq674238n3-satchel-lavie-24-watermarked-original-imahk67ghzrycu65.jpeg?q=70", "Bags and travel"], ["Boldfit 4 mm Yoga Mat", "boldfit-4-mm-yoga-mat", 282, 699, 60, 4.1, "16,182", "https://rukminim1.flixcart.com/image/300/300/xif0q/sport-mat/v/d/b/yoga-mat-for-men-women-4mm-exercise-mat-anti-skid-workout-yoga-original-imahrgzckjzy4r4t.jpeg?q=70", "Sports and fitness"], ["Zebronics Thunder Bluetooth Headphones", "zebronics-thunder-bluetooth-headphones", 664, 1699, 61, 4.0, "1,45,366", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/v/t/d/-enriched-transparent-original-imahm9xqhbnnysb4.png?q=70", "Audio"], ["Zebronics K20 Wired Keyboard", "zebronics-k20-wired-keyboard", 232, 399, 42, 4.1, "1,35,888", "https://rukminim1.flixcart.com/image/300/300/xif0q/keyboard/desktop-keyboard/z/y/1/zeb-k20-zeb-k65-zebronics-enriched-transparent-original-imahmcyxescfzyyg.png?q=70", "Computer and mobile"], ["Yonex ZR 100 Light Badminton Racquet, Pack of 2", "yonex-zr-100-light-badminton-racquet-pack-of-2", 589, 750, 21, 4.1, "65,994", "https://rukminim1.flixcart.com/image/300/300/xif0q/racquet/u/v/k/g4-8-25-cm-zr-100-light-strung-1-na-400-badminton-racquet-yonex-enriched-transparent-original-imaftuvfyays8vkg.png?q=70", "Sports and fitness"], ["Prestige Atlas 1.5 L Electric Kettle", "prestige-atlas-1-5-l-electric-kettle", 669, 1245, 46, 4.1, "1,93,024", "https://rukminim1.flixcart.com/image/300/300/xif0q/electric-kettle/m/i/a/-original-imah6g5zfnqqfaqm.jpeg?q=70", "Kitchen"], ["OnePlus Bullets Wireless Z2 ANC", "oneplus-bullets-wireless-z2-anc", 2149, 2499, 14, 4.3, "16,34,177", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/p/8/8/-original-imagrs3zmrkrrehv.jpeg?q=70", "Audio"], ["Pigeon Popular 2 Burner Glass Gas Stove", "pigeon-popular-2-burner-glass-gas-stove", 1699, 2999, 43, 4.1, "2,55,020", "https://rukminim1.flixcart.com/image/300/300/xif0q/gas-stove/e/l/v/-original-imagrzvn9ymmgsvj.jpeg?q=70", "Kitchen"], ["Wild Stone Edge Perfume 50 ml", "wild-stone-edge-perfume-50-ml", 249, 499, 50, 4.3, "2,34,015", "https://rukminim1.flixcart.com/image/300/300/xif0q/perfume/c/d/b/50-edge-perfume-for-men-eau-de-parfum-wild-stone-men-original-imahepnzax6sng5c.jpeg?q=70", "Perfume and deo"], ["Pigeon 750 W Pop Up Toaster", "pigeon-750-w-pop-up-toaster", 1209, 1504, 20, 4.2, "29,772", "https://rukminim1.flixcart.com/image/300/300/xif0q/pop-up-toaster/e/a/g/-original-imahqmd474tfddzg.jpeg?q=70", "Kitchen"], ["Campus Hurricane Running Shoes for Men", "campus-hurricane-running-shoes-for-men", 1199, 1699, 29, 4.3, "1,52,028", "https://rukminim1.flixcart.com/image/300/300/xif0q/shoe/6/n/g/9-6g-842-9-campus-bt-grn-blk-watermarked-original-imahhdjhbpncmxtz.jpeg?q=70", "Footwear"], ["Syska 9 W LED Bulb, Pack of 6", "syska-9-w-led-bulb-pack-of-6", 228, 1200, 81, 4.2, "1,75,615", "https://rukminim1.flixcart.com/image/300/300/xif0q/bulb/7/1/a/6-srl-9w-po6-syska-original-imahgz6skkgk6ade.jpeg?q=70", "Home and Diwali decor"], ["Safari 30 L Laptop Backpack", "safari-30-l-laptop-backpack", 513, 3199, 84, 4.3, "3,86,101", "https://rukminim1.flixcart.com/image/300/300/xif0q/backpack/q/m/f/-watermarked-original-imahm2xezcmgfdxb.jpeg?q=70", "Bags and travel"], ["Bajaj Crest Turbo 1200 mm Ceiling Fan", "bajaj-crest-turbo-1200-mm-ceiling-fan", 1399, 2762, 49, 4.1, "2,01,870", "https://rukminim1.flixcart.com/image/300/300/xif0q/fan/t/y/h/-original-imahp9ghzfb5drkg.jpeg?q=70", "Home appliances"], ["Philips GC1903 1300 W Steam Iron", "philips-gc1903-1300-w-steam-iron", 1299, 2195, 41, 4.3, "2,02,750", "https://rukminim1.flixcart.com/image/300/300/xif0q/minutes_enrichment_original/-enriched-resized-original-IRND2UFFYBMGSPUN_0.jpg?q=70", "Home appliances"], ["Ajanta 32 cm Wall Clock", "ajanta-32-cm-wall-clock", 489, 575, 15, 4.3, "1,89,121", "https://rukminim1.flixcart.com/image/300/300/xif0q/wall-clock/a/1/e/-original-imahgvbzjquqmu4j.jpeg?q=70", "Home and Diwali decor"], ["Biotique Sandalwood Sunscreen SPF 50", "biotique-sandalwood-sunscreen-spf-50", 400, 449, 11, 4.2, "76,878", "https://rukminim1.flixcart.com/image/300/300/xif0q/sunscreen/c/m/m/120-0-sun-shield-sandalwood-lotion-uvb-uva-ultra-protective-original-imahckrt4eqzpr5b.jpeg?q=70", "Skin and makeup"], ["Dabur Vatika Health Shampoo", "dabur-vatika-health-shampoo", 299, 999, 70, 4.3, "1,57,298", "https://rukminim1.flixcart.com/image/300/300/xif0q/shampoo/e/k/8/vatika-health-shampoo-with-henna-and-amla-for-problem-free-hair-enriched-transparent-original-imag5ecgrvyrtkw8.png?q=70", "Hair care"], ["Cello Sapphire 3 Piece Casserole Set", "cello-sapphire-3-piece-casserole-set", 599, 1399, 57, 4.1, "1,96,033", "https://rukminim1.flixcart.com/image/300/300/xif0q/casserole/y/u/t/3-clo-sphre-cssrl-setof3-brwn-cello-original-imah8bzkycryhmz5.jpeg?q=70", "Kitchen"], ["Havells HS4104 Hair Straightener", "havells-hs4104-hair-straightener", 992, 2199, 55, 4.3, "79,992", "https://rukminim1.flixcart.com/image/300/300/xif0q/hair-straightener/s/r/m/-enriched-transparent-original-imahgnh86g8gzxzq.png?q=70", "Hair care"], ["Plum 10% Niacinamide Face Serum", "plum-10-niacinamide-face-serum", 236, 249, 5, 4.2, "1,17,380", "https://rukminim1.flixcart.com/image/300/300/xif0q/skin-treatment/8/6/r/10-10-niacinamide-brightening-face-serum-with-rice-water-original-imahsdvaedtfhu7n.jpeg?q=70", "Skin and makeup"], ["Milton Pro Insulated Lunch Box, 4 Containers", "milton-pro-insulated-lunch-box-4-containers", 799, 1999, 60, 4.3, "69,828", "https://rukminim1.flixcart.com/image/300/300/xif0q/minutes_enrichment_original/-enriched-original-LBXGKF9VHQDZZSHT_0.jpg?q=70", "Kitchen"], ["Cetaphil Gentle Skin Cleanser 1 L", "cetaphil-gentle-skin-cleanser-1-l", 1614, 1899, 15, 4.3, "5,20,119", "https://rukminim1.flixcart.com/image/300/300/xif0q/face-wash/r/y/x/-original-imahjz6ygg5wbzbn.jpeg?q=70", "Skin and makeup"], ["Cello Puro Steel X Benz 650 ml Bottle", "cello-puro-steel-x-benz-650-ml-bottle", 329, 545, 40, 4.1, "1,16,418", "https://rukminim1.flixcart.com/image/300/300/xif0q/bottle/4/q/p/650-puro-x-benz-900-insulated-inner-outer-water-1-steelxbenz-original-imahdj5grznqhunp.jpeg?q=70", "Kitchen"], ["Classmate Geometry Box", "classmate-geometry-box", 189, 250, 24, 4.3, "23,623", "https://rukminim1.flixcart.com/image/300/300/xif0q/geometry-box/j/h/h/04010030aa-classmate-enriched-transparent-original-imafzw6agupbzyn6.png?q=70", "Kids, toys and school"], ["Pigeon Special Pressure Cooker Set, 2, 3 and 5 L", "pigeon-special-pressure-cooker-set-2-3-and-5-l", 2349, 2535, 7, 4.1, "5,23,376", "https://rukminim1.flixcart.com/image/300/300/xif0q/pressure-cooker/n/0/s/-enriched-transparent-original-imagsjvgdbdgcy9u.png?q=70", "Kitchen"], ["Prestige Omega Festival Pack Non Stick Cookware, 3 Piece", "prestige-omega-festival-pack-non-stick-cookware-3-piece", 1799, 2995, 40, 4.3, "4,17,714", "https://rukminim1.flixcart.com/image/300/300/xif0q/cookware-set/x/i/h/-original-imahqvkskxygnc8p.jpeg?q=70", "Kitchen"], ["Nivia Storm Football, Size 5, with Pump", "nivia-storm-football-size-5-with-pump", 399, 928, 57, 4.0, "3,91,310", "https://rukminim1.flixcart.com/image/300/300/xif0q/ball/y/2/2/420-470-storm-yellow-moulded-football-with-ball-pump-5-9968-enriched-transparent-original-imagt6zxwwzxeshb.png?q=70", "Sports and fitness"], ["Pigeon Healthifry Digital 1200 W Air Fryer", "pigeon-healthifry-digital-1200-w-air-fryer", 2999, 5995, 50, 4.0, "56,942", "https://rukminim1.flixcart.com/image/300/300/xif0q/air-fryer/1/b/z/-original-imahrd4z2gzbxtqh.jpeg?q=70", "Kitchen"], ["Wipro 6 W Rechargeable LED Lantern", "wipro-6-w-rechargeable-led-lantern", 736, 1090, 32, 4.3, "6,109", "https://rukminim1.flixcart.com/image/300/300/xif0q/emergency-light/z/u/k/-original-imahyx2dheytnbgr.jpeg?q=70", "Home and Diwali decor"], ["Mi 20000 mAh 33 W Power Bank", "mi-20000-mah-33-w-power-bank", 1999, 3999, 50, 4.3, "3,87,483", "https://rukminim1.flixcart.com/image/300/300/xif0q/power-bank/a/c/x/-enriched-transparent-original-imah45heessfc5jg.png?q=70", "Computer and mobile"], ["Vaseline Deep Moisture Body Lotion 600 ml", "vaseline-deep-moisture-body-lotion-600-ml", 292, 649, 55, 4.4, "8,36,444", "https://rukminim1.flixcart.com/image/300/300/xif0q/moisturizer-cream/w/h/6/-original-imahpgda6h9hhqx9.jpeg?q=70", "Skin and makeup"], ["SanDisk Cruzer Blade 64 GB Pen Drive", "sandisk-cruzer-blade-64-gb-pen-drive", 790, 3800, 79, 4.2, "1,89,226", "https://rukminim1.flixcart.com/image/300/300/xif0q/pendrive/pendrive/r/a/2/cruze-blade-sdcz50-sandisk-enriched-transparent-original-imah2gddutv3zajd.png?q=70", "Computer and mobile"], ["Mamaearth Onion Hair Oil 200 ml", "mamaearth-onion-hair-oil-200-ml", 328, 499, 34, 4.1, "2,32,835", "https://rukminim1.flixcart.com/image/300/300/xif0q/hair-oil/q/o/v/200-0-onion-redensyl-for-fall-control-mamaearth-original-imahcksg7zysfufc.jpeg?q=70", "Hair care"], ["Classmate Pulse 6 Subject A4 Spiral Notebook", "classmate-pulse-6-subject-a4-spiral-notebook", 449, 540, 17, 4.5, "50,918", "https://rukminim1.flixcart.com/image/300/300/xif0q/diary-notebook/s/r/h/classmate-02105012-resized-original-imafvm2c7uhgd7fr.jpeg?q=70", "Kids, toys and school"], ["Fastrack UV Protection Wayfarer Sunglasses", "fastrack-uv-protection-wayfarer-sunglasses", 509, 1200, 58, 4.1, "1,05,456", "https://rukminim1.flixcart.com/image/300/300/xif0q/sunglass/l/t/e/-resized-original-imahejzvcxvznbwk.jpeg?q=70", "Clothing and accessories"], ["Logitech C270 HD Webcam", "logitech-c270-hd-webcam", 2195, 3494, 37, 4.4, "20,140", "https://rukminim1.flixcart.com/image/300/300/xif0q/webcam/pc-webcam/q/a/p/hd-webcam-c270-logitech-enriched-transparent-original-imahczfkkkgggvgj.png?q=70", "Computer and mobile"], ["Philips BRE710 Cordless Epilator", "philips-bre710-cordless-epilator", 56, 7099, 99, 4.2, "1,025", "https://rukminim1.flixcart.com/image/300/300/xif0q/epilator/5/h/f/5-4-bre710-00-philips-original-imah7jrh92rmvvzh.jpeg?q=70", "Grooming"], ["AGARO Cosmic Plus Sonic Electric Toothbrush", "agaro-cosmic-plus-sonic-electric-toothbrush", 1699, 3699, 54, 4.4, "5,541", "https://rukminim1.flixcart.com/image/300/300/xif0q/electric-toothbrush/s/a/k/cosmic-plus-sonic-agaro-original-imahdhgf4zegzxxn.jpeg?q=70", "Grooming"], ["Van Heusen VH000008C Analog Watch for Women", "van-heusen-vh000008c-analog-watch-for-women", 1099, 2999, 63, 4.5, "1,52,439", "https://rukminim1.flixcart.com/image/300/300/xif0q/watch/x/h/6/-watermarked-original-imahfszadz77hxu8.jpeg?q=70", "Watches"], ["Red Tape Athleisure Walking Shoes for Men", "red-tape-athleisure-walking-shoes-for-men", 1054, 6899, 85, 4.2, "4,364", "https://rukminim1.flixcart.com/image/300/300/xif0q/shoe/h/k/c/6-rso4911-6-0-red-tape-beige-original-imahrarzg4ksgr7a.jpeg?q=70", "Footwear"], ["Himalaya Baby Pants Diapers, Medium, 70 Pack", "himalaya-baby-pants-diapers-medium-70-pack", 515, 999, 48, 4.3, "5,04,849", "https://rukminim1.flixcart.com/image/300/300/xif0q/bangle-bracelet-armlet/d/g/y/-original-imahzpdkemzzaqbg.jpeg?q=70", "Kids, toys and school"], ["Boldfit Heavy Resistance Band", "boldfit-heavy-resistance-band", 179, 699, 74, 4.0, "24,452", "https://rukminim1.flixcart.com/image/300/300/xif0q/fitness-band/e/u/s/-original-imahrbw3guecgffg.jpeg?q=70", "Sports and fitness"], ["Samsung 25 W Fast Charging Adapter", "samsung-25-w-fast-charging-adapter", 686, 1699, 60, 4.4, "1,92,741", "https://rukminim1.flixcart.com/image/300/300/xif0q/battery-charger/w/l/g/ep-t2510n-samsung-original-imahfr6hf9rqfgwu.jpeg?q=70", "Computer and mobile"], ["Bajaj Crest Neo 400 mm Table Fan", "bajaj-crest-neo-400-mm-table-fan", 2149, 3990, 46, 4.1, "24,077", "https://rukminim1.flixcart.com/image/300/300/xif0q/fan/z/k/e/-original-imahz349ybtffuxz.jpeg?q=70", "Home appliances"], ["Havells HD2222 1200 W Hair Dryer", "havells-hd2222-1200-w-hair-dryer", 849, 1295, 34, 4.4, "93,260", "https://rukminim1.flixcart.com/image/300/300/xif0q/hair-dryer/x/k/a/hd2222-hd2222-havells-enriched-transparent-original-imahcsq472xwupwf.png?q=70", "Hair care"], ["HP 32 GB MicroSDHC Memory Card", "hp-32-gb-microsdhc-memory-card", 899, 3499, 74, 4.2, "1,60,775", "https://rukminim1.flixcart.com/image/300/300/xif0q/memory-card/microsdhc/o/h/a/mi210-hp-enriched-transparent-original-imagfaffktzghqtt.png?q=70", "Computer and mobile"], ["Safari Halo 35 L Backpack", "safari-halo-35-l-backpack", 610, 2499, 76, 4.2, "10,179", "https://rukminim1.flixcart.com/image/300/300/xif0q/backpack/0/v/i/-watermarked-original-imahfskaqfgrhzjd.jpeg?q=70", "Kids, toys and school"], ["Philips BT3101 Beard Trimmer", "philips-bt3101-beard-trimmer", 1222, 1645, 26, 4.2, "4,93,974", "https://rukminim1.flixcart.com/image/300/300/xif0q/trimmer/a/r/t/-original-imahrecuftwgsvrp.jpeg?q=70", "Grooming"], ["Maybelline Colossal Bold Eye Kit", "maybelline-colossal-bold-eye-kit", 349, 1323, 74, 4.5, "98,634", "https://rukminim1.flixcart.com/image/300/300/xif0q/kajal/h/p/i/-original-imagufectq5csf4m.jpeg?q=70", "Skin and makeup"], ["Philips Helio 5 W Rechargeable LED Lantern", "philips-helio-5-w-rechargeable-led-lantern", 1194, 1999, 40, 4.2, "3,646", "https://rukminim1.flixcart.com/image/300/300/xif0q/emergency-light/2/f/t/-enriched-transparent-1-original-imagsc3xrmzkzc9q.png?q=70", "Home and Diwali decor"], ["Boldfit Plastic Tennis Cricket Bat", "boldfit-plastic-tennis-cricket-bat", 314, 999, 69, 4.2, "9,372", "https://rukminim1.flixcart.com/image/300/300/xif0q/bat/w/s/2/810-cricket-bat-indoor-outdoor-turf-bat-plastic-tennis-cricket-original-imahry9an29we5gg.jpeg?q=70", "Sports and fitness"], ["Philips S1151 Electric Shaver for Men", "philips-s1151-electric-shaver-for-men", 2182, 2649, 18, 4.1, "10,905", "https://rukminim1.flixcart.com/image/300/300/xif0q/shaver/x/r/m/s1151-03-s1151-03-philips-enriched-transparent-original-imahh3jgtfrzrsaa.png?q=70", "Grooming"], ["Fogg Day and Date Analog Watch for Men", "fogg-day-and-date-analog-watch-for-men", 298, 1799, 83, 4.1, "2,06,586", "https://rukminim1.flixcart.com/image/300/300/xif0q/watch/l/j/7/1-2038-olive-fogg-men-resized-original-imahksgfvyh2xhwu.jpeg?q=70", "Watches"], ["Treo Cascade Glass Set of 4, 292 ml", "treo-cascade-glass-set-of-4-292-ml", 281, 370, 24, 4.4, "3,382", "https://rukminim1.flixcart.com/image/300/300/xif0q/mug/w/a/s/cascade-cool-glass-beer-mug-set-of-4-292-ml-each-serve-whiskey-original-imah8ujwkg3zygnh.jpeg?q=70", "Kitchen"], ["Philips MG3911 Waterproof Multi Trimmer", "philips-mg3911-waterproof-multi-trimmer", 1583, 1945, 19, 4.2, "79,993", "https://rukminim1.flixcart.com/image/300/300/xif0q/trimmer/t/m/o/-original-imahp2uqgzbpner8.jpeg?q=70", "Grooming"], ["Crompton 10 m 100 LED String Lights", "crompton-10-m-100-led-string-lights", 277, 700, 60, 4.2, "4,954", "https://rukminim1.flixcart.com/image/300/300/xif0q/rice-light/m/u/6/-original-imagkzhgqyqhnynh.jpeg?q=70", "Home and Diwali decor"], ["Portronics Toad 13 Wireless Mouse", "portronics-toad-13-wireless-mouse", 299, 499, 40, 4.1, "84,174", "https://rukminim1.flixcart.com/image/300/300/xif0q/mouse/a/t/d/-enriched-transparent-original-imagwde4z4v2cy6g.png?q=70", "Computer and mobile"], ["TP-Link Archer C20 Dual Band WiFi Router", "tp-link-archer-c20-dual-band-wifi-router", 1999, 2499, 20, 4.3, "45,716", "https://rukminim1.flixcart.com/image/300/300/xif0q/router/o/z/6/archer-c20-ac-wireless-dual-band-tp-link-enriched-transparent-original-imag7cjev8fqe9jv.png?q=70", "Computer and mobile"], ["Samsung 1 m USB Type C Cable", "samsung-1-m-usb-type-c-cable", 337, 599, 44, 4.2, "12,097", "https://rukminim1.flixcart.com/image/300/300/xif0q/minutes_enrichment_original/-enriched-original-ACCGAXG7XGGQZZAG_0.jpg?q=70", "Computer and mobile"], ["Bella Vita Fresh and Skai Aquatic Perfume Combo", "bella-vita-fresh-and-skai-aquatic-perfume-combo", 179, 748, 76, 4.4, "1,87,275", "https://rukminim1.flixcart.com/image/300/300/xif0q/perfume/h/s/0/40-fresh-perfume-skai-aquatic-perfume-combo-2x20ml-with-citrus-original-imahy9dk78rscfcz.jpeg?q=70", "Perfume and deo"], ["Safari Magnum by Safari Zeno 55 cm Cabin Trolley", "safari-magnum-by-safari-zeno-55-cm-cabin-trolley", 1249, 7365, 83, 4.3, "2,67,726", "https://rukminim1.flixcart.com/image/300/300/xif0q/suitcase/c/w/v/-original-imahqeptms5tjv38.jpeg?q=70", "Bags and travel"], ["Kenstar Pureza 8 L RO Water Purifier", "kenstar-pureza-8-l-ro-water-purifier", 5558, 16500, 66, 4.0, "41,439", "https://rukminim1.flixcart.com/image/300/300/xif0q/water-purifier/k/a/d/pureza-kenstar-resized-original-imahj38mvhmscsgb.jpeg?q=70", "Home appliances"], ["Pigeon Favourite 1800 W Induction Cooktop", "pigeon-favourite-1800-w-induction-cooktop", 1599, 3195, 50, 4.0, "6,73,970", "https://rukminim1.flixcart.com/image/300/300/xif0q/induction-cook-top/1/x/c/-original-imaheyg2e7b4pmjf.jpeg?q=70", "Kitchen"], ["Maybelline Color Sensational Creamy Matte Lipstick", "maybelline-color-sensational-creamy-matte-lipstick", 180, 329, 45, 4.2, "1,60,237", "https://rukminim1.flixcart.com/image/300/300/xif0q/lipstick/v/v/9/-original-imahh2zftbmegppe.jpeg?q=70", "Skin and makeup"], ["Noise Icon Buzz Calling Smartwatch for Women", "noise-icon-buzz-calling-smartwatch-for-women", 1399, 4999, 72, 4.1, "6,31,097", "https://rukminim1.flixcart.com/image/300/300/xif0q/smartwatch/9/i/w/1-69-wrb-sw-colorfiticonbuzz-std-gld-pnk-android-ios-noise-yes-enriched-transparent-original-imahe6dt89tvy5hh.png?q=70", "Smartwatches"], ["Tommy Hilfiger Leather Wallet for Men", "tommy-hilfiger-leather-wallet-for-men", 699, 2499, 72, 4.6, "1,916", "https://rukminim1.flixcart.com/image/300/300/k612pow0/wallet-card-wallet/t/v/k/felix-th-felixgcw08-wallet-tommy-hilfiger-original-imafzhyzrjsgqvhk.jpeg?q=70", "Bags and travel"], ["AGARO Regal Hand Held Vacuum Cleaner", "agaro-regal-hand-held-vacuum-cleaner", 1899, 2999, 37, 4.0, "44,100", "https://rukminim1.flixcart.com/image/300/300/xif0q/vacuum-cleaner/m/7/4/regal-agaro-original-imahg2hm3kngzhfj.jpeg?q=70", "Home appliances"], ["Mivi Fort H160 2.1 Soundbar", "mivi-fort-h160-2-1-soundbar", 3799, 25999, 85, 4.2, "20,975", "https://rukminim1.flixcart.com/image/300/300/xif0q/speaker/s/k/j/-original-imahrfgfc9u4dhc5.jpeg?q=70", "Audio"], ["Levi's Straight Fit Dark Blue Jeans for Men", "levi-s-straight-fit-dark-blue-jeans-for-men", 999, 3099, 68, 4.1, "995", "https://rukminim1.flixcart.com/image/300/300/xif0q/jean/v/k/b/32-005rc-0087-levi-s-resized-original-imahkny5tgzqkvr8.jpeg?q=70", "Clothing and accessories"], ["Park Avenue Luxury Grooming Kit, 8 Items", "park-avenue-luxury-grooming-kit-8-items", 278, 899, 69, 4.5, "60,191", "https://rukminim1.flixcart.com/image/300/300/xif0q/combo-kit/6/1/l/-original-imahrqbuzdk672jg.jpeg?q=70", "Grooming"], ["Puma Zarsuns Sneakers for Women", "puma-zarsuns-sneakers-for-women", 1643, 4799, 66, 4.4, "2,314", "https://rukminim1.flixcart.com/image/300/300/xif0q/shoe/n/0/g/-original-imah852r69tkt67v.jpeg?q=70", "Footwear"], ["Axe Signature Mysterious Body Perfume 400 ml", "axe-signature-mysterious-body-perfume-400-ml", 197, 798, 75, 4.1, "86,959", "https://rukminim1.flixcart.com/image/300/300/xif0q/deodorant/c/l/u/-original-imah32r6y3mssmtx.jpeg?q=70", "Perfume and deo"], ["Prestige PGMFB Grill Sandwich Maker", "prestige-pgmfb-grill-sandwich-maker", 1470, 1960, 25, 4.3, "62,946", "https://rukminim1.flixcart.com/image/300/300/xif0q/sandwich-maker/o/j/l/-original-imahjxggfm2zcmv9.jpeg?q=70", "Kitchen"], ["Cello Dazzle Oleander 47 Piece Dinner Set", "cello-dazzle-oleander-47-piece-dinner-set", 2199, 6099, 64, 4.4, "2,03,173", "https://rukminim1.flixcart.com/image/300/300/xif0q/dinner-set/s/7/d/yes-47-8904350470044-cello-original-imahcbygmd2kadh4.jpeg?q=70", "Kitchen"], ["WD My Passport 5 TB External Hard Disk", "wd-my-passport-5-tb-external-hard-disk", 156, 20000, 99, 4.4, "44,692", "https://rukminim1.flixcart.com/image/300/300/xif0q/external-hard-drive/hdd/a/s/u/my-passport-wd-enriched-transparent-original-imag58zthg6xhgm9.png?q=70", "Computer and mobile"], ["Bajaj DX 15 1000 W Dry Iron", "bajaj-dx-15-1000-w-dry-iron", 625, 1320, 53, 4.2, "2,22,249", "https://rukminim1.flixcart.com/image/300/300/xif0q/iron/t/w/l/-resized-original-imahm58nqurftvz6.jpeg?q=70", "Home appliances"], ["Puma Softride Slides for Men", "puma-softride-slides-for-men", 1569, 3499, 55, 4.4, "5,736", "https://rukminim1.flixcart.com/image/300/300/xif0q/slipper-flip-flop/b/y/l/-watermarked-original-imahgveh5rgfwnjr.jpeg?q=70", "Footwear"], ["KENT 450 W Chopper and Hand Blender", "kent-450-w-chopper-and-hand-blender", 1484, 2200, 33, 4.2, "19,079", "https://rukminim1.flixcart.com/image/300/300/xif0q/hand-blender/4/c/9/-original-imahqzrfvahzdpzz.jpeg?q=70", "Kitchen"], ["Bajaj GX 8 750 W Mixer Grinder, 4 Jars", "bajaj-gx-8-750-w-mixer-grinder-4-jars", 3189, 6100, 48, 4.2, "3,76,874", "https://rukminim1.flixcart.com/image/300/300/xif0q/mixer-grinder-juicer/5/6/w/-original-imahzv5tzfvxqqg3.jpeg?q=70", "Kitchen"], ["Noise Two Wireless Earbuds", "noise-two-wireless-earbuds", 1699, 4999, 66, 4.0, "21,157", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/y/v/v/-original-imah8syzqahyzdgz.jpeg?q=70", "Audio"], ["Dell KB216 Wired Multimedia Keyboard", "dell-kb216-wired-multimedia-keyboard", 529, 1799, 71, 4.4, "48,927", "https://rukminim1.flixcart.com/image/300/300/xif0q/keyboard/desktop-keyboard/m/7/v/kb216-multimedia-keyboard-with-usb-interface-plunger-keys-enriched-transparent-original-imahmc47teu3cjke.png?q=70", "Computer and mobile"], ["Prestige PKOSS 1.5 L Electric Kettle", "prestige-pkoss-1-5-l-electric-kettle", 699, 1445, 52, 4.2, "1,70,922", "https://rukminim1.flixcart.com/image/300/300/xif0q/electric-kettle/b/p/2/-original-imah9c9enred7shj.jpeg?q=70", "Kitchen"], ["boAt Rockerz 255 Pro+ Neckband", "boat-rockerz-255-pro-neckband", 853, 3990, 79, 4.2, "5,23,293", "https://rukminim1.flixcart.com/image/300/300/xif0q/headphone/f/s/e/-original-imagzuzzgteshegg.jpeg?q=70", "Audio"], ["Lifelong ISI Certified 2 Burner Glass Gas Stove", "lifelong-isi-certified-2-burner-glass-gas-stove", 1299, 4350, 70, 4.1, "1,08,750", "https://rukminim1.flixcart.com/image/300/300/xif0q/gas-stove/s/h/y/-original-imagsc3xfuxz4csw.jpeg?q=70", "Kitchen"], ["Beardo Whisky Smoke Perfume", "beardo-whisky-smoke-perfume", 355, 1200, 70, 4.3, "1,62,653", "https://rukminim1.flixcart.com/image/300/300/xif0q/perfume/t/x/y/-original-imahs3z2ead5gpfk.jpeg?q=70", "Perfume and deo"], ["Bajaj ATX 4 750 W Pop Up Toaster", "bajaj-atx-4-750-w-pop-up-toaster", 1499, 2150, 30, 4.3, "13,372", "https://rukminim1.flixcart.com/image/300/300/xif0q/pop-up-toaster/7/h/f/-original-imahz4c3a84mxspa.jpeg?q=70", "Kitchen"], ["Campus Brazil Adv Pro Running Shoes for Men", "campus-brazil-adv-pro-running-shoes-for-men", 1114, 2299, 52, 4.2, "26,617", "https://rukminim1.flixcart.com/image/300/300/xif0q/shoe/u/2/u/-watermarked-original-imahmd3xzurzq2n4.jpeg?q=70", "Footwear"], ["Philips 10 W LED Bulb, Pack of 10", "philips-10-w-led-bulb-pack-of-10", 581, 1080, 46, 4.2, "35,677", "https://rukminim1.flixcart.com/image/300/300/xif0q/bulb/3/a/r/-enriched-transparent-original-imahfjg68phartea.png?q=70", "Home and Diwali decor"], ["Orient Ujala Air 400 mm Table Fan", "orient-ujala-air-400-mm-table-fan", 1449, 2600, 44, 4.1, "65,473", "https://rukminim1.flixcart.com/image/300/300/xif0q/fan/i/a/j/3134848614700-52-1-ceiling-fan-1200-orient-electric-original-imahy3yqkxkgy7qx.jpeg?q=70", "Home appliances"], ["Minimalist SPF 50 Sunscreen", "minimalist-spf-50-sunscreen", 236, 249, 5, 4.2, "50,817", "https://rukminim1.flixcart.com/image/300/300/xif0q/sunscreen/0/w/0/30-lightweight-niacinamide-broad-spectrum-suncream-no-white-cast-original-imahzn5hg2kykjwm.jpeg?q=70", "Skin and makeup"], ["Mamaearth Rosemary Anti Hair Fall Shampoo", "mamaearth-rosemary-anti-hair-fall-shampoo", 302, 310, 0, 4.2, "73,751", "https://rukminim1.flixcart.com/image/300/300/xif0q/shampoo/m/h/q/250-rosemary-anti-hairfall-shampoo-with-rosemary-methi-dana-for-original-imahmqb4zcnpgyha.jpeg?q=70", "Hair care"], ["Philips Hair Straightener, Alia Bhatt Edition", "philips-hair-straightener-alia-bhatt-edition", 1287, 1495, 14, 4.1, "2,983", "https://rukminim1.flixcart.com/image/300/300/xif0q/hair-straightener/c/c/u/alia-bhatt-new-edition-philips-original-imagm9yqh2zzeqpa.jpeg?q=70", "Hair care"], ["Mamaearth Vitamin C Face Serum", "mamaearth-vitamin-c-face-serum", 203, 225, 10, 4.1, "97,816", "https://rukminim1.flixcart.com/image/300/300/xif0q/skin-treatment/g/a/e/10-0-vitamin-c-daily-glow-face-serum-turmeric-for-radiant-skin-original-imahd5z6vwcz36hs.jpeg?q=70", "Skin and makeup"], ["Biotique Papaya Deep Cleanse Face Wash", "biotique-papaya-deep-cleanse-face-wash", 366, 400, 8, 4.2, "1,81,887", "https://rukminim1.flixcart.com/image/300/300/xif0q/face-wash/q/x/x/-original-imahq836yvheuf5h.jpeg?q=70", "Skin and makeup"], ["Milton Super 1000 ml Steel Bottle", "milton-super-1000-ml-steel-bottle", 305, 413, 26, 4.0, "87,849", "https://rukminim1.flixcart.com/image/300/300/xif0q/bottle/p/h/j/1000-super-1-cutnftb037assr0001-milton-enriched-transparent-original-imahhxfshudqbneb.png?q=70", "Kitchen"], ["Classmate Invento Geometry Box", "classmate-invento-geometry-box", 142, 170, 16, 4.2, "697", "https://rukminim1.flixcart.com/image/300/300/xif0q/geometry-box/u/x/z/invento-classmate-enriched-transparent-original-imagffzbpntzdetf.png?q=70", "Kids, toys and school"], ["Pigeon Special 3 L Pressure Cooker", "pigeon-special-3-l-pressure-cooker", 649, 1070, 39, 4.1, "2,90,518", "https://rukminim1.flixcart.com/image/300/300/xif0q/pressure-cooker/9/9/d/-original-imagsjvhkhvz5yuz.jpeg?q=70", "Kitchen"], ["KENT Ultra 4 L Digital Air Fryer", "kent-ultra-4-l-digital-air-fryer", 3099, 11999, 74, 4.1, "12,695", "https://rukminim1.flixcart.com/image/300/300/xif0q/air-fryer/u/8/u/-resized-original-imahq24zfdhe749z.jpeg?q=70", "Kitchen"], ["Crompton Deskmate LED Table Lamp", "crompton-deskmate-led-table-lamp", 394, 950, 59, 4.1, "6,077", "https://rukminim1.flixcart.com/image/300/300/xif0q/table-lamp/f/a/v/deskmate-led5wchtbl-dskm-wh-pack-of-1-crompton-11-3-original-imah88ffu4uqf6vv.jpeg?q=70", "Home and Diwali decor"], ["HP 64 GB USB Pen Drive", "hp-64-gb-usb-pen-drive", 788, 3499, 77, 4.2, "78,107", "https://rukminim1.flixcart.com/image/300/300/xif0q/pendrive/pendrive/i/r/x/v236w-hp-enriched-transparent-original-imafxvf93gh7axat.png?q=70", "Computer and mobile"], ["Bajaj 100% Pure Coconut Oil 1 L", "bajaj-100-pure-coconut-oil-1-l", 324, 540, 40, 4.4, "2,10,292", "https://rukminim1.flixcart.com/image/300/300/xif0q/hair-oil/w/8/s/-original-imahdnhhjj8q8qzp.jpeg?q=70", "Hair care"]];
+const q=document.getElementById('q'),R=document.getElementById('results'),G=document.getElementById('rgrid'),M=document.getElementById('main');
+const f=n=>n.toLocaleString('en-IN');
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+q.addEventListener('input',()=>{
+  const t=q.value.trim().toLowerCase();
+  if(!t){R.classList.remove('on');M.style.display='';return}
+  const w=t.split(/\s+/);
+  const hits=P.filter(p=>{const s=(p[0]+' '+p[8]).toLowerCase();return w.every(x=>s.includes(x))});
+  G.innerHTML=hits.length?hits.map(p=>`<a class="pc" href="/${p[1]}/"><div class="pi"><img src="${p[7]}" alt="${esc(p[0])}" loading="lazy"></div><div class="pb"><div class="pn">${esc(p[0])}</div><div class="pp"><span class="now">₹${f(p[2])}</span>${p[4]?`<span class="mrp">₹${f(p[3])}</span><span class="off">${p[4]}% off</span>`:''}</div><div class="pr"><span class="rt">${p[5]} ★</span>${p[6]}</div></div></a>`).join(''):'<p class="empty">Nothing matches that yet. Try a simpler word, like kettle or earbuds.</p>';
+  R.classList.add('on');M.style.display='none';
+});
+</script>
 </body>
 </html>
