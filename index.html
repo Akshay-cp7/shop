@@ -222,7 +222,7 @@ footer a{text-decoration:underline}
     <div class="ask">
       <h2>What are you looking for?</h2>
       <p class="sub">Type anything, like <i>gift for dad under 1000</i>, or tap a product above</p>
-      <form id="aif"><input id="aiq" type="text" placeholder="I am looking for..." autocomplete="off" enterkeyhint="search" aria-label="What are you looking for"><button class="go" type="submit">Ask</button></form>
+      <form id="aif"><input id="aiq" autocomplete="off" type="text" placeholder="I am looking for..." enterkeyhint="search" aria-label="What are you looking for"><button class="go" type="submit">Ask</button></form>
       <button class="browse" type="button" data-close>Just browsing</button>
     </div>
   </div>
@@ -425,7 +425,7 @@ function loop(t){var dt=Math.min(.05,(t-(last||t))/1000);last=t;
   if(!reduce)items.forEach(function(it){it.a+=dt*(it.inner?.22:-.13)*slow});
   pull+=(pullTo-pull)*Math.min(1,dt*7);
   place();if(open)raf=requestAnimationFrame(loop)}
-function show(){ai.hidden=false;open=true;size();pull=1;pullTo=0;document.body.style.overflow='hidden';fab.classList.remove('on');
+function show(){inp.value='';A.classList.remove('on');A.innerHTML='';ai.hidden=false;open=true;size();pull=1;pullTo=0;document.body.style.overflow='hidden';fab.classList.remove('on');
   requestAnimationFrame(function(){ai.classList.add('on')});last=0;cancelAnimationFrame(raf);raf=requestAnimationFrame(loop);
   if(innerWidth>700)setTimeout(function(){try{inp.focus({preventScroll:true})}catch(e){}},400)}
 function hide(cb){pullTo=1;orb.classList.add('gulp');
