@@ -126,6 +126,7 @@ const f=n=>n.toLocaleString('en-IN');
 const SH='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>';
 const wb=w=>w?`<div class="wb" title="Warranty stated on the Flipkart listing">${SH}${w>=1?w+' yr':Math.round(w*12)+' month'} warranty</div>`:'';
 const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c]);
+if(q&&M){const iq=new URLSearchParams(location.search).get('q');if(iq)setTimeout(()=>{q.value=iq;q.dispatchEvent(new Event('input'))},0)}
 if(q&&M)q.addEventListener('input',()=>{
   const t=q.value.trim().toLowerCase();
   if(!t){R.classList.remove('on');M.style.display='';return}
